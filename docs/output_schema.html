@@ -1,0 +1,83 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>output_schema</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:1080px;margin:36px auto;padding:0 20px;color:#173448}h1,h2,h3{line-height:1.3}a{color:#176b98}table{border-collapse:collapse;display:block;overflow-x:auto}th,td{border:1px solid #d7e2e9;padding:7px 10px}pre{overflow:auto;padding:15px;background:#eef4f8}img,video{max-width:100%}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}nav{padding:14px;background:#edf5f8;border-radius:8px}.muted{font-size:14px;color:#536a79}@media(max-width:700px){.cards{grid-template-columns:1fr}}@font-face{font-family:"Flow Korean";src:url("../visualization/fonts/NotoSansKR-full.otf")}body{font-family:"Flow Korean",system-ui,sans-serif}</style><body><nav><a href="../visualization/">Interactive site</a> · <a href="../share.html">Share summary</a> · <a href="output_schema.html">Markdown</a></nav><h1>Output schema</h1>
+<p>All paths are relative to this experiment. Numerical flow values are latent-space velocity, not physical end-effector velocity.</p>
+<table>
+<thead>
+<tr>
+<th>Requested output</th>
+<th>Artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background name, action ID/hash, seed, tau/sigma/progress</td>
+<td><code>results/&lt;task&gt;/seed&lt;seed&gt;/cases/&lt;action_id&gt;/&lt;BG&gt;/complete.json</code>, or <code>bank/&lt;action_id&gt;/&lt;BG&gt;/complete.json</code></td>
+</tr>
+<tr>
+<td>Actual shared sampler tensor and normalized future tensor</td>
+<td><code>reference/stepNN.pt</code>: <code>xt</code>, <code>z_t</code>; initial sampler tensor in <code>reference/initial_noise.pt</code></td>
+</tr>
+<tr>
+<td>Exact tensor hashes and pairing assertions</td>
+<td><code>complete.json</code> rows: <code>noise_hash</code>, <code>normalized_noise_hash</code>, action/model-action/BF16-action hashes, physical-state hash, equality flags</td>
+</tr>
+<tr>
+<td>Checkpoint, scheduler, instruction, cameras, action preprocessing</td>
+<td><code>reference/paired_controls.json</code>; source hashes/revisions in <code>docs/</code></td>
+</tr>
+<tr>
+<td>Raw velocity</td>
+<td><code>stepNN.npz</code>: <code>flow_velocity</code>, shape <code>[1,16,12,32,32]</code></td>
+</tr>
+<tr>
+<td>Temporal robot mask and coverage</td>
+<td><code>robot_mask</code>, <code>robot_coverage</code>, shape <code>[12,32,32]</code>; primary excludes conditioning positions and wrist view</td>
+</tr>
+<tr>
+<td>Masked velocity and primary probe representation</td>
+<td><code>robot_masked_flow</code>, <code>representation</code>; flattened <code>[12,16]</code> with temporal order intact</td>
+</tr>
+<tr>
+<td>Alternate probe controls</td>
+<td><code>fixed_mask_representation</code>, <code>mask_only_representation</code></td>
+</tr>
+<tr>
+<td>Robot/full/background flow differences</td>
+<td>Canonical <code>complete.json</code>; bank <strong><code>paired_background_metrics.json</code></strong>, paired with BG0 for the same action ID</td>
+</tr>
+<tr>
+<td>Background difference heatmap</td>
+<td>Canonical <code>stepNN.npz:flow_difference_heatmap</code>; bank <strong><code>paired_background_heatmaps.npz</code></strong></td>
+</tr>
+<tr>
+<td>Action perturbation and robot flow response</td>
+<td><code>cases/action_dJ_eE/BG0/complete.json</code>; one action time/dimension only, training-set std and actual delta recorded</td>
+</tr>
+<tr>
+<td>Numerator, denominator, ratio and stability</td>
+<td><code>results/metrics.csv</code>, <code>results/metrics.json</code>, <code>results/action_control_sweep.json</code></td>
+</tr>
+<tr>
+<td>Probe predictions and targets</td>
+<td><code>probes/representation_&lt;linear-or-mlp&gt;_stepNN_BGK_predictions.npz</code>, indexed by <code>action_ids</code>; train/validation/canonical/control predictions have explicit suffixes</td>
+</tr>
+<tr>
+<td>Probe R², ΔR² and paired predicted-action drift</td>
+<td><code>probes/metrics.json</code>, aggregate <code>results/probe_metrics.csv</code>; per-coordinate/time/dimension/group values in JSON</td>
+</tr>
+<tr>
+<td>Probe uncertainty</td>
+<td><code>results/probe_bootstrap.json</code>: demonstration-cluster resampling, same resampled demos across backgrounds</td>
+</tr>
+<tr>
+<td>Secondary clean estimate</td>
+<td><code>reference/stepNN.pt:x0_secondary</code> and canonical BG0/BG8 NPZ; official denoiser conversion only</td>
+</tr>
+<tr>
+<td>Secondary decoded videos</td>
+<td><code>results/Original/seed0/decoded/{A,B,C}/</code>; actual per-chunk shared noise tensors alongside</td>
+</tr>
+</tbody>
+</table>
+<p>The initial bank capture's <code>D_all</code>, <code>D_background</code>, and <code>flow_difference_heatmap</code> compare to the <strong>canonical-action</strong> BG0 reference. They include action differences and are not background-only bank metrics. Use the separate <code>paired_background_*</code> files for same-action background comparisons. Raw flow tensors remain unchanged.</p>
+<p>R² is a test-set statistic and is undefined for an individual inference case. Prediction NPZs join to bank cases by <code>action_ids</code>; <code>metrics.json</code> joins by task, probe, representation, background, and step. Action-control ratios are evaluated on the canonical action sequence, not every bank action. Unrun combinations are not assigned invented values.</p>
+<p><code>finalization_status.json</code> is marked completed only after every task's probes, strict paired validation, figures/report, and browser checks finish. <code>validation.json</code> explicitly lists any missing required artifacts.</p></body></html>

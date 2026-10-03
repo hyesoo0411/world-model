@@ -1,0 +1,113 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>existing_experiment_summary</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:1080px;margin:36px auto;padding:0 20px;color:#173448}h1,h2,h3{line-height:1.3}a{color:#176b98}table{border-collapse:collapse;display:block;overflow-x:auto}th,td{border:1px solid #d7e2e9;padding:7px 10px}pre{overflow:auto;padding:15px;background:#eef4f8}img,video{max-width:100%}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}nav{padding:14px;background:#edf5f8;border-radius:8px}.muted{font-size:14px;color:#536a79}@media(max-width:700px){.cards{grid-template-columns:1fr}}@font-face{font-family:"Flow Korean";src:url("../visualization/fonts/NotoSansKR-full.otf")}body{font-family:"Flow Korean",system-ui,sans-serif}</style><body><nav><a href="../visualization/">Interactive site</a> · <a href="../share.html">Share summary</a> · <a href="existing_experiment_summary.html">Markdown</a></nav><h1>기존 실험 확인 — 사용자 선택: settled_v2</h1>
+<p>새 작업 위치: <code>experiments/[EX8]_flow_velocity_analysis</code>.
+재사용 대상은 <code>[EX2]_background_action_invariance/results/a2world_2b/settled_v2</code>다. 최초 실험과 혼합하지 않는다. 원본은 <code>[EX2]_background_action_invariance</code>로 이름만 변경했다. 이전 이름은 호환 링크다. 기존 결과 내용은 수정하지 않는다.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Suite / task</th>
+<th>Demo</th>
+<th>Canonical physical state hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original</td>
+<td>libero_10 / STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy</td>
+<td>demo_47 [0:40]</td>
+<td><code>0ea882672f492d84780f4b57128af453fe129efd52f72b15ce35490ca6da1069</code></td>
+</tr>
+<tr>
+<td>T01</td>
+<td>libero_90 / STUDY_SCENE2_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy</td>
+<td>demo_6 [0:40]</td>
+<td><code>e6002891104fad0bc1da003092c8ac6f220b69362c6893d85ca0b2daacd49eb0</code></td>
+</tr>
+<tr>
+<td>T02</td>
+<td>libero_90 / STUDY_SCENE3_pick_up_the_white_mug_and_place_it_to_the_right_of_the_caddy</td>
+<td>demo_44 [0:40]</td>
+<td><code>7ab07d05db9b206bf6e5c4cd74dc888e2e5b0f2404805a68a1f1bb0b5475f63c</code></td>
+</tr>
+<tr>
+<td>T03</td>
+<td>libero_90 / STUDY_SCENE4_pick_up_the_book_on_the_right_and_place_it_on_the_cabinet_shelf</td>
+<td>demo_39 [0:40]</td>
+<td><code>e9055165efd2caa6818f693e09238dd2de35c656513a8428d0f740f0b7fc3ef7</code></td>
+</tr>
+<tr>
+<td>T04</td>
+<td>libero_10 / LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket</td>
+<td>demo_12 [0:40]</td>
+<td><code>c432f64e96352cbe9ffa5a4bcc29030572d22fcbe1e0d46822aab212141ecf2d</code></td>
+</tr>
+<tr>
+<td>T05</td>
+<td>libero_10 / LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate</td>
+<td>demo_31 [0:40]</td>
+<td><code>9874c4ea5ce62ca341f4e1b913a4c40f40ea4bae2e726aa668c93711a160fa83</code></td>
+</tr>
+</tbody>
+</table>
+<p>각 task의 <code>phase1/canonical_state</code> XML/integration/controller snapshot을 복원한다. 공식 initial-state index 0에서 zero-action settling 14 steps(T04:19) 후 저장한 상태다. Action 40 steps, 20 Hz; model은 20×2 chunks, 10 FPS. 카메라는 agentview(ID2)/robot0_eye_in_hand(ID0), inference RGB 256², preview 256²/512². Upright flip와 INTER_AREA resize, 최초 history 17장/view 반복을 유지한다. 35 denoising steps, guidance 0, seeds 0/1/2. Task text는 metadata에 보존하고 model은 zero embedding을 쓴다.</p>
+<table>
+<thead>
+<tr>
+<th>ID / name</th>
+<th>정확한 texture 설정 (0–255)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BG0 ORIGINAL</td>
+<td>원래 LIBERO plaster</td>
+</tr>
+<tr>
+<td>BG1 LIGHT_GRAY</td>
+<td>(184,184,184)</td>
+</tr>
+<tr>
+<td>BG2 PALE_BLUE</td>
+<td>(174,188,198)</td>
+</tr>
+<tr>
+<td>BG3 LOW_CONTRAST_CHECKER</td>
+<td>(174,174,174)/(186,186,186), 8×8 cells/texture</td>
+</tr>
+<tr>
+<td>BG4 LOW_CONTRAST_NOISE</td>
+<td>gray 180±8, 32×32 integer grid, bilinear resize, seed 20260915</td>
+</tr>
+<tr>
+<td>BG5 SATURATED_BLUE</td>
+<td>(25,70,190)</td>
+</tr>
+<tr>
+<td>BG6 BURNT_ORANGE</td>
+<td>(210,65,25)</td>
+</tr>
+<tr>
+<td>BG7 FOREST_GREEN</td>
+<td>(30,150,65)</td>
+</tr>
+<tr>
+<td>BG8 HIGH_CONTRAST_CHECKER</td>
+<td>(35,35,35)/(230,230,230), 4×4 cells/texture</td>
+</tr>
+<tr>
+<td>BG9 HIGH_CONTRAST_NOISE</td>
+<td>gray 128±100, 16×16 integer grid, bilinear resize, seed 20260915</td>
+</tr>
+</tbody>
+</table>
+<p>| BG10 WARM_MATCHED_CHECKER | endpoints (168,123,75)/(217,167,117), 4×4 cells |
+| BG11 WARM_MATCHED_NOISE | 같은 warm palette LUT; BG9 scalar field |
+| BG12 COOL_MATCHED_CHECKER | endpoints (39,140,188)/(98,186,236), 4×4 cells |
+| BG13 COOL_MATCHED_NOISE | 같은 cool palette LUT; BG9 scalar field |
+| BG14 MATCHED_GRAY_MATCHED_CHECKER | endpoints (132,132,132)/(176,176,176), 4×4 cells |
+| BG15 MATCHED_GRAY_MATCHED_NOISE | 같은 gray palette LUT; BG9 scalar field |</p>
+<p>BG10–15의 정확한 이름/전체 256-entry RGB LUT와 모든 조건 parameters는 원본 <code>conditions.json</code>을 <code>configs/protocol.json</code>에 그대로 보존했다. LUT를 endpoints 사이 단순 RGB 보간으로 대체하지 않는다. <code>palette_revision=settled_v2_L55_72_C35</code>; 목표 L<em>=55–72, warm/cool C</em>=35, gray C*=0, hue 70°/250°. 기존 <code>create_background_variants.bitmap/apply_background</code>를 재사용한다.</p>
+<p>원본 validation: <code>phase1_validation.json</code>, task별 <code>phase1/validation/state_equality.json</code>, <code>phase2/metadata/gt_validation.json</code>, <code>final_validation.json</code>. 모든 배경의 physical/fixed model 최대 오차 0, robot/non-wall 내부 RGB 오차 0. GT 40-frame 물체 drift 최대 1.92e-8 m, robot contact 0. 이 값은 기존 검증 결과이며 새 mask replay 검증은 별도로 저장한다.</p>
+<p>기존 inference: 원본 최상위 <code>scripts/run_a2world_paired.py</code>, <code>BG_PILOT_ROOT</code>로 task 선택. Site: settled <code>visualization/index.html</code>, <code>method.html</code>, <code>tasks/&lt;task&gt;/visualization/index.html</code>. Outputs: <code>tasks/&lt;task&gt;/phase1/{canonical_state,initial_frames,metadata,validation}</code>와 <code>phase2/{actions,inputs,simulator_gt,a2world_rollouts,metadata}</code>, tracking <code>quantification/</code>, 집계 <code>metrics.csv</code>, <code>plots/</code>.</p>
+<p>주 비교는 첫 20-action chunk에서 동일한 물리 상태/conditioning을 엄격히 통제한다. 전체 40-action 파일은 보존하고 2-chunk 자유 생성은 secondary rollout 진단으로 구분한다. 두 번째 chunk의 배경별 생성 history는 이미 달라질 수 있으므로 단독 배경 개입과 혼합하지 않는다.</p>
+<p>파일 hashes: <code>source_hashes.json</code>. 생성 시각과 폴더 변경: <code>directory_renames.json</code>.</p></body></html>

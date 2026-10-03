@@ -1,0 +1,668 @@
+{
+  "resources-49181-capture_flow-1fe4dc70.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T05",
+      "--seed",
+      "2",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.85025405883789,
+    "cgroup_polled_peak_gib": 18.909835815429688,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49180-capture_flow-3bbd21dc.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T04",
+      "--seed",
+      "0",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.85150909423828,
+    "cgroup_polled_peak_gib": 19.530818939208984,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49185-capture_flow-c1b568b8.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T04",
+      "--seed",
+      "0",
+      "--mode",
+      "bank",
+      "--bank-start",
+      "50",
+      "--bank-stop",
+      "100"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.902706146240234,
+    "cgroup_polled_peak_gib": 17.60605239868164,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49175-capture_flow.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "Original",
+      "--seed",
+      "1",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.901973724365234,
+    "cgroup_polled_peak_gib": 18.88153076171875,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49177-capture_flow.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T02",
+      "--seed",
+      "1",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.893959045410156,
+    "cgroup_polled_peak_gib": 17.492244720458984,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49180-capture_flow-01219fe8.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T04",
+      "--seed",
+      "2",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.901626586914062,
+    "cgroup_polled_peak_gib": 18.685222625732422,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49182-rollout_sanity-a9c106b1.json": {
+    "stage": "scripts/rollout_sanity.py",
+    "argv": [
+      "scripts/rollout_sanity.py",
+      "--task",
+      "Original",
+      "--seed",
+      "0"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.90190887451172,
+    "cgroup_polled_peak_gib": 17.360267639160156,
+    "gpu_reserved_peak_gib": 9.029296875,
+    "gpu_allocated_peak_gib": 7.72726583480835
+  },
+  "resources-49167-prepare_masks.json": {
+    "stage": "scripts/prepare_masks.py",
+    "argv": [
+      "scripts/prepare_masks.py",
+      "--task",
+      "Original",
+      "--bank"
+    ],
+    "requested_cpu_ram_mb": "4096",
+    "process_peak_gib": 2.4897994995117188,
+    "cgroup_polled_peak_gib": 2.0195960998535156,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49181-capture_flow-9fbd57bd.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T05",
+      "--seed",
+      "0",
+      "--mode",
+      "bank"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.856433868408203,
+    "cgroup_polled_peak_gib": 17.804222106933594,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49178-capture_flow-0ee842be.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T03",
+      "--seed",
+      "0",
+      "--mode",
+      "bank"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.89643096923828,
+    "cgroup_polled_peak_gib": 18.032024383544922,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49175-capture_flow-6b4e1eae.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "Original",
+      "--seed",
+      "0",
+      "--mode",
+      "bank"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.897098541259766,
+    "cgroup_polled_peak_gib": 19.256214141845703,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49175-capture_flow-3fbb8431.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "Original",
+      "--seed",
+      "2",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.901222229003906,
+    "cgroup_polled_peak_gib": 19.09412384033203,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49181-fit_probes-1b85fb4d.json": {
+    "stage": "scripts/fit_probes.py",
+    "argv": [
+      "scripts/fit_probes.py",
+      "--task",
+      "T05",
+      "--seed",
+      "0"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.7560195922851562,
+    "cgroup_polled_peak_gib": 1.735076904296875,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49178-fit_probes-710cb1b0.json": {
+    "stage": "scripts/fit_probes.py",
+    "argv": [
+      "scripts/fit_probes.py",
+      "--task",
+      "T03",
+      "--seed",
+      "0"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.7608146667480469,
+    "cgroup_polled_peak_gib": 2.6502723693847656,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49176-capture_flow-79124c89.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T01",
+      "--seed",
+      "2",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.89911651611328,
+    "cgroup_polled_peak_gib": 19.736248016357422,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49180-capture_flow-7d297082.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T04",
+      "--seed",
+      "1",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.89907455444336,
+    "cgroup_polled_peak_gib": 18.94891357421875,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49181-run_task-3c274f57.json": {
+    "stage": "scripts/run_task.py",
+    "argv": [
+      "scripts/run_task.py",
+      "--task",
+      "T05"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.036167144775390625,
+    "cgroup_polled_peak_gib": 19.664318084716797,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49176-capture_flow.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T01",
+      "--seed",
+      "1",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.848873138427734,
+    "cgroup_polled_peak_gib": 17.614803314208984,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49177-run_task.json": {
+    "stage": "scripts/run_task.py",
+    "argv": [
+      "scripts/run_task.py",
+      "--task",
+      "T02"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.036243438720703125,
+    "cgroup_polled_peak_gib": 19.799884796142578,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49180-capture_flow-d613f385.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T04",
+      "--seed",
+      "0",
+      "--mode",
+      "bank"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.899574279785156,
+    "cgroup_polled_peak_gib": 17.988285064697266,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49174-prepare_masks.json": {
+    "stage": "scripts/prepare_masks.py",
+    "argv": [
+      "scripts/prepare_masks.py",
+      "--task",
+      "T05",
+      "--bank"
+    ],
+    "requested_cpu_ram_mb": "4096",
+    "process_peak_gib": 3.000011444091797,
+    "cgroup_polled_peak_gib": 2.464008331298828,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49169-prepare_masks.json": {
+    "stage": "scripts/prepare_masks.py",
+    "argv": [
+      "scripts/prepare_masks.py",
+      "--task",
+      "T01",
+      "--bank"
+    ],
+    "requested_cpu_ram_mb": "4096",
+    "process_peak_gib": 2.481426239013672,
+    "cgroup_polled_peak_gib": 1.9858283996582031,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49177-fit_probes-869cb84e.json": {
+    "stage": "scripts/fit_probes.py",
+    "argv": [
+      "scripts/fit_probes.py",
+      "--task",
+      "T02",
+      "--seed",
+      "0"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.7603225708007812,
+    "cgroup_polled_peak_gib": 2.6383056640625,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49172-capture_flow.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "Original",
+      "--seed",
+      "0",
+      "--mode",
+      "pilot"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.899917602539062,
+    "cgroup_polled_peak_gib": 19.528587341308594,
+    "gpu_reserved_peak_gib": 9.033203125,
+    "gpu_allocated_peak_gib": 7.705783843994141
+  },
+  "resources-49176-capture_flow-6567c4f7.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T01",
+      "--seed",
+      "0",
+      "--mode",
+      "bank"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.89698028564453,
+    "cgroup_polled_peak_gib": 20.398571014404297,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49177-capture_flow-8d43718c.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T02",
+      "--seed",
+      "0",
+      "--mode",
+      "bank"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.858928680419922,
+    "cgroup_polled_peak_gib": 17.689891815185547,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49178-capture_flow-a6d0e666.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T03",
+      "--seed",
+      "2",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.901996612548828,
+    "cgroup_polled_peak_gib": 17.587322235107422,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49177-capture_flow-5265e8f2.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T02",
+      "--seed",
+      "2",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.9014892578125,
+    "cgroup_polled_peak_gib": 18.485240936279297,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49178-run_task.json": {
+    "stage": "scripts/run_task.py",
+    "argv": [
+      "scripts/run_task.py",
+      "--task",
+      "T03"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.03614044189453125,
+    "cgroup_polled_peak_gib": 19.778850555419922,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49171-prepare_masks.json": {
+    "stage": "scripts/prepare_masks.py",
+    "argv": [
+      "scripts/prepare_masks.py",
+      "--task",
+      "T03",
+      "--bank"
+    ],
+    "requested_cpu_ram_mb": "4096",
+    "process_peak_gib": 1.9179153442382812,
+    "cgroup_polled_peak_gib": 1.5200538635253906,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49175-fit_probes-de7018ad.json": {
+    "stage": "scripts/fit_probes.py",
+    "argv": [
+      "scripts/fit_probes.py",
+      "--task",
+      "Original",
+      "--seed",
+      "0"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.7606544494628906,
+    "cgroup_polled_peak_gib": 2.6538848876953125,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49178-capture_flow.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T03",
+      "--seed",
+      "1",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.90174102783203,
+    "cgroup_polled_peak_gib": 18.968231201171875,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49173-prepare_masks.json": {
+    "stage": "scripts/prepare_masks.py",
+    "argv": [
+      "scripts/prepare_masks.py",
+      "--task",
+      "T04",
+      "--bank"
+    ],
+    "requested_cpu_ram_mb": "4096",
+    "process_peak_gib": 3.2399559020996094,
+    "cgroup_polled_peak_gib": 2.7108230590820312,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49180-run_task-46a5a1d7.json": {
+    "stage": "scripts/run_task.py",
+    "argv": [
+      "scripts/run_task.py",
+      "--task",
+      "T04"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.0361480712890625,
+    "cgroup_polled_peak_gib": 19.994022369384766,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49175-run_task.json": {
+    "stage": "scripts/run_task.py",
+    "argv": [
+      "scripts/run_task.py",
+      "--task",
+      "Original"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.036224365234375,
+    "cgroup_polled_peak_gib": 19.597110748291016,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49176-run_task.json": {
+    "stage": "scripts/run_task.py",
+    "argv": [
+      "scripts/run_task.py",
+      "--task",
+      "T01"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.036052703857421875,
+    "cgroup_polled_peak_gib": 19.921977996826172,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49181-capture_flow-75bcf815.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T05",
+      "--seed",
+      "1",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.89691925048828,
+    "cgroup_polled_peak_gib": 19.401988983154297,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49180-fit_probes-bf31d2ce.json": {
+    "stage": "scripts/fit_probes.py",
+    "argv": [
+      "scripts/fit_probes.py",
+      "--task",
+      "T04",
+      "--seed",
+      "0"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.7597579956054688,
+    "cgroup_polled_peak_gib": 1.7481842041015625,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49181-capture_flow-2e0eed40.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T05",
+      "--seed",
+      "0",
+      "--mode",
+      "canonical"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.89820098876953,
+    "cgroup_polled_peak_gib": 19.858715057373047,
+    "gpu_reserved_peak_gib": 9.05859375,
+    "gpu_allocated_peak_gib": 7.755615234375
+  },
+  "resources-49176-fit_probes-131b67e1.json": {
+    "stage": "scripts/fit_probes.py",
+    "argv": [
+      "scripts/fit_probes.py",
+      "--task",
+      "T01",
+      "--seed",
+      "0"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 0.760986328125,
+    "cgroup_polled_peak_gib": 2.643035888671875,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  },
+  "resources-49186-capture_flow-e62fef72.json": {
+    "stage": "scripts/capture_flow.py",
+    "argv": [
+      "scripts/capture_flow.py",
+      "--task",
+      "T05",
+      "--seed",
+      "0",
+      "--mode",
+      "bank",
+      "--bank-start",
+      "50",
+      "--bank-stop",
+      "100"
+    ],
+    "requested_cpu_ram_mb": "28672",
+    "process_peak_gib": 19.902427673339844,
+    "cgroup_polled_peak_gib": 17.698875427246094,
+    "gpu_reserved_peak_gib": 9.0546875,
+    "gpu_allocated_peak_gib": 7.7527008056640625
+  },
+  "resources-49170-prepare_masks.json": {
+    "stage": "scripts/prepare_masks.py",
+    "argv": [
+      "scripts/prepare_masks.py",
+      "--task",
+      "T02",
+      "--bank"
+    ],
+    "requested_cpu_ram_mb": "4096",
+    "process_peak_gib": 2.8003616333007812,
+    "cgroup_polled_peak_gib": 2.2698020935058594,
+    "gpu_reserved_peak_gib": 0.0,
+    "gpu_allocated_peak_gib": 0.0
+  }
+}

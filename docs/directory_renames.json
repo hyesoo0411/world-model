@@ -1,0 +1,51 @@
+[
+  {
+    "number": 1,
+    "created_unix": 1789391450,
+    "old": "experiments/reverse_causal",
+    "new": "experiments/[EX1]_reverse_causal",
+    "compatibility_symlink": true
+  },
+  {
+    "number": 2,
+    "created_unix": 1789475802,
+    "old": "experiments/background_action_invariance",
+    "new": "experiments/[EX2]_background_action_invariance",
+    "compatibility_symlink": true
+  },
+  {
+    "number": 3,
+    "created_unix": 1790496208,
+    "old": "experiments/distractor_object_invariance_v1",
+    "new": "experiments/[EX3]_distractor_object_invariance_v1",
+    "compatibility_symlink": true
+  },
+  {
+    "number": 4,
+    "created_unix": 1790568510,
+    "old": "experiments/cosmos3_droid_appearance_invariance",
+    "new": "experiments/[EX4]_cosmos3_droid_appearance_invariance",
+    "compatibility_symlink": true
+  },
+  {
+    "number": 5,
+    "created_unix": 1790569247,
+    "old": "experiments/action_info_preservation",
+    "new": "experiments/[EX5]_action_info_preservation",
+    "compatibility_symlink": true
+  },
+  {
+    "number": 6,
+    "created_unix": 1790582334,
+    "old": "experiments/subtle_patch_action_consistency",
+    "new": "experiments/[EX6]_subtle_patch_action_consistency",
+    "compatibility_symlink": true
+  },
+  {
+    "number": 7,
+    "created_unix": 1790664383,
+    "old": "experiments/background_motion_probe_comparison",
+    "new": "experiments/[EX7]_background_motion_probe_comparison",
+    "compatibility_symlink": true
+  }
+]

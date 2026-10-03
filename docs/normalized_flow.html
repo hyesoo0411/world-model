@@ -1,0 +1,181 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>normalized_flow</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:1080px;margin:36px auto;padding:0 20px;color:#173448}h1,h2,h3{line-height:1.3}a{color:#176b98}table{border-collapse:collapse;display:block;overflow-x:auto}th,td{border:1px solid #d7e2e9;padding:7px 10px}pre{overflow:auto;padding:15px;background:#eef4f8}img,video{max-width:100%}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}nav{padding:14px;background:#edf5f8;border-radius:8px}.muted{font-size:14px;color:#536a79}@media(max-width:700px){.cards{grid-template-columns:1fr}}@font-face{font-family:"Flow Korean";src:url("../visualization/fonts/NotoSansKR-full.otf")}body{font-family:"Flow Korean",system-ui,sans-serif}</style><body><nav><a href="../visualization/">Interactive site</a> · <a href="../share.html">Share summary</a> · <a href="normalized_flow.html">Markdown</a></nav><h1>정규화한 robot flow 차이</h1>
+<p><strong>현재 답:</strong> “초기/high-noise 단계가 더 민감하다”는 패턴은 Original과 T05에서 정규화 후에도 유지되지만, 모든 task의 공통 경향은 아니다. 6-task 평균은 정규화 후 초기와 후반이 거의 같다. 배경에 따른 두 flow의 차이는 주로 latent 벡터 방향 차이이며, 단순한 전체 크기 배율 변화만으로 설명되지 않는다.</p>
+<h2>실험</h2>
+<p>확인하려는 것은 초기 raw flow 차이가 큰 이유가 flow 자체의 큰 크기 때문인지다. 기존 6 tasks × 3 seeds × 16 backgrounds × 10 τ의 저장된 paired flow와 robot mask를 그대로 재사용했다. 같은 action·물리 상태·실제 x_τ에서 배경만 바꾼 예측이다. 모델 재추론은 하지 않았다. 주 영역은 agentview future L1–L5의 robot mask이며 각 L별 결과도 저장했다.</p>
+<pre><code class="language-text">D_raw = RMS_selected(v_b − v_ref)
+M_ref = RMS_selected(v_ref); M_b = RMS_selected(v_b)
+D_norm = D_raw / (0.5 × (M_ref + M_b) + 1e-8)
+CosSim = dot(vec(v_ref|robot), vec(v_b|robot)) / (||v_ref|robot|| × ||v_b|robot||)
+</code></pre>
+<p>RMS의 분모는 선택된 robot 위치 × 채널 수다. Mask 밖의 0은 분모에 포함하지 않는다. Cosine은 같은 선택 영역을 flatten하여 계산했다. Float64로 통계량을 계산했다. BG0 자체 비교는 D_raw=D_norm=0, CosSim=1이다.</p>
+<p>ε는 1e-08, 관측된 최소 평균 flow 크기는 0.593299로 ε의 상대 영향은 최대 1.69e-08다. Zero-norm case는 없었다.</p>
+<h2>초기 &gt; 후반 패턴</h2>
+<p>초기는 progress≤1/3의 저장 step 0·4·8, 후반은 progress≥2/3의 step 27·31·35로 정의했다. 평균은 BG1–BG15, seeds 0–2와 각 구간의 3개 시점에 동일 가중치를 준다. 각 case를 먼저 정규화하고 평균했다. Mean(flow)를 먼저 구한 뒤 정규화하지 않았다. Raw/normalized 숫자는 서로 단위가 다르므로 각각의 초기/후반 비율로 비교한다.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th style="text-align: right;">Raw 초기 / 후반</th>
+<th style="text-align: right;">Normalized 초기 / 후반</th>
+<th style="text-align: right;">정규화 초기÷후반</th>
+<th>유지?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original</td>
+<td style="text-align: right;">0.23760 / 0.09061</td>
+<td style="text-align: right;">0.20874 / 0.10480</td>
+<td style="text-align: right;">1.992</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>T01</td>
+<td style="text-align: right;">0.07424 / 0.10129</td>
+<td style="text-align: right;">0.06465 / 0.11385</td>
+<td style="text-align: right;">0.568</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>T02</td>
+<td style="text-align: right;">0.09114 / 0.08969</td>
+<td style="text-align: right;">0.07998 / 0.10277</td>
+<td style="text-align: right;">0.778</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>T03</td>
+<td style="text-align: right;">0.08990 / 0.09777</td>
+<td style="text-align: right;">0.07921 / 0.11148</td>
+<td style="text-align: right;">0.711</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>T04</td>
+<td style="text-align: right;">0.04645 / 0.05007</td>
+<td style="text-align: right;">0.03989 / 0.05652</td>
+<td style="text-align: right;">0.706</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>T05</td>
+<td style="text-align: right;">0.09755 / 0.05872</td>
+<td style="text-align: right;">0.08470 / 0.06703</td>
+<td style="text-align: right;">1.264</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>ALL_TASKS</td>
+<td style="text-align: right;">0.10615 / 0.08136</td>
+<td style="text-align: right;">0.09286 / 0.09274</td>
+<td style="text-align: right;">1.001</td>
+<td>거의 동일</td>
+</tr>
+</tbody>
+</table>
+<p><strong>관측 → 의미:</strong> Original은 정규화 후에도 초기 차이가 약 1.99배, T05는 약 1.26배다. 이 두 task에서는 큰 절대 flow 크기만으로 초기 민감도를 설명할 수 없다. 반면 전체 평균은 0.09286 vs 0.09274로 사실상 평평하다. 전체에 대해 초기 민감도가 더 크다는 일반화는 지지하지 않는다. ALL_TASKS의 1.001배 차이는 의미 있는 우세라는 판정이 아니다.</p>
+<p>Task·seed·배경별 270개 곡선 중 raw 초기&gt;후반은 121개, 정규화 후에는 73개다. Raw 패턴을 유지한 것은 73개다. 이는 독립 표본 유의성 검정이 아닌 관측 조건의 기술 통계다.</p>
+<h2>크기 변화인가, 방향 변화인가</h2>
+<p>CosSim이 1에 가깝다는 사실만으로 차이가 주로 크기 변화라고 판단할 수는 없다. 두 flow의 전체 크기가 거의 같으면 작은 각도 차이도 오차의 대부분을 설명할 수 있다. 다음 항등식으로 두 성분을 추가 확인했다.</p>
+<pre><code class="language-text">D_raw² = (M_ref − M_b)² + 2 M_ref M_b (1 − CosSim)
+           크기 차이 항          방향 차이 항
+</code></pre>
+<p>비원본 배경 전체 primary 측정에서 squared difference의 <strong>99.81%</strong>가 방향 차이 항이다(항의 합으로 가중). 여기서 방향은 공간·시간·채널을 flatten한 latent flow 벡터의 방향이며, 물리적 로봇의 이동 방향을 뜻하지 않는다.</p>
+<table>
+<thead>
+<tr>
+<th>Original · seed 0 · BG8</th>
+<th style="text-align: right;">D_raw</th>
+<th style="text-align: right;">M_ref</th>
+<th style="text-align: right;">M_b</th>
+<th style="text-align: right;">D_norm</th>
+<th style="text-align: right;">CosSim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>step 0</td>
+<td style="text-align: right;">0.48971</td>
+<td style="text-align: right;">1.12882</td>
+<td style="text-align: right;">1.13302</td>
+<td style="text-align: right;">0.43302</td>
+<td style="text-align: right;">0.90625</td>
+</tr>
+<tr>
+<td>step 16</td>
+<td style="text-align: right;">0.54027</td>
+<td style="text-align: right;">1.12958</td>
+<td style="text-align: right;">1.12868</td>
+<td style="text-align: right;">0.47848</td>
+<td style="text-align: right;">0.88553</td>
+</tr>
+<tr>
+<td>step 35</td>
+<td style="text-align: right;">0.09543</td>
+<td style="text-align: right;">0.65612</td>
+<td style="text-align: right;">0.65131</td>
+<td style="text-align: right;">0.14598</td>
+<td style="text-align: right;">0.98937</td>
+</tr>
+</tbody>
+</table>
+<p>이 예시에서 초기 두 flow의 크기는 거의 같지만 CosSim은 약 0.906이다. 마지막에는 약 0.989로 가까워진다. 따라서 초기 BG8 효과는 단순 크기 배율 변화 이상의 방향 차이를 포함한다.</p>
+<h2>가장 강한 배경</h2>
+<p>아래 순위는 각 task·seed·10개 τ에 동일 가중치를 준 D_norm 평균이다. τ 간격에 대한 적분 순위가 아니다.</p>
+<table>
+<thead>
+<tr>
+<th>집계</th>
+<th style="text-align: right;">순위</th>
+<th>기존 background</th>
+<th style="text-align: right;">평균 D_norm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALL_TASKS</td>
+<td style="text-align: right;">1</td>
+<td>BG8 · HIGH_CONTRAST_CHECKER</td>
+<td style="text-align: right;">0.14877</td>
+</tr>
+<tr>
+<td>ALL_TASKS</td>
+<td style="text-align: right;">2</td>
+<td>BG10 · WARM_MATCHED_CHECKER</td>
+<td style="text-align: right;">0.14142</td>
+</tr>
+<tr>
+<td>ALL_TASKS</td>
+<td style="text-align: right;">3</td>
+<td>BG6 · BURNT_ORANGE</td>
+<td style="text-align: right;">0.12698</td>
+</tr>
+<tr>
+<td>Original</td>
+<td style="text-align: right;">1</td>
+<td>BG10 · WARM_MATCHED_CHECKER</td>
+<td style="text-align: right;">0.30647</td>
+</tr>
+<tr>
+<td>Original</td>
+<td style="text-align: right;">2</td>
+<td>BG8 · HIGH_CONTRAST_CHECKER</td>
+<td style="text-align: right;">0.30042</td>
+</tr>
+<tr>
+<td>Original</td>
+<td style="text-align: right;">3</td>
+<td>BG6 · BURNT_ORANGE</td>
+<td style="text-align: right;">0.26067</td>
+</tr>
+</tbody>
+</table>
+<h2>해석의 범위와 출력</h2>
+<p>정규화는 전체 flow scale 차이를 조정한다. Robot mask의 위치·tokenizer 혼합이나 task별 차이까지 제거하지는 않는다. 모든 비교는 공통 BG0 latent 경로 위의 조건 민감도이며 독립 rollout 간 최종 차이는 아니다. Early/high-noise와 Late/low-noise로만 부르며 motion planning 단계라고 확정하지 않는다.</p>
+<ul>
+<li><a href="../results/normalized_flow_metrics.csv">전체 수치 CSV</a>: 17,280개 row, all/L1–L5, raw·크기·정규화·cosine·방향 성분·pairing hash.</li>
+<li><a href="../results/normalized_background_means.csv">배경 평균 CSV</a>: BG0–BG15 / BG1–BG15 모두 제공. 사이트 기본 점선은 요청한 전체 16배경 평균이다.</li>
+<li><a href="../results/normalized_stage_comparison.csv">초기/후반 CSV</a>, <a href="../results/normalized_background_ranking.csv">배경 순위 CSV</a>.</li>
+<li><a href="../results/normalized_flow_validation.json">계산 검증</a>, figure PNG/PDF <code>figures/12_normalized_flow_*</code> (task별 및 전체, seeds 평균).</li>
+<li>코드: <code>scripts/normalized_flow.py</code>, <code>scripts/write_normalized_report.py</code>; 사이트 3A raw와 3B before/after 비교.</li>
+</ul></body></html>

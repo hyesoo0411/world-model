@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "rows": 17280,
+  "paired_metadata_and_masks_equal": true,
+  "max_raw_difference_from_existing": 9.730038996735857e-11,
+  "epsilon": 1e-08,
+  "minimum_mean_magnitude": 0.5932985682926173,
+  "max_epsilon_relative_to_mean_magnitude": 1.6854920160649975e-08,
+  "zero_norm_cases": 0,
+  "BG0_zero_difference": true,
+  "BG0_cosine_one": true,
+  "normalized_difference_range": [
+    0.0,
+    0.6250618758955927
+  ],
+  "magnitude_direction_identity_checked": true,
+  "unit_tests_passed": 4
+}

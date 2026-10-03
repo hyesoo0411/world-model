@@ -1,0 +1,45 @@
+{
+  "answers": [
+    {
+      "question": "Q1. \ubc30\uacbd\ub9cc \ubc14\uafb8\uba74 robot-related flow\uac00 \ub2ec\ub77c\uc9c0\ub294\uac00?",
+      "answer": "YES",
+      "evidence": "\ubcc0\uacbd \ubc30\uacbd\uc758 2700/2700\uac1c \uce21\uc815\uc5d0\uc11c RMS > 1e-6. BG0 \uc7ac\uc608\uce21 RMS\ub3c4 \ubaa8\ub450 0\uc73c\ub85c \ud655\uc778\ud588\ub2e4."
+    },
+    {
+      "question": "Q2. \ucc28\uc774\uac00 \uac00\uc7a5 \ud070 denoising \ub2e8\uacc4\uac00 \ud655\uc778\ub418\ub294\uac00?",
+      "answer": "YES",
+      "evidence": "\uac01 task/seed/background\uc758 \ucd5c\ub300\uc810 \ubd84\ud3ec: {'Early/high-noise': 52, 'Middle': 49, 'Late/low-noise': 169}. \ub2e8\uc77c \ub2e8\uacc4\uc5d0 \ubcf4\ud3b8\uc801\uc73c\ub85c \uc9d1\uc911\ub41c\ub2e4\ub294 \ub73b\uc740 \uc544\ub2c8\ub2e4."
+    },
+    {
+      "question": "Q3. Flow\uc5d0\uc11c conditioning action \uc815\ubcf4\ub97c \ud68c\ubcf5\ud560 \uc218 \uc788\ub294\uac00?",
+      "answer": "YES",
+      "evidence": "\uace0\uc815 temporal mask\uc758 held-out linear flow probe\uc5d0\uc11c 59/60\uac1c task/tau\uc758 R\u00b2\uac00 \uc591\uc218. \ud604\uc7ac split\uc5d0\uc11c\uc758 \ud68c\ubcf5 \uac00\ub2a5\uc131\uc774\ub2e4."
+    },
+    {
+      "question": "Q4. \ubc30\uacbd\uc774 \ubc14\ub00c\uba74 original-only probe\uc758 R\u00b2\uac00 \ub0ae\uc544\uc9c0\ub294\uac00?",
+      "answer": "YES",
+      "evidence": "1679/1800\uac1c background/timestep/probe \ud3c9\uac00\uc5d0\uc11c \u0394R\u00b2 > 0. \uc774\ub294 \uace0\uc815 probe\uc758 \uc804\uc774 \uc800\ud558\uc774\uba70 \uc815\ubcf4\uc758 \uc18c\uba78 \uc99d\uac70\ub294 \uc544\ub2c8\ub2e4."
+    },
+    {
+      "question": "Q5. \ubc30\uacbd flow drift\uac00 \uc791\uc740 action \ubcc0\ud654\uc640 \ube44\uc2b7\ud558\uac70\ub098 \ub354 \ud070\uac00?",
+      "answer": "YES",
+      "evidence": "\uc8fc control(x, timestep 0, \u03b5=.05)\uc5d0\uc11c \uc548\uc815\ud55c ratio 2700/2700\uac1c\uac00 \u22651. \uc120\ud0dd\ud55c perturbation \ud06c\uae30\uc5d0 \ud55c\uc815\ud55c\ub2e4."
+    },
+    {
+      "question": "Q6. \ub0b4\ubd80 \ucc28\uc774\uc640 \ucd5c\uc885 \uc601\uc0c1\uc758 robot motion \ucc28\uc774\uac00 \ud568\uaed8 \ub098\ud0c0\ub098\ub294\uac00?",
+      "answer": "YES",
+      "evidence": "Original task, seed 0\uc758 BG0/BG8 paired 40-action \uc601\uc0c1\uc5d0\uc11c frame 20/30/40\uc758 robot wrist/gripper \uc704\uce58\u00b7\ubc29\ud5a5\uc774 \ub208\uc5d0 \ub744\uac8c \ub2e4\ub974\ub2e4. BG0\uc758 \uc791\uc740 x-action \ubcc0\ud654(C)\ub294 \uc774 contact sheet\uc5d0\uc11c A\uc640 \ub9e4\uc6b0 \uc720\uc0ac\ud558\ub2e4. \ub3d9\uc77c raw action(A/B)\uacfc chunk\ubcc4 \uc800\uc7a5 noise hash\ub97c \ud655\uc778\ud588\ub2e4. \ud55c task\u00b7\ubc30\uacbd\u00b7seed\uc758 \uc815\uc131\uc801 \ub3d9\ubc18 \uad00\uce21\uc774\uba70, 3D pose \uc815\ub7c9 \ud3c9\uac00\ub098 \uc5b4\ub290 denoising \ub2e8\uacc4\uac00 motion \ucc28\uc774\ub97c \uc720\ubc1c\ud588\ub294\uc9c0\uc758 \uc99d\uac70\ub294 \uc544\ub2c8\ub2e4."
+    },
+    {
+      "question": "Q7. \uae30\uc874 \ubc30\uacbd \uc720\ud615 \uc804\ubc18\uc5d0\uc11c \uad00\uce21\ub418\ub294\uac00?",
+      "answer": "YES",
+      "evidence": "\ubaa8\ub4e0 \uae30\uc874 15\uac1c \ubcc0\uacbd \ubc30\uacbd, 6\uac1c task\uc5d0\uc11c \uad00\uce21\ub428. \uc0c8\ub85c\uc6b4 task/state/background\ub85c\uc758 \uc77c\ubc18\ud654\ub294 \uac80\uc99d\ud558\uc9c0 \uc54a\uc558\ub2e4."
+    }
+  ],
+  "peak_stage_counts": {
+    "Early/high-noise": 52,
+    "Middle": 49,
+    "Late/low-noise": 169
+  },
+  "canonical_complete": true
+}

@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "canonical_records": 2880,
+  "primary_probe_evaluations": 1920,
+  "bank_cases": 2040,
+  "validation": "experiments/[EX8]_flow_velocity_analysis/results/validation.json"
+}

@@ -1,0 +1,17 @@
+{
+  "answer": "YES",
+  "evidence": "Original task, seed 0의 BG0/BG8 paired 40-action 영상에서 frame 20/30/40의 robot wrist/gripper 위치·방향이 눈에 띄게 다르다. BG0의 작은 x-action 변화(C)는 이 contact sheet에서 A와 매우 유사하다. 동일 raw action(A/B)과 chunk별 저장 noise hash를 확인했다. 한 task·배경·seed의 정성적 동반 관측이며, 3D pose 정량 평가나 어느 denoising 단계가 motion 차이를 유발했는지의 증거는 아니다.",
+  "reviewed_file": "results/Original/seed0/decoded/comparison.png",
+  "reviewed_frames": [
+    0,
+    10,
+    20,
+    30,
+    40
+  ],
+  "same_action_A_B": true,
+  "same_saved_noise_A_B_C": true,
+  "decoded_result_secondary": true,
+  "causal_stage_attribution": "not established",
+  "limitation": "Autoregressive chunk 2 uses background-dependent generated history; learned-decoder appearance and geometric artifacts may contribute."
+}

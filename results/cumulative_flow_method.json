@@ -1,0 +1,14 @@
+{
+  "quadrature": "trapezoidal, 10 stored points, actual tau intervals",
+  "tau_convention": "tau=sigma/(1+sigma), high to low noise",
+  "magnitude_accumulation": "sum_i (tau[i-1]-tau[i])*(D[i-1]+D[i])/2",
+  "vector_accumulation": "RMS_region(sum_i (tau[i]-tau[i-1])*(delta_v[i-1]+delta_v[i])/2)",
+  "scope": "paired predictions on the common BG0 path; not independent-rollout endpoint drift or exact AB2 updates",
+  "regions": {
+    "robot": "agentview future L1\u2013L5 robot cells",
+    "agent_future": "agentview future L1\u2013L5 all spatial cells",
+    "full": "all 12 view/time slots including conditioning slots and wrist; raw DiT output, secondary"
+  },
+  "missing_intermediate_steps": "26 of the 36 prediction points are not stored; quadrature resolution is not convergence-validated",
+  "start_end": "begins at measured tau\u22480.995 and ends at measured tau\u22480.0099; no extrapolation to 1 or 0"
+}

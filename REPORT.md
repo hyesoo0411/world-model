@@ -1,0 +1,164 @@
+# Background Perturbation Sensitivity in A2World via Flow Velocity
+
+같은 물리 상태와 action을 유지해도 배경이 A2World의 로봇 관련 flow를 바꾸는지 확인했다. 사용자가 선택한 **settled_v2의 6 tasks × 16개 배경**을 그대로 재사용했다. 원본 BG0의 denoising 경로에서 저장한 동일 noisy latent를 각 배경과 작은 action 변화에 다시 입력했다. 주 결과는 x0가 아닌 **DiT의 직접 flow-velocity 출력**이다.
+
+현재 검증 범위: canonical flow 2880/2880 records; probe evaluations 1920/1920. 전체 완료 여부는 [검증 JSON](results/validation.json)을 따른다.
+
+**현재 답:** 배경만으로 로봇 영역 flow가 달라진다는 가설을 지지한다. Action 정보는 고정 mask flow에서도 회복 가능하며, 배경이 바뀌면 같은 probe의 성능이 달라진다.
+
+| 질문 | 답 | 관측 근거와 해석 범위 |
+|---|---|---|
+| Q1. 배경만 바꾸면 robot-related flow가 달라지는가? | **YES** | 변경 배경의 2700/2700개 측정에서 RMS > 1e-6. BG0 재예측 RMS도 모두 0으로 확인했다. |
+| Q2. 차이가 가장 큰 denoising 단계가 확인되는가? | **YES** | 각 task/seed/background의 최대점 분포: {'Early/high-noise': 52, 'Middle': 49, 'Late/low-noise': 169}. 단일 단계에 보편적으로 집중된다는 뜻은 아니다. |
+| Q3. Flow에서 conditioning action 정보를 회복할 수 있는가? | **YES** | 고정 temporal mask의 held-out linear flow probe에서 59/60개 task/tau의 R²가 양수. 현재 split에서의 회복 가능성이다. |
+| Q4. 배경이 바뀌면 original-only probe의 R²가 낮아지는가? | **YES** | 1679/1800개 background/timestep/probe 평가에서 ΔR² > 0. 이는 고정 probe의 전이 저하이며 정보의 소멸 증거는 아니다. |
+| Q5. 배경 flow drift가 작은 action 변화와 비슷하거나 더 큰가? | **YES** | 주 control(x, timestep 0, ε=.05)에서 안정한 ratio 2700/2700개가 ≥1. 선택한 perturbation 크기에 한정한다. |
+| Q6. 내부 차이와 최종 영상의 robot motion 차이가 함께 나타나는가? | **YES** | Original task, seed 0의 BG0/BG8 paired 40-action 영상에서 frame 20/30/40의 robot wrist/gripper 위치·방향이 눈에 띄게 다르다. BG0의 작은 x-action 변화(C)는 이 contact sheet에서 A와 매우 유사하다. 동일 raw action(A/B)과 chunk별 저장 noise hash를 확인했다. 한 task·배경·seed의 정성적 동반 관측이며, 3D pose 정량 평가나 어느 denoising 단계가 motion 차이를 유발했는지의 증거는 아니다. |
+| Q7. 기존 배경 유형 전반에서 관측되는가? | **YES** | 모든 기존 15개 변경 배경, 6개 task에서 관측됨. 새로운 task/state/background로의 일반화는 검증하지 않았다. |
+
+## 바꾼 것과 비교한 것
+
+- 배경 비교: task별 canonical simulator state, raw actions, checkpoint, camera, task instruction, scheduler, timestep, 저장한 sampler tensor를 고정했다. `wall_rear_visual`의 기존 RGB texture/LUT만 다르다. BG0–BG15의 이름과 parameters는 그대로다.
+- 직접 flow 비교는 **첫 20-action model chunk**다. 원래 action 파일 40개와 2-chunk autoregression은 보조 영상에 유지한다. 두 번째 chunk의 생성된 robot/history는 이미 달라질 수 있어 직접 background-only 비교에 섞지 않는다.
+- Mask는 simulator robot/gripper geom segmentation을 사용했다. Native 256² RGB에서 tokenizer의 4-frame causal grouping과 8× spatial grid에 맞춘 coverage ≥0.5를 사용한다. Conditioning 슬롯은 제외한다. Primary camera는 agentview이며 wrist/full/background 값은 보조로 저장했다.
+- Probe: task별 50 demos의 시작/마지막 20-action window, 총 100 windows. Demo 단위 35/7/8 split(70/14/16 windows). BG0로만 linear/2-layer MLP를 학습하고 같은 test windows의 16개 배경에서 평가했다. Scaler/std와 fitting은 train, hyperparameter/early stopping은 validation만 사용한다.
+- Canonical flow는 seeds 0/1/2, action probe는 seed 0이다. Probe windows는 원래 demo state가 아니라 동일한 기존 settled canonical state에서 재생한 counterfactual action bank다.
+
+## 로봇 flow 차이와 denoising 단계
+
+`D_bg_robot`은 선택한 robot spatial locations × temporal positions × channels에서의 RMS다. Mask 밖 0까지 평균해 값을 작게 만들지 않는다. 이 velocity는 latent 공간의 flow이며 로봇 end-effector의 물리적 속도가 아니다. 아래 평균은 변경 배경 15개와 seeds 3개를 합친 기술 통계다.
+
+| Task | Early step 0 평균 | Middle step 16 평균 | Late step 35 평균 | 평균 curve 최대 progress / tau |
+|---|---:|---:|---:|---|
+| Original | 0.2352 | 0.2271 | 0.08022 | 0.343 / 0.9606 |
+| T01 | 0.07375 | 0.08 | 0.09539 | 0.886 / 0.0778 |
+| T02 | 0.09065 | 0.0889 | 0.08228 | 0.886 / 0.0778 |
+| T03 | 0.08938 | 0.09615 | 0.08784 | 0.886 / 0.0778 |
+| T04 | 0.04632 | 0.04587 | 0.05221 | 0.886 / 0.0778 |
+| T05 | 0.1003 | 0.05209 | 0.06295 | 0.000 / 0.9950 |
+
+**관측 → 의미:** 초반/high-noise에서도 차이가 있으면 배경 민감도가 최종 렌더링 단계에만 나타나는 것은 아니다. 다만 early를 motion planning, late를 appearance refinement로 확정할 수 없다. 여기서는 각각 *candidate coarse dynamics formation*, *candidate appearance refinement*라는 가설로만 둔다.
+**다른 설명/미확인:** Simulator robot mask는 learned tokenizer의 넓은 receptive field와 attention mixing을 제거하지 못한다. Generated robot가 GT mask에서 벗어나는 경우도 있다. 따라서 “로봇 관련 공간의 flow 민감도”이며 완전히 분리된 물리 dynamics state의 오차는 아니다. Coverage .25/.5/.75와 one-token dilation 결과는 raw JSON에 저장했다. 공식 future-slot 변환은 같은 xt에서 Δx0 = −τ·Δv이므로, flow peak가 clean 추정 또는 영상 변화의 최대 시점과 같다고 볼 수 없다. BG0/BG8의 공식 clean 출력에서도 이 관계를 [보조 진단](results/clean_latent_diagnostic.json)으로 확인했다.
+
+| Task | coverage .25 / .50 평균 비율 | coverage .75 / .50 평균 비율 | 1-token dilation / primary 평균 비율 |
+|---|---:|---:|---:|
+| Original | 1.063 | 0.9348 | 1.585 |
+| T01 | 1.265 | 0.9119 | 2.457 |
+| T02 | 1.2 | 0.8521 | 2.186 |
+| T03 | 1.135 | 0.8987 | 2.291 |
+| T04 | 1.266 | 0.8358 | 2.597 |
+| T05 | 1.112 | 0.8279 | 2.189 |
+
+Coverage 기준을 바꾼 값은 robot-associated 영역 정의에 대한 민감도다. Dilation 후 증가한 차이는 경계/배경 정보가 추가된 영향일 수 있으므로, 더 강한 robot dynamics 변화의 근거로 사용하지 않는다.
+
+## Flow Action Recoverability
+
+R²=1은 완전한 예측, 0은 test-set 평균 예측 수준, 음수는 그보다 나쁜 예측이다. 분산이 0인 action coordinate는 정의 불가로 제외하고 개수를 저장했다. 시간축을 유지한 `[T_latent,C]` masked-spatial-mean을 flatten했다. 아래는 미리 정한 early/middle/late 시점의 macro R²다.
+
+| Task | Probe | BG0 R² step 0 / 16 / 35 | BG0 최대 progress / R² | step 16의 배경 median ΔR² |
+|---|---|---|---|---:|
+| Original | linear | 0.5471 / 0.5914 / 0.5665 | 0.771 / 0.6203 | 0.6091 |
+| Original | mlp | 0.5064 / 0.5727 / 0.6355 | 1.000 / 0.6355 | 0.7356 |
+| T01 | linear | 0.2883 / 0.2074 / 0.2668 | 0.657 / 0.351 | 0.03886 |
+| T01 | mlp | 0.1091 / 0.06732 / 0.1826 | 0.543 / 0.3524 | -0.0677 |
+| T02 | linear | 0.437 / 0.3666 / 0.2347 | 0.657 / 0.4718 | 0.1845 |
+| T02 | mlp | 0.4527 / 0.3675 / 0.2936 | 0.000 / 0.4527 | 0.1567 |
+| T03 | linear | 0.5695 / 0.6142 / 0.6698 | 1.000 / 0.6698 | 0.1875 |
+| T03 | mlp | 0.5643 / 0.5879 / 0.639 | 0.886 / 0.6593 | 0.129 |
+| T04 | linear | 0.3934 / 0.3552 / 0.1572 | 0.114 / 0.3948 | 0.01963 |
+| T04 | mlp | 0.2616 / 0.3968 / 0.09141 | 0.457 / 0.3968 | 0.0276 |
+| T05 | linear | 0.05495 / 0.1097 / 0.2491 | 0.657 / 0.3702 | 0.04101 |
+| T05 | mlp | 0.05288 / 0.24 / 0.2268 | 0.543 / 0.3748 | 0.06015 |
+
+| Task | step 16 primary linear | fixed-mask flow linear | mask-only linear | shuffled-label linear |
+|---|---:|---:|---:|---:|
+| Original | 0.5914 | 0.6587 | -2.663 | -0.4218 |
+| T01 | 0.2074 | -0.2117 | -2.52 | -0.6472 |
+| T02 | 0.3666 | 0.4209 | -0.2252 | -0.6879 |
+| T03 | 0.6142 | 0.5663 | 0.1618 | -0.63 |
+| T04 | 0.3552 | 0.4003 | 0.0928 | -0.5225 |
+| T05 | 0.1097 | 0.2212 | 0.1466 | -0.7558 |
+
+**관측 → 의미:** Background ΔR²가 양수이거나 paired predicted-action drift가 커지면 BG0에서 학습한 action readout이 배경 변화에 민감하다는 뜻이다. 매우 음의 R²는 배경에 의한 feature offset과 probe extrapolation 때문일 수도 있다. **Flow 차이 또는 R² 감소만으로 action 정보가 소실됐다고 주장하지 않는다.**
+Mask 비교도 중요하다. 예를 들어 T05의 step 16에서는 mask-only 점수가 primary linear 점수보다 높다. Primary representation의 성능을 모두 flow 신호의 기여로 돌릴 수 없다. Action별로 mask가 바뀌지 않는 fixed-mask flow 대조군의 양의 R²가 직접 flow 신호의 회복 가능성을 따로 뒷받침한다.
+**다른 설명/미확인:** Action에 따라 달라지는 GT mask 자체가 정보를 줄 수 있어 mask-only와 fixed-mask flow를 함께 비교한다. 각 task의 test는 8개 demonstrations뿐이고 probe noise seed도 하나다. 새 state/noise seed와 더 많은 독립 demo에서의 재검증이 필요하다.
+
+Test demonstration 단위 paired bootstrap(500회, 두 window를 함께 재표집)의 95% percentile 구간도 [별도 JSON](results/probe_bootstrap.json)에 저장했다. 아래는 미리 정한 step 16, linear probe다. 학습된 probe를 고정한 조건부 구간이며 training split 변동이나 다중 비교를 보정하지 않는다. R²의 분모가 작은 재표집에서는 구간이 넓어질 수 있다.
+
+| Task | BG0 R² 95% 구간 | BG8 ΔR² 95% 구간 |
+|---|---|---|
+| Original | [-0.2217, 0.6474] | [1.888, 8.767] |
+| T01 | [-2.044, 0.3919] | [0.1418, 5.437] |
+| T02 | [-32.7, 0.3587] | [-12.82, 1.391] |
+| T03 | [0.2475, 0.6985] | [0.1991, 1.317] |
+| T04 | [-2.499, 0.387] | [0.003481, 1.121] |
+| T05 | [-9.173, 0.2399] | [-0.5233, 2.617] |
+
+## 배경 대 작은 action 변화
+
+주 control은 timestep 0의 x-translation만 `0.05 × training-demo std`만큼 바꾼다. Valid action bounds를 유지한다. x/y/z/rotation-x 및 ε=.02/.05/.10 sweep도 저장했다. Discrete gripper는 제외했다. 아래는 주 control이며 **분자와 분모를 따로 표시한다**.
+
+| Task | D_bg_robot min–max | D_action_robot min–max | Ratio median [min,max] | Undefined |
+|---|---|---|---|---:|
+| Original | 0.02981–0.5758 | 0.00557–0.01367 | 13.61 [3.546,103.4] | 0 |
+| T01 | 0.02445–0.1748 | 0.00571–0.01798 | 9.853 [3.315,28.54] | 0 |
+| T02 | 0.02413–0.2487 | 0.006201–0.01617 | 8.242 [2.302,31.8] | 0 |
+| T03 | 0.02691–0.2658 | 0.005828–0.01438 | 9.931 [3.6,38.25] | 0 |
+| T04 | 0.01373–0.09978 | 0.005605–0.01551 | 5.126 [2.157,16.69] | 0 |
+| T05 | 0.0138–0.2871 | 0.005893–0.01547 | 6.055 [1.592,35.93] | 0 |
+
+Action-coordinate/크기 대조군의 전체 task·seed·배경·tau 기술 통계다. Ratio median은 각 paired 비율의 중앙값이므로, 두 RMS 중앙값을 나눈 값과 다를 수 있다.
+
+| Action 좌표 | ε | D_bg median | D_action median | Ratio median | Ratio ≥1 / 정의된 수 | Undefined |
+|---|---:|---:|---:|---:|---|---:|
+| x | 0.02 | 0.0728 | 0.005637 | 9.79 | 2700/2700 | 0 |
+| x | 0.05 | 0.0728 | 0.007278 | 8.479 | 2700/2700 | 0 |
+| x | 0.10 | 0.0728 | 0.01053 | 6.37 | 2700/2700 | 0 |
+| y | 0.02 | 0.0728 | 0.005565 | 9.779 | 2700/2700 | 0 |
+| y | 0.05 | 0.0728 | 0.006882 | 8.579 | 2700/2700 | 0 |
+| y | 0.10 | 0.0728 | 0.009362 | 7.018 | 2677/2700 | 0 |
+| z | 0.02 | 0.0728 | 0.007202 | 8.385 | 2700/2700 | 0 |
+| z | 0.05 | 0.0728 | 0.0115 | 6.217 | 2656/2700 | 0 |
+| z | 0.10 | 0.0728 | 0.01844 | 4.197 | 2588/2700 | 0 |
+| rotation-x | 0.02 | 0.0728 | 0.005131 | 11.22 | 2700/2700 | 0 |
+| rotation-x | 0.05 | 0.0728 | 0.005404 | 10.17 | 2700/2700 | 0 |
+| rotation-x | 0.10 | 0.0728 | 0.005699 | 9.168 | 2700/2700 | 0 |
+
+**관측 → 의미:** Ratio ≥1이면 선택한 작은 action 변화보다 배경이 로봇 공간 flow를 더 크게 바꾼다. 이는 입력 perturbation의 의미·규모를 동일하게 맞춘 비교가 아니며 일반적인 “배경이 action보다 중요하다”는 명제는 아니다. 분모 ≤1e-6은 undefined로 표시했다. BF16 입력 hash를 남겨 작은 perturbation이 양자화로 사라지는 경우를 검사할 수 있게 했다.
+
+## 영상·검증·재현
+
+새 mask용 replay는 6 tasks × 두 카메라 × 41 frames에서 기존 settled GT와 RGB가 bitwise 동일했다. 기존 fixed-model/physics 검증 항목을 생략하지 않았다. 실제 noisy tensor는 PT로 저장하고 매 paired prediction에서 재사용·동일성 검사를 수행했다. Upstream source는 clean git commit `077e10ad6cee07342b5e779f11fea78247584834`이며 checkpoint/tokenizer는 원래 HF 기본 캐시와 revision을 유지했다.
+성공 flow pilot의 CPU RAM 최대 19.90 GiB, 요청 28 GiB(약 41% 여유). GPU reserved peak 9.03 GiB는 별도 수치다. Slurm accounting 비활성화로 process HWM과 cgroup polling을 기록했으며 page cache/짧은 peak/allocator 밖 GPU 메모리 측정 한계가 있다. 모든 제출은 사용자 active job 최대 4개를 지킨다.
+
+- [최소 시각화 사이트](visualization/index.html): 첫 Input 섹션에 RGB→latent robot-mask overlay. Tau 동기화 heatmaps/flow/R²/ratio.
+- [기존 실험 요약](docs/existing_experiment_summary.md) · [실제 flow parameterization/loss](docs/a2world_flow_interface.md) · [통제와 범위](docs/protocol_decisions.md).
+- [CSV](results/metrics.csv) · [전체 JSON](results/metrics.json) · [action-coordinate/epsilon sweep](results/action_control_sweep.json).
+- [원본 hash](docs/source_hashes.json) · [재생 RGB 검증](docs/replay_rgb_validation.json) · [paired 결과 검증](results/validation.json).
+- Publication PNG/PDF: `figures/01_*`–`08_*`; 원시 flow/robot mask/representation/prediction은 `results/<task>/seed*/`. 제출/메모리 기록은 `logs/`.
+
+## 미래 latent 시점별 추가 분석
+
+배경 민감도가 특정 미래 구간에 집중되는지 확인하기 위해, 저장된 raw flow를 agentview future L1–L5로 나누어 각 시점의 robot mask × 16채널만으로 RMS를 다시 계산했다. 20 RGB frames의 4배 시간 압축으로 future latent는 5개다. Denoising τ와 미래 영상 시점 L은 다른 축이다.
+
+같은 task·seed·배경·τ 안에서 시점별 최대/최소 RMS 비율의 중앙값은 **1.93배**였다. 비원본 배경 13,500개 시점별 비교 중 13,500개에서 RMS > 10⁻⁶이었다. 전체 RMS와 시점별 RMS의 토큰 수 가중 제곱평균 관계도 확인했다.
+
+이는 전체 RMS에 가려진 미래 구간별 차이를 보여준다. 가장 민감한 미래 시점은 task와 조건마다 다르며, 미래로 갈수록 차이가 항상 커진다는 근거는 아니다. RGB 구간은 mask 정렬 기준이고 tokenizer/attention의 시간 혼합 때문에 각 latent를 독립적인 4프레임의 물리 속도로 해석할 수 없다.
+
+[계산·해석](docs/temporal_rms.md) · [시점별 CSV](results/temporal_metrics.csv) · [검증](results/temporal_validation.json) · `figures/09_temporal_rms_*.png/pdf`. 작은 action 대조군은 첫 step x, ε=0.05이며 probe는 기존 시간 순서 보존 입력을 유지한다.
+
+## 전체 flow와 누적 진단
+
+Robot 영역 외에도 agentview 미래 전체 공간과 두 카메라의 12슬롯 전체 raw flow를 비교했다. Original·BG8·seed 0에서 step 16→35의 robot RMS는 0.540→0.095, full raw RMS는 0.415→0.197이었다. 이 예시의 감소는 robot 영역에만 나타나지 않지만 원인은 확정하지 않는다.
+
+저장된 10개 시점과 실제 τ 간격으로 누적 RMS 크기와 벡터 적분 후 RMS를 각각 계산했다. 같은 예시의 robot 최종값은 0.203785 / 0.133706이다. 이는 공통 BG0 경로에서의 근사 적분이며, 독립 rollout의 최종 차이나 정확한 AB2 업데이트 누적이 아니다.
+
+[정의·결과·한계](docs/cumulative_flow.md) · [누적 CSV](results/cumulative_flow_metrics.csv) · [계산 검증](results/cumulative_flow_validation.json). 사이트 3번은 robot/full 순간 차이, 4번은 순간 곡선, 5번은 누적 진단, probe/ratio/video는 6/7/8번이다.
+
+## 정규화 flow 비교
+
+초기 차이가 단순히 flow 크기가 커서 나타나는지 확인하려고 기존 paired flow를 각 쌍의 평균 RMS 크기로 나누고 cosine similarity도 계산했다. 모델 재추론 없이 robot L1–L5와 각 시점을 분석했다.
+
+정규화한 초기/후반 비율은 Original 1.99배, T05 1.26배로 유지되었다. 6-task 평균은 1.001배로 사실상 평평하다. 초기 우세는 task에 따라 다르며 보편적 패턴으로 지지되지 않는다. 차이는 주로 latent 벡터 방향 성분이며 단순 전체 배율 변화가 아니다. 전체 평균 정규화 효과가 큰 배경은 BG8, BG10, BG6 순이다.
+
+이는 공통 BG0 latent 경로에서의 기술 통계다. Motion planning 단계나 독립 rollout 차이의 원인을 확정하지 않는다. [정의·수치·해석](docs/normalized_flow.md) · [CSV](results/normalized_flow_metrics.csv). 사이트 3A raw와 3B 정규화 비교, publication figure 12에 반영했다.

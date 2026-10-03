@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "rows": 14400,
+  "nonoriginal_rows": 13500,
+  "above_1e_6": 13500,
+  "ratio_at_least_one": 13500,
+  "undefined_ratios": 0,
+  "max_pooled_reconstruction_error": 1.1102230246251565e-16,
+  "median_within_case_max_min_rms_ratio": 1.9269495305291038,
+  "max_within_case_max_min_rms_ratio": 7.300993994682852,
+  "scope": "Canonical actions, 6 tasks, 3 seeds, 16 backgrounds, 10 denoising points, 5 future latent slices; primary x action control only."
+}

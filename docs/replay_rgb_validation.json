@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "tasks": [
+    {
+      "task": "Original",
+      "frames": 41,
+      "same_pixel_rgb_all_frames": {
+        "agentview": true,
+        "robot0_eye_in_hand": true
+      }
+    },
+    {
+      "task": "T01",
+      "frames": 41,
+      "same_pixel_rgb_all_frames": {
+        "agentview": true,
+        "robot0_eye_in_hand": true
+      }
+    },
+    {
+      "task": "T02",
+      "frames": 41,
+      "same_pixel_rgb_all_frames": {
+        "agentview": true,
+        "robot0_eye_in_hand": true
+      }
+    },
+    {
+      "task": "T03",
+      "frames": 41,
+      "same_pixel_rgb_all_frames": {
+        "agentview": true,
+        "robot0_eye_in_hand": true
+      }
+    },
+    {
+      "task": "T04",
+      "frames": 41,
+      "same_pixel_rgb_all_frames": {
+        "agentview": true,
+        "robot0_eye_in_hand": true
+      }
+    },
+    {
+      "task": "T05",
+      "frames": 41,
+      "same_pixel_rgb_all_frames": {
+        "agentview": true,
+        "robot0_eye_in_hand": true
+      }
+    }
+  ]
+}

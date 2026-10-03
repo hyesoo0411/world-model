@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "images": 5940,
+  "schedule_cases": 180,
+  "panels_per_image": 5,
+  "image_size": [
+    160,
+    32
+  ],
+  "source": "saved raw predicted flow velocity and per-slice robot mask",
+  "per_pixel_metric": "sqrt(mean over 16 channels of squared raw flow difference or squared raw flow))",
+  "temporal_pooling": false,
+  "color_scale": "shared across all five times and all compared backgrounds at each task/seed/tau",
+  "grey": "outside the simulator-derived robot mask",
+  "all_image_dimensions_verified": true,
+  "independent_raw_tensor_checks": 9,
+  "all_five_panels_pixel_exact": true
+}

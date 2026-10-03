@@ -1,0 +1,15 @@
+{
+  "early_pattern": "task dependent: retained in Original and T05; pooled normalized early/late ratio approximately 1",
+  "direction_energy_fraction_primary": 0.9980851712119522,
+  "top_global_backgrounds": [
+    "BG8",
+    "BG10",
+    "BG6"
+  ],
+  "top_original_backgrounds": [
+    "BG10",
+    "BG8",
+    "BG6"
+  ],
+  "limitations": "descriptive common-path condition sensitivity; no population significance or motion-planning attribution"
+}

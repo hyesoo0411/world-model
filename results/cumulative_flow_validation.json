@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "instantaneous_rows": 2880,
+  "cumulative_rows": 37440,
+  "max_existing_rms_error": 1.1102230246251565e-16,
+  "net_integral_exceeds_magnitude_integral_max": 0.0,
+  "all_BG0_zero": true,
+  "all_cumulative_starts_zero": true,
+  "magnitude_integral_monotonic": true,
+  "full_map_images": 2880,
+  "quadrature_only": true,
+  "independent_scalar_quadrature_max_error": 1.1102230246251565e-16,
+  "independent_tensor_quadrature_max_error": 0.0,
+  "constant_and_opposite_signal_checks": true,
+  "independent_tensor_cases": 3
+}
