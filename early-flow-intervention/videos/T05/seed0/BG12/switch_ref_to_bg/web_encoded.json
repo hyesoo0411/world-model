@@ -1,0 +1,5 @@
+{
+  "display_only": true,
+  "crf": 28,
+  "metrics_use_lossless_frames": true
+}
