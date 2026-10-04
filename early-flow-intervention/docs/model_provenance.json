@@ -1,0 +1,25 @@
+{
+  "model": "A2World only",
+  "git_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+  "checkpoint": "Fleurrr/A2World-World-Model/a2world-libero.pt",
+  "revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+  "sha256": "0d462d248cf0718ca9d360b5860b4b1090b80ba638ee6463133788324b08cbe2",
+  "cache_policy": "existing default Hugging Face cache; no new download",
+  "raw_flow_shape": [
+    1,
+    16,
+    12,
+    32,
+    32
+  ],
+  "intervened_positions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scheduler": "RectifiedFlowAB2Scheduler",
+  "steps": 35,
+  "flow_evaluations": 36
+}

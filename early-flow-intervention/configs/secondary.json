@@ -1,0 +1,36 @@
+{
+  "background_switch_scope": "all six tasks, all three seeds, BG1-BG15",
+  "alpha_scope": {
+    "tasks": [
+      "Original",
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "seeds": [
+      0
+    ],
+    "backgrounds": [
+      "BG8"
+    ]
+  },
+  "alpha_values": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "basis": "Optional dose-response uses prespecified pilot background BG8 across all tasks at seed0; no outcome-based selection. Main alpha1 experiment remains complete all tasks/seeds/backgrounds.",
+  "random_matched_control": "optional, not run",
+  "recovery_sensitivity": {
+    "baseline_drift_px_thresholds": [
+      0,
+      1,
+      5
+    ],
+    "primary_unchanged": true,
+    "absolute_paired_advantage": "D_late-D_early in pixels",
+    "timing": "specified before full tracking/results; no tracker accuracy asserted"
+  }
+}
