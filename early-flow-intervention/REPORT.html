@@ -1,0 +1,75 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Early flow intervention report</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:1100px;margin:auto;padding:24px}table{border-collapse:collapse}td,th{padding:8px;border:1px solid #ddd}a{color:#16778a}</style><a href="./">Intervention site</a><h1>Early / Late Robot-Flow Intervention</h1>
+<p>Status: INTERIM — NOT A FINAL CONCLUSION (4/1890 primary conditions tracked).</p>
+<p>같은 배경 변화가 만든 로봇 flow를 초기 또는 후기에 BG0 방향으로 교정해 최종 궤적이 복원되는지 검사했다. 같은 현재 latent에서 BGb와 BG0 flow를 계산하고 로봇 영역만 교체했다. 초기 물리 상태·action·noise·모델·스케줄은 동일하다.</p>
+<p><strong>현재 답:</strong> 전체 표본 수집 중이다. Pilot의 관측으로 일반 결론을 내리지 않는다.</p>
+<table>
+<thead>
+<tr>
+<th>질문</th>
+<th>답</th>
+<th>직접 근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1. Early correction reduces BG drift</td>
+<td>INCONCLUSIVE</td>
+<td>mean 0.0033, 95% CI [undefined, undefined], n=1</td>
+</tr>
+<tr>
+<td>Q2. Early is better than late</td>
+<td>INCONCLUSIVE</td>
+<td>mean 0.0585, 95% CI [undefined, undefined], n=1</td>
+</tr>
+<tr>
+<td>Q3. Full is stronger than stage-specific correction</td>
+<td>INCONCLUSIVE</td>
+<td>Full−Early mean -0.0402, 95% CI [undefined, undefined], n=1; Full−Late mean 0.0184, 95% CI [undefined, undefined], n=1</td>
+</tr>
+<tr>
+<td>Q4. Spatial specificity to the robot region</td>
+<td>INCONCLUSIVE</td>
+<td>Early robot − early far-background recovery: mean undefined, 95% CI [undefined, undefined], n=0; region sizes and intervention magnitudes differ.</td>
+</tr>
+<tr>
+<td>Q5. Larger early drift predicts greater benefit</td>
+<td>INCONCLUSIVE</td>
+<td>Task-demeaned Spearman mean undefined, 95% CI [undefined, undefined], n=1; association is not mediation.</td>
+</tr>
+<tr>
+<td>Q6. Early correction reduces MuJoCo GT error</td>
+<td>INCONCLUSIVE</td>
+<td>BGb ADE minus early ADE (positive=improvement, px): mean 0.0791, 95% CI [undefined, undefined], n=1</td>
+</tr>
+<tr>
+<td>Q7. Subsequent robot latent stays closer to BG0</td>
+<td>INCONCLUSIVE</td>
+<td>Post-early positions12–35 mean normalized-z distance reduction: mean 0.0094, 95% CI [undefined, undefined], n=1</td>
+</tr>
+<tr>
+<td>Q8. Background switching supports early influence</td>
+<td>INCONCLUSIVE</td>
+<td>Secondary switch results are reported separately; do not substitute them for robot-only intervention.</td>
+</tr>
+<tr>
+<td>Q9. Evidence for a causal contribution of early robot flow</td>
+<td>INCONCLUSIVE</td>
+<td>Assess direct paired interventions, spatial controls, latent persistence and tracking quality jointly. BG0 is not physical truth; soft geometric masks cannot isolate all robot information.</td>
+</tr>
+</tbody>
+</table>
+<h2>결과 해석</h2>
+<p>Early recovery: mean 0.0033, 95% CI [undefined, undefined], n=1. Late recovery: mean -0.0553, 95% CI [undefined, undefined], n=1. Recovery는 BG0 모델 궤적에 가까워진 비율이며, 양수가 이득이다. MuJoCo ADE 개선은 별도로 보고한다.</p>
+<p>관측된 교정 효과는 지정한 soft robot mask 및 stage 범위에 대한 개입 효과이다. 작은 효과가 로봇 flow의 모든 인과 영향이 없음을 뜻하지 않는다. 배경/물체/다른 view의 표현, mask 밖으로 이동한 생성 로봇, tokenizer 공간·시간 혼합을 통해 영향이 남을 수 있다. Full 교정도 전체 모델 상태를 BG0로 바꾸지는 않는다. Early를 motion planning이라고 부르지 않는다.</p>
+<h2>고정 설정 및 품질 관리</h2>
+<ul>
+<li>EX2 settled_v2: 6 tasks, BG0–BG15, seeds0–2. First20 actions; two model views; robot intervention only agentview future latent1–5.</li>
+<li>Actual flow evals0–35. Early0–11 / middle12–23 / late24–35. Step35 is final denoise for decoder. AB2 history continues without reset.</li>
+<li>Existing temporal RGB segmentation coverage is the soft intervention mask. Coverage≥0.5 is the unchanged metric mask. Soft boundaries are partial correction even at α=1.</li>
+<li>BG0/BGb baseline decoded pixels must match cached EX2 videos exactly. BG0 identity must preserve latent path exactly. On every paired forward, current tensor and RNG must remain identical.</li>
+<li>EX2 MuJoCo full GT arrays are exactly equal across16 backgrounds (96 checks). Same camera and projection oracle; no physics rerun required.</li>
+<li>Existing CoTracker3 / fixed hand-surface queries. Uniform21-frame input for all conditions; do not mix prior41-frame offline tracker outputs. All points visible on≥95% futureframes; no failure interpolation. Uncalibrated confidence is exported and does not prove correctness.</li>
+<li>Primary unit task/seed/background. Task bootstrap1000, six task clusters. Per-task results and paired contrasts saved; frames are not independent samples.</li>
+<li>Near-zero baseline drift≤1e-4px yields undefined Recovery. D_BG and D_int always accompany it. Far-background mask excludes two output-grid cells around any robot coverage; mask sizes differ.</li>
+</ul>
+<p><a href="configs/protocol.json">Protocol</a> · <a href="results/trajectory_metrics.csv">Trajectory CSV</a> · <a href="results/paired_early_late.csv">Paired CSV</a> · <a href="results/mechanism_correlations.csv">Correlations</a> · <a href="https://hyesoo0411.github.io/world-model/visualization/">Previous site</a></p></html>
