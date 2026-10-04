@@ -60,6 +60,7 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 
 
 
+
 <!-- EX9 extension start -->
 <section id="flow-trajectory" lang="ko"><h2>9 · Flow → Trajectory</h2>
 <p><b>Goal</b> Robot-flow drift가 클수록 생성 궤적도 달라지는가?</p>
@@ -85,6 +86,16 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 <p><b>Input</b> 기존 flow 표현·demo split 그대로 · task·τ별 학습 · seed 0 · Linear / 2-layer MLP. 상단 Probe 선택과 연동.</p>
 <p><b>Output</b> 동일 held-out demo의 Action R² · 공간만 pooling, 시간 순서 유지.</p>
 <p><b>Result</b> <span id="ex9-probe-result"></span></p><div id="ex9-probe-curves"></div><div id="ex9-probe-heatmap"></div>
+<h3>Robot-flow drift ↔ LOBO Action R²</h3>
+<p><b>Goal</b> 배경으로 인한 flow 변화가 클수록 LOBO 성능도 낮아지는가? LOBO는 평가할 배경 하나를 제외한 나머지 배경으로 학습합니다.</p>
+<div class="formula">ρ(mean<sub>A</sub> D<sub>flow,norm</sub>(τ,b,A), R²<sub>LOBO</sub>(τ,b))</div>
+<p><b>Input</b> 동일한 held-out action 16개에서 얻은 평균 robot-flow drift와 Action R² · 6 tasks × BG1–15 = 90점 · seed 0.</p>
+<p><b>Output</b> Spearman ρ · Pearson r · task bootstrap 95% CI. R²는 action 회귀 성능입니다.</p>
+<label>비교 범위 <select id="ex9-lobo-group"><option value="task_demeaned" selected>Task 평균 제거</option><option value="pooled">전체 pooled</option><option value="task">선택한 task</option></select></label>
+<p><b>Result</b> Task 평균 제거 후 큰 drift와 낮은 LOBO R²가 연관됩니다. Task를 그대로 합치면 관계가 약해지며, 인과관계는 확인하지 않았습니다.</p>
+<p id="ex9-lobo-result"></p>
+<div id="ex9-lobo-scatter"></div><div id="ex9-lobo-rho"></div>
+<p><a href="trajectory_extension/results/lobo_flow_pairs.csv">Paired values CSV</a> · <a href="trajectory_extension/results/lobo_flow_correlations.csv">Correlation + CI CSV</a> · <a href="trajectory_extension/figures/14_flow_vs_lobo_linear.pdf">Linear PDF</a> · <a href="trajectory_extension/figures/14_flow_vs_lobo_mlp.pdf">MLP PDF</a></p>
 </section>
 <section id="action-calibration" lang="ko"><h2>12 · Action Calibration</h2>
 <p><b>Goal</b> 배경 flow drift는 실제 action을 얼마나 바꾼 효과와 비슷한가?</p>
