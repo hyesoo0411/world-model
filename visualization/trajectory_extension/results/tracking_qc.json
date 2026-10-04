@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "continuous_scores_available": true,
+  "min_mean_confidence": 0.9966659545898438,
+  "min_individual_confidence": 0.9808068871498108,
+  "tracker_failed": 0,
+  "perturbed_below_tracking_floor": 0,
+  "GT_error_increased": 178,
+  "n_perturbed": 270,
+  "interpretation": "Confidence is an uncalibrated tracking score, not proof of correct physical motion. GT tracking background floor is a diagnostic, not a subtractable bias estimate.",
+  "tracker_replay_max_pixel_difference": 0.0,
+  "tracker_replay_videos": 384
+}

@@ -1,0 +1,199 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "task": "Original",
+      "seed": 0,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "Original",
+      "seed": 1,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "Original",
+      "seed": 2,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T01",
+      "seed": 0,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T01",
+      "seed": 1,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T01",
+      "seed": 2,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T02",
+      "seed": 0,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T02",
+      "seed": 1,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T02",
+      "seed": 2,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T03",
+      "seed": 0,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T03",
+      "seed": 1,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T03",
+      "seed": 2,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T04",
+      "seed": 0,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T04",
+      "seed": 1,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T04",
+      "seed": 2,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T05",
+      "seed": 0,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T05",
+      "seed": 1,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    },
+    {
+      "task": "T05",
+      "seed": 2,
+      "checkpoint_identical": true,
+      "A2World_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+      "checkpoint_revision": "411846321a75f1b64af2ab79af3db939c85d6a72",
+      "history_and_schedule_identical": true,
+      "all_16_background_prepared_RGB_inputs_identical_between_flow_and_rollouts": true
+    }
+  ],
+  "pixel_cross_check": [
+    {
+      "task": "Original",
+      "seed": 0,
+      "background": "BG0",
+      "first_chunk_RGB_bitwise_equal": true
+    },
+    {
+      "task": "Original",
+      "seed": 0,
+      "background": "BG8",
+      "first_chunk_RGB_bitwise_equal": true
+    }
+  ],
+  "source_hashes": {
+    "experiments/[EX2]_background_action_invariance/scripts/phase2_simulator.py": "b2b93e2a4400a16d29672e4d4475a70328d119c3bd9129b6d620dd36aee63c38",
+    "experiments/[EX2]_background_action_invariance/scripts/prepare_tracking_queries.py": "5e6e39cd5908d9e58225763579083383c0ca373c07c7d112c45581a013492fe9",
+    "experiments/[EX2]_background_action_invariance/scripts/track_robot_motion.py": "7bc0a2c7b167c6e399dce398442b27d82dafd73eae8f41f31605356223cc57be",
+    "experiments/[EX7]_background_motion_probe_comparison/scripts/track.py": "d16c5939ff3aa0fa9db9d74837f3a809dced43834e2700e854f9b817e97cacf0",
+    "experiments/[EX8]_flow_velocity_analysis/scripts/capture_flow.py": "382ab9e0a040430e20ca54f6f680bbfd4ae9a9c520818fdeda4ac41445cb4514",
+    "experiments/[EX8]_flow_velocity_analysis/scripts/normalized_flow.py": "c39f516cfcc8f7d5bd04a6881a402ea1bea96af0499e77a77038f5fa7beecc1e",
+    "experiments/[EX8]_flow_velocity_analysis/scripts/fit_probes.py": "3bd86a4b6d2b11093f403a4b4911d83d6250ff46d761c7ce122b92ae264f9ea3"
+  },
+  "default_HF_cache": "/opt/hf_cache/hub",
+  "tracking_model": {
+    "repo_id": "facebook/cotracker3",
+    "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+    "filename": "scaled_offline.pth",
+    "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+    "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+  },
+  "legacy_rng_note": "Some EX8 reference files predate saved RNG fields. New capture explicitly proves identical reference v and unchanged CPU/CUDA RNG on denoising; saved tensor equality is checked directly."
+}

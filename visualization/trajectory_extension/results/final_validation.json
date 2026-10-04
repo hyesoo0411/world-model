@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "totals": {
+    "new_bank": 7560,
+    "new_dose": 4829,
+    "probes": 3840
+  },
+  "joint_rows": 2880,
+  "EAP_rows": 69120,
+  "PDF_figures": 13,
+  "raw_action_hashes_valid": true,
+  "saved_noise_hashes_valid": true,
+  "demo_splits_disjoint": true,
+  "no_test_background_in_LOBO_train_or_validation": true,
+  "all_perturbations_valid": true,
+  "R2_not_duplicated_across_noise_seeds": true,
+  "linear_BG0_reproduction_checked": true,
+  "MLP_BG0_retraining_difference_exported": true
+}

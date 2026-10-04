@@ -1,0 +1,2507 @@
+{
+  "passed": true,
+  "samples": 288,
+  "checks": [
+    {
+      "task": "Original",
+      "background": "BG0",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG1",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG2",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG3",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG4",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG5",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG6",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG7",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG8",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG9",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG10",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG11",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG12",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG13",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG14",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "Original",
+      "background": "BG15",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG0",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG1",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG2",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG3",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG4",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG5",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG6",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG7",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG8",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG9",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG10",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG11",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG12",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG13",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG14",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T01",
+      "background": "BG15",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 4.263256414560601e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG0",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG1",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG2",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG3",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG4",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG5",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG6",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG7",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG8",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG9",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG10",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG11",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG12",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG13",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG14",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T02",
+      "background": "BG15",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG0",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG1",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG2",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG3",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG4",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG5",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG6",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG7",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG8",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG9",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG10",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG11",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG12",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG13",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG14",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T03",
+      "background": "BG15",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 8.526512829121202e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG0",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG1",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG2",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG3",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG4",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG5",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG6",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG7",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG8",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG9",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG10",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG11",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG12",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG13",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG14",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T04",
+      "background": "BG15",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG0",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG1",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG2",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG3",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG4",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG5",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG6",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG7",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG8",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG9",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG10",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG11",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG12",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG13",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG14",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    },
+    {
+      "task": "T05",
+      "background": "BG15",
+      "GT_max_abs_difference": 0.0,
+      "GT_fields": [
+        "qpos",
+        "qvel",
+        "robot_qpos",
+        "robot_qvel",
+        "eef_position",
+        "eef_orientation",
+        "gripper_state",
+        "all_body_positions",
+        "all_body_orientations",
+        "eef_agentview_pixels"
+      ],
+      "camera": "agentview",
+      "oracle_initial_error": 5.684341886080802e-14,
+      "tracker_asset": {
+        "repo_id": "facebook/cotracker3",
+        "revision": "bf55ea50d4390e1820a267f131cd6587240fb2c5",
+        "filename": "scaled_offline.pth",
+        "path": "HF_CACHE/hub/models--facebook--cotracker3/snapshots/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_offline.pth",
+        "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
+      }
+    }
+  ],
+  "track_failures": 0,
+  "paired_failures": 0,
+  "primary_frames": "1..20 (first action chunk); offline tracker cached on 41-frame video",
+  "metric": "Euclidean error of fixed reviewed hand-surface landmark centroid. All query points visible on >=95% future frames, no interpolation. FDE only if final frame visible.",
+  "confidence_limitation": "Only thresholded official visibility cached. Continuous scores will be recovered with unchanged tracker if needed."
+}

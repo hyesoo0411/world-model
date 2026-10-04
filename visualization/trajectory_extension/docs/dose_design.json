@@ -1,0 +1,2837 @@
+{
+  "rows": [
+    {
+      "task": "Original",
+      "dimension": 0,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 4.298463392700064,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 0,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 4.188587876077986,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 0,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 4.188587876077986,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 0,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 4.188587876077986,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 1,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 4.181664497709251,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 1,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 4.181664497709251,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 1,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 4.181664497709251,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 1,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 4.181664497709251,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 2,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 2.5994582883557675,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 2,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 2.5994582883557675,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 2,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 2.5994582883557675,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 2,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 2.5382679014459106,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 3,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 35.175819139617765,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 3,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 35.175819139617765,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 3,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 35.15071148855451,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 3,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 35.15071148855451,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 4,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 33.162128831280555,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 4,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 32.95327007726969,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 4,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 32.95327007726969,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 4,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 32.4891395128011,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 5,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 16.524178326884265,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 5,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 16.524178326884265,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 5,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 16.524178326884265,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "Original",
+      "dimension": 5,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 16.524178326884265,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 0,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 3.405742612646171,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 0,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 3.405742612646171,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 0,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 3.405742612646171,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 0,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 3.405742612646171,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 1,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 7.254794966383583,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 1,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 7.142123431098938,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 1,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 7.048230485028399,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 1,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 6.766551646816785,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 2,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 2.3506598510672387,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 2,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 2.338134132500273,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 2,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 2.338134132500273,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 2,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 2.338134132500273,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 3,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 33.851585448515245,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 3,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 33.851585448515245,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 3,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 33.851585448515245,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 3,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 33.851585448515245,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 4,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 29.95805711724597,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 4,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 29.95805711724597,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 4,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 29.95805711724597,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 4,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 29.95805711724597,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 5,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 12.737284368138965,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 5,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 12.737284368138965,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 5,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 12.737284368138965,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T01",
+      "dimension": 5,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 12.737284368138965,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 0,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 2.966280195571237,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 0,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 2.966280195571237,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 0,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 2.966280195571237,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 0,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 2.966280195571237,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 1,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 4.014064196167574,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 1,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 3.9833704172673974,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 1,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 3.932214119100436,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 1,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 3.932214119100436,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 2,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 2.410426551791788,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 2,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 2.410426551791788,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 2,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 2.410426551791788,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 2,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 2.410426551791788,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 3,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 43.00049955046865,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 3,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 43.00049955046865,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 3,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 43.00049955046865,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 3,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 43.00049955046865,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 4,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 23.191557176484654,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 4,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 23.191557176484654,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 4,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 23.191557176484654,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 4,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 23.191557176484654,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 5,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 20.991984992481612,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 5,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 20.991984992481612,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 5,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 20.991984992481612,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T02",
+      "dimension": 5,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 20.835216968000065,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 0,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 3.768511222503048,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 0,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 3.768511222503048,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 0,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 3.768511222503048,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 0,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 3.768511222503048,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 1,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 4.393433633544378,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 1,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 4.393433633544378,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 1,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 4.393433633544378,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 1,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 4.393433633544378,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 2,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 2.456312162561929,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 2,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 2.4314590884044724,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 2,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 2.4314590884044724,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 2,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 2.3568998659321037,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 3,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 7.326338316171831,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 3,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 7.326338316171831,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 3,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 7.326338316171831,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 3,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 7.3185221657633965,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 4,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 15.560283023483647,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 4,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 15.560283023483647,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 4,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 15.527117233735547,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 4,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 15.361288284995048,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 5,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 13.040980093562018,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 5,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 13.040980093562018,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 5,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 13.040980093562018,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T03",
+      "dimension": 5,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 13.040980093562018,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 0,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 3.9029641650236453,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 0,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 3.8938308635454315,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 0,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 3.8938308635454315,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 0,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 3.8938308635454315,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 1,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 2.374139967336777,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 1,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 2.2780533582034166,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 1,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 2.2780533582034166,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 1,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 2.2780533582034166,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 2,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 2.1213010234320646,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 2,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 2.1213010234320646,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 2,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 2.1213010234320646,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 2,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 2.0190240098023042,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 3,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 32.33935160574574,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 3,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 32.33935160574574,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 3,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 32.33935160574574,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 3,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 32.13145577399452,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 4,
+      "window_length": 1,
+      "sign": -1,
+      "max_valid_epsilon": 18.966873737492545,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 4,
+      "window_length": 4,
+      "sign": -1,
+      "max_valid_epsilon": 18.94657383695295,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 4,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 18.94657383695295,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 4,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 18.92627393641336,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 5,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 22.34666758128276,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 5,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 22.34666758128276,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 5,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 22.34666758128276,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T04",
+      "dimension": 5,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 22.34666758128276,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 0,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 2.685400792148621,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 0,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 2.685400792148621,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 0,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 2.685400792148621,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 0,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 2.685400792148621,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 1,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 6.397876273136962,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 1,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 6.397876273136962,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 1,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 6.397876273136962,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 1,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 5.211361037027926,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 2,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 3.3825540323135903,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 2,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 3.3825540323135903,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 2,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 3.3825540323135903,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 2,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 3.3825540323135903,
+      "n_nonzero_doses": 9,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 3,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 36.56192699490373,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 3,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 36.56192699490373,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 3,
+      "window_length": 8,
+      "sign": -1,
+      "max_valid_epsilon": 36.56192699490373,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 3,
+      "window_length": 20,
+      "sign": -1,
+      "max_valid_epsilon": 36.56192699490373,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 4,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 19.677133558129306,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 4,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 19.677133558129306,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 4,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 19.677133558129306,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 4,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 19.677133558129306,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 5,
+      "window_length": 1,
+      "sign": 1,
+      "max_valid_epsilon": 21.282449287509735,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 5,
+      "window_length": 4,
+      "sign": 1,
+      "max_valid_epsilon": 21.282449287509735,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 5,
+      "window_length": 8,
+      "sign": 1,
+      "max_valid_epsilon": 21.260695506295928,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "task": "T05",
+      "dimension": 5,
+      "window_length": 20,
+      "sign": 1,
+      "max_valid_epsilon": 19.563900571618827,
+      "n_nonzero_doses": 10,
+      "epsilon": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    }
+  ],
+  "expected_new_cases": 4829,
+  "all_feasible": true,
+  "base_expected_new_cases": 4167,
+  "adaptive_expanded_cases": 662
+}

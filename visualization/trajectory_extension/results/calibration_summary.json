@@ -1,0 +1,10 @@
+{
+  "n_curves": 4320,
+  "curves_with_nonmonotonic_response": 1097,
+  "n_EAP_cells": 69120,
+  "above_tested_range": 7899,
+  "undefined_negligible_response": 0,
+  "measured_crossing_exists_but_global_isotonic_misses": 144,
+  "max_epsilon_measured": 43.0004952504187,
+  "uncertainty": "EAP is piecewise-linear interpolation, not a directly measured dose or confidence interval. Crossing brackets are exported; multiple crossings use the first."
+}

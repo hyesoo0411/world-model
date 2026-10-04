@@ -2,7 +2,14 @@
 <nav><a href="visualization/">인터랙티브 실험 사이트</a> · <a href="REPORT.html">전체 보고서</a> · <a href="docs/normalized_flow.html">정규화 분석</a> · <a href="https://github.com/hyesoo0411/world-model">GitHub repository</a></nav>
 <p>LIBERO의 동일한 물리 상태·action·실제 noisy latent에서 배경만 바꿨을 때 A2World의 로봇 영역 flow velocity가 달라지는지 분석했습니다.</p>
 <p>기존 settled_v2의 6 tasks, BG0–BG15, 3 seeds, 10 denoising 시점을 사용합니다. 미래 20프레임은 5개 temporal latent로 표현되며, 주 분석은 agentview 미래 robot mask 안의 flow입니다.</p>
-<h2>현재 결과</h2><ul>
+<h2>추가 실험 · Flow → Trajectory / Re-probing / Action calibration</h2>
+<nav><a href="visualization/#flow-trajectory">새 결과 섹션 9–13</a> · <a href="visualization/trajectory_extension/REPORT.html">EX9 보고서</a> · <a href="visualization/trajectory_extension/results/joint_metrics.csv">통합 CSV</a></nav>
+<p>기존 288개 생성 영상을 재사용했습니다. 배경 간 로봇 궤적 차이와 초기 normalized robot-flow 차이의 task-demeaned Spearman ρ는 0.779입니다. MuJoCo GT 오차와의 최대 ρ는 0.554이며 task별 차이가 큽니다.</p>
+<p>비원본 배경·task·시점 평균 Linear Action R²: BG0 transfer -0.283 → within-background 0.377 / held-out-background LOBO 0.343. 재학습 회복은 배경에 따른 표현 변화를 지지하며, 정보 소실을 뜻하지 않습니다.</p>
+<p>6개 연속 action 좌표와 1·4·8·20-step 구간의 dose-response에서 EAP를 측정했습니다. 측정 범위 밖은 외삽하지 않습니다. 동일 flow 크기는 동일 동작을 뜻하지 않습니다.</p>
+<img src="visualization/trajectory_extension/figures/04_correlation_vs_denoising.png" alt="Flow-to-trajectory Spearman correlation with task bootstrap confidence intervals">
+<img src="visualization/trajectory_extension/figures/06_transfer_vs_within.png" alt="Original background transfer versus within-background action readouts">
+<p class="muted">첫 20-action chunk의 2D 손 표면 추적점 중심을 분석했습니다. Flow는 공통 BG0 latent 경로의 조건 민감도이며, 상관은 인과 매개 경로의 증명이 아닙니다.</p><h2>기존 flow 분석 결과</h2><ul>
 <li>측정한 비원본 배경 2,700개 paired case 모두에서 robot flow 차이가 관측되었습니다.</li>
 <li>정규화 후 초기/후반 비율: Original 1.99배, T05 1.26배. 6-task 평균은 1.001배로 거의 같습니다.</li>
 <li>배경 효과는 주로 latent flow 벡터 방향 차이이며, 전체 평균 정규화 효과는 BG8 &gt; BG10 &gt; BG6 순입니다.</li>
