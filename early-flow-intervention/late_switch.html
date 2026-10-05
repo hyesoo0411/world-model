@@ -1,0 +1,18 @@
+<section id="late-switch"><h2>9 · BGb Early+Middle → BG0 Late</h2>
+<p><b>Goal</b> Early+Middle 동안 BGb로 생성한 뒤 Late에서 BG0로 바꾸면 최종 로봇 궤적이 어느 쪽에 가까워지는가?</p>
+<div class="formula">Early 0–11: BGb → Middle 12–23: BGb → Late 24–35: BG0<br>v_used = vθ(x_current, τ, I_selected, A)<br>Recovery = 1 − D_to_BG0 / (D_BG + ε)</div>
+<p><b>Input</b> 동일 action·초기 noise·물리 상태. Step 24에서 양 카메라의 관측 조건을 BG0로 전환합니다. 현재 latent와 scheduler history는 이어서 사용합니다.</p>
+<p><b>Output</b> 최종 손 궤적의 BG0 / BGb까지 거리·회복률·MuJoCo GT 오차. 관측 조건을 전환하는 실험이며 robot flow 교체는 없습니다.</p>
+<p><b>Result</b> <span id="ls-headline"></span></p>
+<img src="figures/14_late_background_switch.png?v=c3eb04aa22" alt="BG0 condition switch at step12 versus step24, paired trajectory recovery and relative closeness with task bootstrap confidence intervals">
+<div class="scroll" id="ls-summary"></div>
+<p class="small">Recovery는 BG0 방향 회복입니다. 상대적 근접성 = (BGb까지 거리 − BG0까지 거리) / D_BG: 양수는 BG0, 음수는 BGb에 더 가까움. CI는 task 단위 bootstrap 95%.</p>
+<div class="scroll" id="ls-task-summary"></div><p class="small"><b>Result · 민감도</b> <span id="ls-sensitivity"></span></p>
+<p><b>Result · 선택 표본</b> <button id="ls-play">동기 재생 / 정지</button> <button id="ls-reset">처음으로</button></p>
+<div class="videos ls-videos" id="ls-videos"></div>
+<div class="scroll" id="ls-metrics"></div>
+<div class="grid"><div id="ls-tracks" class="plot"></div><div id="ls-latent" class="plot"></div></div>
+<p class="small">새 조건은 전환 직전까지 BGb baseline과 latent가 정확히 같습니다. 영상: 20-action chunk의21 frames. nADE = GT 평균 위치 오차 / 영상 대각선. 조건별 유효 frame ≥95%; 추적 실패는 제외합니다.</p>
+<p class="small"><b>Result · 해석 범위</b> 전환 시점과 BG0 노출 기간이 함께 달라집니다. 동일 개입량에서의 단계 중요도나 robot-flow만의 인과 효과를 뜻하지 않습니다. 외형 변화에 따른 추적 오차 가능성이 남습니다.</p>
+<p class="small"><a href="LATE_SWITCH_REPORT.html?v=a1fe346f41">Report</a> · <a href="results/late_switch_metrics.csv?v=a45e07a054">Metrics CSV</a> · <a href="results/late_switch_paired.csv?v=162fd4be05">Paired CSV</a> · <a href="results/late_switch_summary.csv?v=b29927f25f">Summary CSV</a> · <a href="results/late_switch_sensitivity.csv?v=d2a13fca2b">Small-baseline sensitivity</a> · <a href="figures/14_late_background_switch.pdf?v=a8d7af1a28">Figure PDF</a> · <a href="configs/late_switch_protocol.json?v=014eb90579">Protocol</a> · <a href="results/late_switch_validation.json?v=bdd6723ae7">Validation</a></p>
+</section>

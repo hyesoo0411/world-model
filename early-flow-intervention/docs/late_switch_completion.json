@@ -1,0 +1,97 @@
+{
+  "cases": 270,
+  "job_ids": [
+    49449,
+    49450,
+    49451,
+    49452,
+    49453,
+    49454
+  ],
+  "resources": [
+    {
+      "job": 49449,
+      "stage": "scripts/run_intervention.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.892501831054688,
+      "GPU_allocator_peak_GiB": 7.6866679191589355,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49450,
+      "stage": "scripts/run_late_switch.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.834842681884766,
+      "GPU_allocator_peak_GiB": 7.712121486663818,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49451,
+      "stage": "scripts/run_late_switch.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.843490600585938,
+      "GPU_allocator_peak_GiB": 7.712121486663818,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49452,
+      "stage": "scripts/run_late_switch.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.893524169921875,
+      "GPU_allocator_peak_GiB": 7.712121486663818,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49453,
+      "stage": "scripts/run_late_switch.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.88863754272461,
+      "GPU_allocator_peak_GiB": 7.712121486663818,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49454,
+      "stage": "scripts/track_interventions.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 2.0,
+      "CPU_HWM_GiB": 1.2794303894042969,
+      "GPU_allocator_peak_GiB": 1.910717487335205,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    }
+  ],
+  "protocol_sha256": "caae21044004fdb233f059b18f76c42b31673a02bf568819c6999791386dcc7b",
+  "scripts_sha256": {
+    "check_late_switch_site.py": "32af7f92b3af5e3985865b249b74080033cf46130aeb7496137f127e0974e938",
+    "record_late_switch_resources.py": "13d51c97bd6afa7a18ec723db65a66ff060b078bcfe8f9569270a97a3eaeca6c",
+    "visual_late_switch.py": "239a77e702a43a7b75817a36eeb06e845d3d14c1da74fc8d5aade14ed903605c",
+    "run_late_switch.py": "36870bb0b67ee9916cbf3c9feecd8d26c3e555524a9fff0440406a42b3f8510d",
+    "publish_late_switch.py": "73a54601ef65779f1ad06244cd5a62de0575379fbebd2be352079aa49a4bdedb",
+    "validate_late_switch.py": "9a42acceb45708bbcf1dee5adaae47c3ca029e8b6ec0cce0ef55f5604566ce20",
+    "finish_late_switch.py": "d3d74173e4a7d4361016d419593f8af31c9f3c741a72f12e99c88e7336703f98",
+    "analyze_late_switch.py": "ef5f4d54d4e98fb4b8a47c08553055c132e49be645181567f07003e83ddd9d5e"
+  },
+  "original_primary_analysis_sha256": "ced124945dffa882995a339be18205f1ebd4780000afc24c03e8571770212ff4",
+  "same_mask_model_checkpoint_scheduler_as_original": true,
+  "tracking_input_frames": 21,
+  "public_payload_excludes_raw_tensors": true,
+  "visual_review": {
+    "tasks": [
+      "Original",
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "seed": 0,
+    "background": "BG8",
+    "frame": 20,
+    "overlay": "experiments/[EX10]_early_flow_intervention/runtime/visual_qc/late_switch_endpoints.png",
+    "assessment": "Fixed hand queries remain on generated gripper surface in representative endpoints; subpixel tracking bias is not excluded."
+  }
+}
