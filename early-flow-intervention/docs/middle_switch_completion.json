@@ -1,0 +1,89 @@
+{
+  "cases": 270,
+  "job_ids": [
+    49467,
+    49468,
+    49469,
+    49470,
+    49482
+  ],
+  "resources": [
+    {
+      "job": 49467,
+      "stage": "scripts/run_intervention.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.892513275146484,
+      "GPU_allocator_peak_GiB": 7.6866679191589355,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49468,
+      "stage": "scripts/run_middle_switch.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.883922576904297,
+      "GPU_allocator_peak_GiB": 7.716578960418701,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49469,
+      "stage": "scripts/run_middle_switch.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.882545471191406,
+      "GPU_allocator_peak_GiB": 7.716090679168701,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49470,
+      "stage": "scripts/run_middle_switch.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.848106384277344,
+      "GPU_allocator_peak_GiB": 7.716578960418701,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49482,
+      "stage": "scripts/track_interventions.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 2.0,
+      "CPU_HWM_GiB": 1.2504310607910156,
+      "GPU_allocator_peak_GiB": 1.910717487335205,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    }
+  ],
+  "protocol_sha256": "d565d4df154881382385d92f8aa3ac41561d647e76b2a611dc6a8591b3901a57",
+  "scripts_sha256": {
+    "launch_middle_switch.py": "e589d3969425c848abdca9f347e01b9b9db398e4754a00a11854e392a984a90c",
+    "visual_middle_switch.py": "6b5dd7f57c1fe89d721e9023f016ed45f6466b73e2cfc50d0070e8924c262a35",
+    "validate_middle_switch.py": "643baa766e319c209829f3ac4a4b7a8873d1fb24614fb7ca7572ad8eb49783f5",
+    "report_middle_switch.py": "ce01ab3bdf3d8abdc85f39a99778351d412a151d4fa0f4c1b931792d5152380c",
+    "record_middle_switch_resources.py": "a3617c363a6925bed64d9517c6c9c631e6d691413079a9457ee58d96170ef352",
+    "check_middle_switch_site.py": "a78706957fbf91bf555e36deaad6cfe7b0a2e97687d0d0666c7f81405710cf20",
+    "run_middle_switch.py": "2a61d3d51ef583131b6dee9009eba3536db22f7c0c427f62ee0a76a50a2278bc",
+    "finish_middle_switch.py": "0c3439ce93bac3aabe9524bb707d6d7fc5212cb4bd1a2f4138d8b5544242da1c",
+    "analyze_middle_switch.py": "3795e4e10beb85ee4a9420db8686bc4c57f376d7ed9f97941e070cdf25e8a419",
+    "publish_middle_switch.py": "5b7e7ec6b7d928cf5eb80c3c3dd3e466526587ef3e566415eac64534f5b58ced"
+  },
+  "original_primary_analysis_sha256": "ced124945dffa882995a339be18205f1ebd4780000afc24c03e8571770212ff4",
+  "same_mask_model_checkpoint_scheduler_as_original": true,
+  "tracking_input_frames": 21,
+  "public_payload_excludes_raw_tensors": true,
+  "visual_review": {
+    "tasks": [
+      "Original",
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "seed": 0,
+    "background": "BG8",
+    "frame": 20,
+    "file": "runtime/visual_qc/middle_switch_endpoints.png",
+    "assessment": "Tracked queries stay on hand/gripper surface at representative endpoints; no obvious gross tracker failure. Small tracking bias remains possible."
+  }
+}

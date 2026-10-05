@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "samples": 270,
+  "BG0_steps": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "robot_flow_replacement": false,
+  "baseline_exact_prefix_through_latent": 12,
+  "step12_switch_exact_prefix_through_latent": 24,
+  "final_condition_frame_matches_BGb": true,
+  "scheduler_continuation": "official AB2; no latent or history reset"
+}
