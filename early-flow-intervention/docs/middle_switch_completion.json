@@ -85,5 +85,21 @@
     "frame": 20,
     "file": "runtime/visual_qc/middle_switch_endpoints.png",
     "assessment": "Tracked queries stay on hand/gripper surface at representative endpoints; no obvious gross tracker failure. Small tracking bias remains possible."
-  }
+  },
+  "final_scripts_sha256": {
+    "launch_middle_switch.py": "e589d3969425c848abdca9f347e01b9b9db398e4754a00a11854e392a984a90c",
+    "visual_middle_switch.py": "6b5dd7f57c1fe89d721e9023f016ed45f6466b73e2cfc50d0070e8924c262a35",
+    "validate_middle_switch.py": "643baa766e319c209829f3ac4a4b7a8873d1fb24614fb7ca7572ad8eb49783f5",
+    "report_middle_switch.py": "3ba8f945c854a63bf0b044df962fe6c870b4fb7fc1c03372bb776d8845202cb0",
+    "record_middle_switch_resources.py": "a3617c363a6925bed64d9517c6c9c631e6d691413079a9457ee58d96170ef352",
+    "check_middle_switch_site.py": "a78706957fbf91bf555e36deaad6cfe7b0a2e97687d0d0666c7f81405710cf20",
+    "run_middle_switch.py": "2a61d3d51ef583131b6dee9009eba3536db22f7c0c427f62ee0a76a50a2278bc",
+    "finish_middle_switch.py": "0c3439ce93bac3aabe9524bb707d6d7fc5212cb4bd1a2f4138d8b5544242da1c",
+    "analyze_middle_switch.py": "3795e4e10beb85ee4a9420db8686bc4c57f376d7ed9f97941e070cdf25e8a419",
+    "publish_middle_switch.py": "5b7e7ec6b7d928cf5eb80c3c3dd3e466526587ef3e566415eac64534f5b58ced"
+  },
+  "inference_code_sha256": "45a46ba4cee997a6a363ee8e52a55cd8343c3b2b776d23c79cb59039541be25f",
+  "all_270_inference_source_hashes_match": true,
+  "report_sha256": "48b729c191906ac16220e2ba0337dbd8174c7650f1d8a40345d0f059d26ae2a4",
+  "final_provenance_utc": "2026-10-05T11:46:02.695801+00:00"
 }
