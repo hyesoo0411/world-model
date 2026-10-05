@@ -96,6 +96,12 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 <p id="ex9-lobo-result"></p>
 <div id="ex9-lobo-scatter"></div><div id="ex9-lobo-rho"></div>
 <p><a href="trajectory_extension/results/lobo_flow_pairs.csv">Paired values CSV</a> · <a href="trajectory_extension/results/lobo_flow_correlations.csv">Correlation + CI CSV</a> · <a href="trajectory_extension/figures/14_flow_vs_lobo_linear.pdf">Linear PDF</a> · <a href="trajectory_extension/figures/14_flow_vs_lobo_mlp.pdf">MLP PDF</a></p>
+<h3 id="lobo-all-backgrounds">LOBO R² vs. denoising progress · All backgrounds</h3>
+<p><b>Goal</b> Compare LOBO action recoverability across all 16 background conditions.</p>
+<div class="formula">R²_LOBO(τ, b) · b = BG0–BG15</div>
+<p><b>Input</b> Selected Task and Linear / MLP probe · fixed seed 0 · train on the other 15 backgrounds; test on held-out demos of background b.</p>
+<p><b>Output</b> One line per background · held-out Action R².</p>
+<p><b>Result</b> <span id="ex9-lobo-all-result"></span></p><div id="ex9-lobo-all-curves"></div>
 </section>
 <section id="action-calibration" lang="ko"><h2>12 · Action Calibration</h2>
 <p><b>Goal</b> 배경 flow drift는 실제 action을 얼마나 바꾼 효과와 비슷한가?</p>
@@ -116,4 +122,4 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 </section>
 <!-- EX9 extension end -->
 
-<script src="data.js"></script><script src="temporal_data.js"></script><script src="temporal_heatmaps.js"></script><script src="cumulative_data.js"></script><script src="normalized_data.js"></script><script src="normalized.js"></script><script src="app.js"></script><script src="trajectory_data.js"></script><script src="trajectory_extension.js"></script></html>
+<script src="data.js"></script><script src="temporal_data.js"></script><script src="temporal_heatmaps.js"></script><script src="cumulative_data.js"></script><script src="normalized_data.js"></script><script src="normalized.js"></script><script src="app.js"></script><script src="trajectory_data.js"></script><script src="trajectory_extension.js?v=b51bac8d6a"></script></html>
