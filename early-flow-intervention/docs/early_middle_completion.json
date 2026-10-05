@@ -1,0 +1,83 @@
+{
+  "cases": 270,
+  "job_ids": [
+    49421,
+    49422,
+    49423,
+    49424,
+    49425,
+    49432
+  ],
+  "resources": [
+    {
+      "job": 49421,
+      "stage": "scripts/run_intervention.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.894943237304688,
+      "GPU_allocator_peak_GiB": 7.6866679191589355,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49422,
+      "stage": "scripts/run_early_middle.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.893917083740234,
+      "GPU_allocator_peak_GiB": 7.751021862030029,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49423,
+      "stage": "scripts/run_early_middle.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.84960174560547,
+      "GPU_allocator_peak_GiB": 7.751998424530029,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49424,
+      "stage": "scripts/run_early_middle.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.88067626953125,
+      "GPU_allocator_peak_GiB": 7.751998424530029,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49425,
+      "stage": "scripts/run_early_middle.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 28.0,
+      "CPU_HWM_GiB": 19.88103485107422,
+      "GPU_allocator_peak_GiB": 7.751998424530029,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    },
+    {
+      "job": 49432,
+      "stage": "scripts/track_interventions.py",
+      "exit_code": 0,
+      "CPU_request_GiB": 2.0,
+      "CPU_HWM_GiB": 1.2491340637207031,
+      "GPU_allocator_peak_GiB": 1.910717487335205,
+      "accounting": "process VmHWM; GPU PyTorch allocator; Slurm accounting disabled"
+    }
+  ],
+  "protocol_sha256": "0f758192d2dbfa28dd3139d17add2087be288d3cf17bf4f25c233a6161b15562",
+  "scripts_sha256": {
+    "finish_early_middle.py": "66e7eec53721692b844ce0ced90c3b26cf8106708906b92644eb67d00286544a",
+    "record_early_middle_resources.py": "a49d1b6e5188cb7e96444766f5781ff9e6b967a4940d10c4201fad16b5d9e241",
+    "check_early_middle_site.py": "64a1aaf2c4b8e81c37b5057e70f6bb960594dabebd735403ca509b8be6f1ee32",
+    "enrich_early_middle_report.py": "b40364e45071fad12a8b28104427ebb0720d5352d4646800056d636b5385d016",
+    "visual_early_middle.py": "43d9658a705322d8938e080c2643bc13036b6003529a43ae2aae69313c637410",
+    "validate_early_middle.py": "b1c8a620534506ec7f7662b0f3e051eccfa5f827e8c83f1561ff9b04952333d3",
+    "publish_early_middle.py": "733f64b6b780bdd557d4c34038ab82764d64b784a6c1512564e59778136bddbc",
+    "analyze_early_middle.py": "a60296a02460125918dfe2ea3592f33159759ba3772763c6c808391f03a286b5",
+    "run_early_middle.py": "7b1e90a3932b6aa3da1d56c949508b255cecf0d7da9476e6281ee461719858fd"
+  },
+  "original_primary_analysis_sha256": "ced124945dffa882995a339be18205f1ebd4780000afc24c03e8571770212ff4",
+  "same_mask_model_checkpoint_scheduler_as_original": true,
+  "tracking_input_frames": 21,
+  "public_payload_excludes_raw_tensors": true
+}
