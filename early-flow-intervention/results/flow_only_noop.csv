@@ -1,0 +1,19 @@
+task,seed,background,steps,raw_flow_max_abs,latent_max_abs,pixel_max_abs,trajectory_change_px,Recovery_pct,trajectory_source,passed
+Original,0,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+Original,1,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+Original,2,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T01,0,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T01,1,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T01,2,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T02,0,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T02,1,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T02,2,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T03,0,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T03,1,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T03,2,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T04,0,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T04,1,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T04,2,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T05,0,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T05,1,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True
+T05,2,BG8,36,0,0,0,0,0,exact pixel equality; deterministic baseline tracks reused,True

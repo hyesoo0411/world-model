@@ -1,0 +1,24 @@
+<section id="middle-switch"><span id="stage-flow-only"></span><h2>10 · Stage-wise Robot-Flow Intervention</h2>
+<p><b>Goal</b> 배경이 만든 robot-flow 차이 자체를 교정하면 최종 로봇 궤적이 BG0 방향으로 회복되는가?</p>
+<p><b>Input · Observation</b> 모든 개입에서 <strong>BGb → BGb → BGb</strong> 고정. 물리 상태·action·초기 noise·scheduler도 동일합니다.</p>
+<div class="scroll"><table><tr><th>Flow 개입</th><th>Early 0–11</th><th>Middle 12–23</th><th>Late 24–35</th></tr><tr><td>Early</td><td><strong>BG0 robot-flow</strong></td><td>BGb flow</td><td>BGb flow</td></tr><tr><td>Middle</td><td>BGb flow</td><td><strong>BG0 robot-flow</strong></td><td>BGb flow</td></tr><tr><td>Late</td><td>BGb flow</td><td>BGb flow</td><td><strong>BG0 robot-flow</strong></td></tr><tr><td>Full</td><td><strong>BG0 robot-flow</strong></td><td><strong>BG0 robot-flow</strong></td><td><strong>BG0 robot-flow</strong></td></tr></table></div>
+<p><b>Formula</b></p><div class="formula">v_b = vθ(x_current, τ, I_BGb, A)<br>v_0 = vθ(x_current, τ, I_BG0, A)<br>v_used = (1 − M_robot) v_b + M_robot v_0<br><strong>SAME current x · SAME τ · SAME A</strong><br>Outside active window: v_used = v_b</div>
+<p><b>Input · Mask</b> 기존 시간별 simulator soft robot coverage · agentview 미래 latent L1–L5. BG0는 현재 latent의 반사실 flow 평가에만 사용합니다. 독립 BG0 rollout의 flow를 복사하지 않습니다. Soft 경계는 부분 교체입니다.</p>
+<div class="formula">D_BG = ADE(p_BGb, p_BG0) · D_int = ADE(p_int, p_BG0)<br>Recovery(%) = 100 × (D_BG − D_int) / (D_BG + ε)<br>ΔD = D_BG − D_int<br>FlowCorrection = 1 − RMS_robot(v_used − v_0) / (RMS_robot(v_b − v_0) + ε)<br>D_dir = 1 − cos_robot(v_b, v_0)</div>
+<p><b>Output</b> 최종 궤적의 ADE/FDE to BG0 · Recovery % · ΔD(px) · GT ADE/FDE · flow 교정률. Flow RMS 감소는 적용 검증이며, 이후 최종 궤적 변화가 인과 실험의 결과입니다.</p>
+<p><b>Result</b> <span id="fo-headline"></span></p>
+<img src="figures/16_stage_flow_only_results.png?v=a743731391" alt="Fixed BGb condition: robot-flow-only trajectory recovery, absolute distance reduction and measured flow correction with task-bootstrap confidence intervals">
+<div class="scroll" id="fo-summary"></div>
+<p class="small"><b>Output · 통계</b> 네 robot 개입의 동일 유효 표본·frame으로 비교합니다. CI는 6 task cluster를 1000회 재표집했습니다. 비율은 sample별로 계산한 뒤 평균합니다. GT 지표는 별도 visibility 기준입니다.</p>
+<div class="scroll" id="fo-paired"></div><img src="figures/17_flow_only_task_and_contrasts.png?v=861765510e" alt="Per-task flow-only recovery and paired Middle–Early, Middle–Late, Early–Late contrasts"><div class="scroll" id="fo-tasks"></div>
+<p><b>Result · 대조군</b> <span id="fo-noop"></span></p><div class="scroll" id="fo-controls"></div>
+<p class="small">Far-background control은 robot 주변 두 latent cell을 제외한 영역만 교정합니다. Mask 크기·개입량이 달라 완전히 동일한 강도의 공간 비교는 아닙니다.</p>
+<p><b>Result · Flow 방향</b> 원래 common-BG0-latent 경로의 방향 차이와 최종 recovery를 비교합니다. 개입 경로에서 측정한 방향 차이는 CSV에 별도 기록했습니다. 아래 상관은 인과 매개 효과를 증명하지 않습니다.</p>
+<label>구간 <select id="fo-stage"><option value="early">Early</option><option value="middle" selected>Middle</option><option value="late">Late</option><option value="full">Full</option></select></label>
+<label>범위 <select id="fo-group"><option value="task_demeaned">Task 평균 제거</option><option value="pooled">전체 pooled</option><option value="task">선택 task</option></select></label>
+<p id="fo-direction-result"></p><div id="fo-direction" class="plot"></div>
+<p><b>Result · 선택 표본</b> <button id="fo-play">동기 재생 / 정지</button> <button id="fo-reset">처음으로</button></p>
+<div class="videos fo-videos" id="fo-videos"></div><div class="scroll" id="fo-metrics"></div><div id="fo-tracks" class="plot"></div>
+<p><b>Result · 해석</b> <span id="fo-interpretation"></span></p><p class="small">BG0는 모델 reference이며 physical GT는 MuJoCo입니다. 잔여 차이는 soft mask의 불완전 교정, mask 밖·다른 view·latent 경로와도 관련될 수 있습니다. 작은 D_BG의 비율 민감도와 CoTracker의 2D 추적 한계를 함께 고려합니다.</p>
+<p><a href="REPORT.html?v=9f827bf890">Report</a> · <a href="results/flow_only_metrics.csv?v=003a4273e1">Sample metrics CSV</a> · <a href="results/flow_only_paired_stage_metrics.csv?v=2fddc27d1c">Paired metrics</a> · <a href="results/flow_only_summary.csv?v=83d0bbf0d2">Summary + CI</a> · <a href="results/flow_only_paired_summary.csv?v=fef41ae17f">Paired contrasts + CI</a> · <a href="results/flow_only_flow_steps.csv?v=39df6dd659">Flow RMS / cosine CSV</a> · <a href="results/flow_only_trajectories.csv?v=cb540cc2ec">Trajectories</a> · <a href="results/flow_only_direction_correlations.csv?v=05a99b9cb5">Direction correlations</a> · <a href="results/flow_only_noop.csv?v=c2698e614a">No-op</a> · <a href="results/flow_only_sensitivity.csv?v=cf901d67c7">Sensitivity</a> · <a href="figures/16_stage_flow_only_results.pdf?v=89aaf280f7">Results PDF</a> · <a href="figures/17_flow_only_task_and_contrasts.pdf?v=f75880d434">Task / contrasts PDF</a> · <a href="figures/18_flow_only_direction_recovery.pdf?v=43810b9d1d">Direction PDF</a> · <a href="configs/flow_only_protocol.json?v=f87d34b88c">Protocol</a></p>
+</section>

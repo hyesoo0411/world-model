@@ -1,0 +1,167 @@
+{
+  "baseline_cached_reproductions": 288,
+  "passed": true,
+  "flow_only_smoke_passed": true,
+  "cached_cases": 1620,
+  "condition_counts": {
+    "middle": 270,
+    "early": 270,
+    "background_full": 270,
+    "full": 270,
+    "late": 270,
+    "background_early": 270
+  },
+  "same_background_noop": [
+    {
+      "task": "Original",
+      "seed": 0,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "Original",
+      "seed": 1,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "Original",
+      "seed": 2,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T01",
+      "seed": 0,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T01",
+      "seed": 1,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T01",
+      "seed": 2,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T02",
+      "seed": 0,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T02",
+      "seed": 1,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T02",
+      "seed": 2,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T03",
+      "seed": 0,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T03",
+      "seed": 1,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T03",
+      "seed": 2,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T04",
+      "seed": 0,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T04",
+      "seed": 1,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T04",
+      "seed": 2,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T05",
+      "seed": 0,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T05",
+      "seed": 1,
+      "background": "BG8",
+      "passed": true
+    },
+    {
+      "task": "T05",
+      "seed": 2,
+      "background": "BG8",
+      "passed": true
+    }
+  ],
+  "GT_equality_checks": 96,
+  "source_audit_current_hash_match": {
+    "experiments/[EX8]_flow_velocity_analysis/scripts/capture_flow.py": true,
+    "experiments/[EX8]_flow_velocity_analysis/scripts/flow_common.py": true,
+    "experiments/[EX2]_background_action_invariance/scripts/run_a2world_paired.py": true,
+    "experiments/[EX2]_background_action_invariance/scripts/prepare_tracking_queries.py": true,
+    "experiments/[EX2]_background_action_invariance/scripts/track_robot_motion.py": true,
+    "experiments/[EX9]_flow_trajectory_analysis/scripts/audit_and_trajectories.py": true,
+    "experiments/[EX9]_flow_trajectory_analysis/scripts/recover_tracking_confidence.py": true,
+    "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/schedulers/rectified_flow_scheduler.py": true,
+    "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/pipelines/video2world_multiview_action_state_pred.py": true,
+    "experiments/[EX10]_early_flow_intervention/configs/protocol.json": true
+  },
+  "resources": [
+    {
+      "job_id": "49586",
+      "cpu_ram_request_MiB": 28672,
+      "process_HWM_GiB": 19.896339416503906,
+      "gpu_allocated_peak_GiB": 7.701388835906982,
+      "gpu_reserved_peak_GiB": 9.03515625,
+      "exit_code": 0
+    },
+    {
+      "job_id": "49577",
+      "cpu_ram_request_MiB": 28672,
+      "process_HWM_GiB": 19.893028259277344,
+      "gpu_allocated_peak_GiB": 7.70216703414917,
+      "gpu_reserved_peak_GiB": 9.033203125,
+      "exit_code": 0
+    },
+    {
+      "job_id": "49587",
+      "cpu_ram_request_MiB": 28672,
+      "process_HWM_GiB": 19.890491485595703,
+      "gpu_allocated_peak_GiB": 7.701388835906982,
+      "gpu_reserved_peak_GiB": 9.03515625,
+      "exit_code": 0
+    }
+  ],
+  "resource_limitations": "Slurm accounting unavailable; process HWM and polled cgroup; GPU PyTorch allocator peak excludes non-PyTorch device usage",
+  "mask": "soft geometric coverage; metric >=0.5; no hard-mask claim",
+  "run_policy": "reuse validated robot-flow-only caches; no observation-switch inference",
+  "validation_code_sha256": "7e608ce77de15c53f8ce659ea6fec832b0e4833cb50335d01750022ebbc8f8e4"
+}

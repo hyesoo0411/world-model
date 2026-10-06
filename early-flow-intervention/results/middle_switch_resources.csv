@@ -1,6 +1,0 @@
-job,stage,exit_code,CPU_request_GiB,CPU_HWM_GiB,GPU_allocator_peak_GiB,accounting
-49467,scripts/run_intervention.py,0,28.0,19.892513275146484,7.6866679191589355,process VmHWM; GPU PyTorch allocator; Slurm accounting disabled
-49468,scripts/run_middle_switch.py,0,28.0,19.883922576904297,7.716578960418701,process VmHWM; GPU PyTorch allocator; Slurm accounting disabled
-49469,scripts/run_middle_switch.py,0,28.0,19.882545471191406,7.716090679168701,process VmHWM; GPU PyTorch allocator; Slurm accounting disabled
-49470,scripts/run_middle_switch.py,0,28.0,19.848106384277344,7.716578960418701,process VmHWM; GPU PyTorch allocator; Slurm accounting disabled
-49482,scripts/track_interventions.py,0,2.0,1.2504310607910156,1.910717487335205,process VmHWM; GPU PyTorch allocator; Slurm accounting disabled

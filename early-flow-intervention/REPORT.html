@@ -1,526 +1,264 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Early flow intervention report</title><style>@font-face{font-family:FlowKR;src:url(fonts/NotoSansKR-flow.woff2?v=d32d7bc832)}body{font:16px/1.6 FlowKR,system-ui,sans-serif;max-width:1100px;margin:auto;padding:24px}table{border-collapse:collapse}td,th{padding:8px;border:1px solid #ddd}a{color:#16778a}</style><a href="./">Intervention site</a><h1>Early / Late Robot-Flow Intervention</h1>
-<p>Status: PRIMARY COMPLETE (1890/1890 primary conditions tracked).</p>
-<p>같은 배경 변화가 만든 로봇 flow를 초기 또는 후기에 BG0 방향으로 교정해 최종 궤적이 복원되는지 검사했다. 같은 현재 latent에서 BGb와 BG0 flow를 계산하고 로봇 영역만 교체했다. 초기 물리 상태·action·noise·모델·스케줄은 동일하다.</p>
-<p><strong>현재 답:</strong> Early 교정은 평균 5.1059% 회복을 보였다. Paired Early−Late 차이는 4.8933%p, 95% CI [-0.3023, 9.7212]%p이다. Early가 더 효과적이라는 결론은 아직 확정할 수 없다. 이 결과는 지정한 robot mask 개입의 제한적인 회복을 뜻하며, 큰 복원이나 early-dominant 인과 기전을 확정하지 않는다. Early 이후 BG0로 전환하면 평균 71.99% 회복, 반대 전환은 14.31% 회복이었다. 이는 early 배경의 지속적 우위를 지지하지 않는다. 전체 conditioning 및 Middle+Late 구간을 함께 바꾸는 보조 개입이므로 late-only robot 교정과는 별도로 해석한다.</p>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stage-wise Robot-Flow Intervention</title><style>@font-face{font-family:FlowKR;src:url(fonts/NotoSansKR-flow.woff2?v=bae8fd7804)}body{font:16px/1.6 FlowKR,system-ui,sans-serif;max-width:1100px;margin:auto;padding:24px}table{border-collapse:collapse}td,th{padding:8px;border:1px solid #ddd}a{color:#16778a}</style><a href="./#middle-switch">Intervention site</a><h1>Stage-wise Robot-Flow Intervention</h1>
+<p>BGb 관측을 모든 denoising 단계에서 고정하고, 현재 개입 latent에서 다시 계산한 BG0 robot flow를 선택한 구간에만 섞었다. 무엇을 바꾸었는가: robot-associated raw flow. 무엇을 비교했는가: 최종 CoTracker 손 궤적의 BG0까지 거리와 MuJoCo GT 오차.</p>
+<p><strong>현재 답:</strong> Early 교정의 제한적인 회복은 지지되지만, 보편적인 핵심 단계를 확정할 수 없다. Middle의 평균 회복률이 가장 크더라도 task별 차이와 paired CI를 함께 봐야 한다. Soft mask와 agentview 미래 latent에 한정된 개입이며, 관측 전환 결과는 이 보고서에 사용하지 않았다.</p>
+<h2>연구 질문</h2>
 <table>
 <thead>
 <tr>
 <th>질문</th>
 <th>답</th>
-<th>직접 근거</th>
+<th>근거</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Q1. Early correction reduces BG drift</td>
+<td>Q1. Robot-flow-only correction recovers BG0</td>
 <td>YES</td>
-<td>mean 0.0511, 95% CI [0.0133, 0.0952], n=269</td>
+<td>Early recovery %: 5.106 [1.334, 9.521], n=269. 고정 관측하에서 flow 교정의 제한적 인과 기여.</td>
 </tr>
 <tr>
-<td>Q2. Early is better than late</td>
+<td>Q2. Which stage is largest?</td>
 <td>INCONCLUSIVE</td>
-<td>mean 0.0489, 95% CI [-0.0030, 0.0972], n=269</td>
+<td>Mean: Early 5.106%, Middle 10.827%, Late 0.213%, Full 6.113%. Middle−Early: 5.722 [-3.674, 15.542], n=269 %p; Middle−Late: 10.615 [-0.923, 21.546], n=269 %p.</td>
 </tr>
 <tr>
-<td>Q3. Full is stronger than stage-specific correction</td>
-<td>INCONCLUSIVE</td>
-<td>Full−Early mean 0.0101, 95% CI [-0.1270, 0.1157], n=269; Full−Middle mean -0.0471, 95% CI [-0.1140, 0.0057], n=270; Full−Late mean 0.0588, 95% CI [-0.0773, 0.1730], n=270</td>
-</tr>
-<tr>
-<td>Q4. Spatial specificity to the robot region (early comparison)</td>
-<td>YES</td>
-<td>Early robot − early far-background recovery: mean 0.0529, 95% CI [0.0152, 0.0961], n=269; Full robot − full far-background: mean 0.0829, 95% CI [-0.0765, 0.1980], n=268; region sizes and intervention magnitudes differ.</td>
-</tr>
-<tr>
-<td>Q5. Larger early drift predicts greater benefit</td>
-<td>INCONCLUSIVE</td>
-<td>Task-demeaned Spearman mean 0.1841, 95% CI [-0.0221, 0.4402], n=269; association is not mediation.</td>
-</tr>
-<tr>
-<td>Q6. Early correction reduces MuJoCo GT error</td>
-<td>YES</td>
-<td>BGb ADE minus early ADE (positive=improvement, px): mean 0.0634, 95% CI [0.0070, 0.1660], n=269</td>
-</tr>
-<tr>
-<td>Q7. Subsequent mean robot latent distance to BG0 decreases</td>
-<td>YES</td>
-<td>Post-early positions12–35 mean normalized-z distance reduction: mean 0.0025, 95% CI [0.0013, 0.0042], n=270</td>
-</tr>
-<tr>
-<td>Q8. Background switching supports early influence</td>
+<td>Q3. Consistent across tasks?</td>
 <td>NO</td>
-<td>BG0 preference=(D_to_BGb−D_to_BG0)/D_BG (positive=closerBG0): BGb→BG0 mean 0.5808, 95% CI [0.4884, 0.6914], n=270; BG0→BGb mean -0.5357, 95% CI [-0.7222, -0.3450], n=269; paired difference mean -1.1152, 95% CI [-1.4144, -0.8324], n=269</td>
+<td>Task별 양/음의 회복과 순위가 다르다. 보편적 stage 우위를 주장하지 않는다.</td>
 </tr>
 <tr>
-<td>Q9. Evidence for a causal contribution (measured2D trajectory)</td>
-<td>YES</td>
-<td>Limited YES for the measured2D hand-trajectory proxy: early correction improves mean recovery, exceeds the early far-background control, and reduces subsequent latent distance. This supports a modest causal contribution under the tested mask. Early superiority, full mediation and3D action realization are not established.</td>
+<td>Q4. Robot &gt; far-background?</td>
+<td>YES (Early only)</td>
+<td>Early paired advantage: 5.286 [1.523, 9.610], n=269 %p. Full advantage: 8.288 [-7.651, 19.798], n=268 %p. Mask 크기와 개입량은 다르다.</td>
+</tr>
+<tr>
+<td>Q5. Original amount/direction predicts recovery?</td>
+<td>INCONCLUSIVE</td>
+<td>아래 방향 상관 및 CSV 참고. Stage/task에 따라 달라지며 correlation은 causal mediation의 증거가 아니다.</td>
+</tr>
+<tr>
+<td>Q6. How much remains after Full?</td>
+<td>YES, substantial residual</td>
+<td>공통 paired 표본에서 평균 잔여 비율 93.887 [79.388, 111.181], n=269 %. Mean remaining ADE 1.110 [0.185, 2.915], n=269 px. Soft 경계·mask 밖·다른 view·상태경로를 통한 영향은 남는다.</td>
 </tr>
 </tbody>
 </table>
-<h2>궤적 결과</h2>
-<p>Recovery=1−D_int/D_BG. 아래 거리는 공통 유효 future frame에서 측정한 pixel 단위 평균이며, GT ADE는 MuJoCo 투영 궤적에 대한 오차다.</p>
+<h2>동일 paired 표본 비교</h2>
+<p>각 row는 BG0·BGb·Early·Middle·Late·Full의 동일 유효 frame을 사용한다. 비율은 sample별로 계산한 뒤 평균한다. 모든 수치는 20 future frames의 2D query-center 거리이다.</p>
 <table>
 <thead>
 <tr>
-<th>조건</th>
+<th>Flow condition</th>
 <th style="text-align: right;">n</th>
 <th style="text-align: right;">D_BG px</th>
-<th style="text-align: right;">D_int px</th>
-<th style="text-align: right;">Recovery 평균</th>
-<th style="text-align: right;">중앙값</th>
+<th style="text-align: right;">ADE to BG0 px</th>
+<th style="text-align: right;">FDE to BG0 px</th>
+<th>Recovery mean % (95% CI)</th>
+<th style="text-align: right;">Median %</th>
+<th>DeltaD px (95% CI)</th>
 <th style="text-align: right;">GT ADE px</th>
+<th style="text-align: right;">GT FDE px</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>baseline</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">1.4635</td>
-<td style="text-align: right;">1.4635</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">2.2938</td>
-</tr>
-<tr>
 <td>early</td>
 <td style="text-align: right;">269</td>
-<td style="text-align: right;">1.3747</td>
-<td style="text-align: right;">1.2983</td>
-<td style="text-align: right;">0.0511</td>
-<td style="text-align: right;">0.0500</td>
-<td style="text-align: right;">2.1384</td>
+<td style="text-align: right;">1.375</td>
+<td style="text-align: right;">1.298</td>
+<td style="text-align: right;">3.067</td>
+<td>5.106 [1.334, 9.521], n=269</td>
+<td style="text-align: right;">5.000</td>
+<td>0.076 [0.009, 0.178], n=269</td>
+<td style="text-align: right;">2.138</td>
+<td style="text-align: right;">4.759</td>
 </tr>
 <tr>
 <td>middle</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">1.4635</td>
-<td style="text-align: right;">1.2865</td>
-<td style="text-align: right;">0.1079</td>
-<td style="text-align: right;">0.1321</td>
-<td style="text-align: right;">2.1605</td>
+<td style="text-align: right;">269</td>
+<td style="text-align: right;">1.375</td>
+<td style="text-align: right;">1.198</td>
+<td style="text-align: right;">2.814</td>
+<td>10.827 [-1.899, 24.914], n=269</td>
+<td style="text-align: right;">13.227</td>
+<td>0.176 [0.044, 0.339], n=269</td>
+<td style="text-align: right;">2.160</td>
+<td style="text-align: right;">4.790</td>
 </tr>
 <tr>
 <td>late</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">1.4635</td>
-<td style="text-align: right;">1.4627</td>
-<td style="text-align: right;">0.0020</td>
-<td style="text-align: right;">0.0165</td>
-<td style="text-align: right;">2.2998</td>
+<td style="text-align: right;">269</td>
+<td style="text-align: right;">1.375</td>
+<td style="text-align: right;">1.372</td>
+<td style="text-align: right;">3.214</td>
+<td>0.213 [-5.739, 5.742], n=269</td>
+<td style="text-align: right;">1.692</td>
+<td>0.003 [-0.010, 0.019], n=269</td>
+<td style="text-align: right;">2.300</td>
+<td style="text-align: right;">5.126</td>
 </tr>
 <tr>
 <td>full</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">1.4635</td>
-<td style="text-align: right;">1.2015</td>
-<td style="text-align: right;">0.0608</td>
-<td style="text-align: right;">0.1846</td>
-<td style="text-align: right;">2.0817</td>
-</tr>
-<tr>
-<td>background_early</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">1.4635</td>
-<td style="text-align: right;">1.4645</td>
-<td style="text-align: right;">-0.0018</td>
-<td style="text-align: right;">0.0007</td>
-<td style="text-align: right;">2.2941</td>
-</tr>
-<tr>
-<td>background_full</td>
-<td style="text-align: right;">268</td>
-<td style="text-align: right;">1.2851</td>
-<td style="text-align: right;">1.2763</td>
-<td style="text-align: right;">-0.0214</td>
-<td style="text-align: right;">0.0016</td>
-<td style="text-align: right;">2.1215</td>
-</tr>
-<tr>
-<td>switch_bg_to_ref</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">1.4635</td>
-<td style="text-align: right;">0.2221</td>
-<td style="text-align: right;">0.7199</td>
-<td style="text-align: right;">0.7661</td>
-<td style="text-align: right;">1.2031</td>
-</tr>
-<tr>
-<td>switch_ref_to_bg</td>
 <td style="text-align: right;">269</td>
-<td style="text-align: right;">1.3778</td>
-<td style="text-align: right;">1.1389</td>
-<td style="text-align: right;">0.1431</td>
-<td style="text-align: right;">0.1137</td>
-<td style="text-align: right;">2.0213</td>
+<td style="text-align: right;">1.375</td>
+<td style="text-align: right;">1.110</td>
+<td style="text-align: right;">2.609</td>
+<td>6.113 [-11.181, 20.612], n=269</td>
+<td style="text-align: right;">18.700</td>
+<td>0.265 [0.040, 0.583], n=269</td>
+<td style="text-align: right;">2.082</td>
+<td style="text-align: right;">4.582</td>
 </tr>
 </tbody>
 </table>
-<h2>Task별 결과</h2>
-<p>조건별 평균은 각 유효 표본, Early−Late와 n paired는 공통 유효 frame·표본 기준이다.</p>
+<p>GT ADE/FDE는 자체 visibility 기준, paired recovery는 공통 visibility 기준이다. 개별 condition-valid 표본의 수치도 <code>flow_only_metrics.csv</code>와 summary CSV에 별도로 저장했다.</p>
+<h2>Task별 paired recovery (%)</h2>
 <table>
 <thead>
 <tr>
 <th>Task</th>
-<th style="text-align: right;">n paired</th>
 <th style="text-align: right;">Early</th>
 <th style="text-align: right;">Middle</th>
 <th style="text-align: right;">Late</th>
 <th style="text-align: right;">Full</th>
-<th style="text-align: right;">Early−Late</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Original</td>
-<td style="text-align: right;">44</td>
-<td style="text-align: right;">0.0641</td>
-<td style="text-align: right;">0.0082</td>
-<td style="text-align: right;">-0.0016</td>
-<td style="text-align: right;">0.0526</td>
-<td style="text-align: right;">0.0652</td>
+<td style="text-align: right;">6.407</td>
+<td style="text-align: right;">0.800</td>
+<td style="text-align: right;">-0.114</td>
+<td style="text-align: right;">5.420</td>
 </tr>
 <tr>
 <td>T01</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">-0.0051</td>
-<td style="text-align: right;">-0.0280</td>
-<td style="text-align: right;">0.0551</td>
-<td style="text-align: right;">-0.0140</td>
-<td style="text-align: right;">-0.0603</td>
+<td style="text-align: right;">-0.514</td>
+<td style="text-align: right;">-2.797</td>
+<td style="text-align: right;">5.512</td>
+<td style="text-align: right;">-1.396</td>
 </tr>
 <tr>
 <td>T02</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">0.0599</td>
-<td style="text-align: right;">0.2023</td>
-<td style="text-align: right;">0.0082</td>
-<td style="text-align: right;">0.1793</td>
-<td style="text-align: right;">0.0517</td>
+<td style="text-align: right;">5.989</td>
+<td style="text-align: right;">20.234</td>
+<td style="text-align: right;">0.819</td>
+<td style="text-align: right;">17.933</td>
 </tr>
 <tr>
 <td>T03</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">0.0392</td>
-<td style="text-align: right;">0.1800</td>
-<td style="text-align: right;">-0.0991</td>
-<td style="text-align: right;">0.0810</td>
-<td style="text-align: right;">0.1384</td>
+<td style="text-align: right;">3.924</td>
+<td style="text-align: right;">17.998</td>
+<td style="text-align: right;">-9.912</td>
+<td style="text-align: right;">8.103</td>
 </tr>
 <tr>
 <td>T04</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">0.0059</td>
-<td style="text-align: right;">-0.0911</td>
-<td style="text-align: right;">-0.0633</td>
-<td style="text-align: right;">-0.2730</td>
-<td style="text-align: right;">0.0692</td>
+<td style="text-align: right;">0.591</td>
+<td style="text-align: right;">-9.112</td>
+<td style="text-align: right;">-6.334</td>
+<td style="text-align: right;">-27.299</td>
 </tr>
 <tr>
 <td>T05</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">0.1427</td>
-<td style="text-align: right;">0.3762</td>
-<td style="text-align: right;">0.1130</td>
-<td style="text-align: right;">0.3390</td>
-<td style="text-align: right;">0.0297</td>
+<td style="text-align: right;">14.267</td>
+<td style="text-align: right;">37.619</td>
+<td style="text-align: right;">11.298</td>
+<td style="text-align: right;">33.900</td>
 </tr>
 </tbody>
 </table>
-<h2>결과 해석</h2>
-<p>Early recovery: mean 0.0511, 95% CI [0.0133, 0.0952], n=269. Late recovery: mean 0.0020, 95% CI [-0.0574, 0.0571], n=270. Recovery는 BG0 모델 궤적에 가까워진 비율이며, 양수가 이득이다. MuJoCo ADE 개선은 별도로 보고한다.</p>
-<p>관측된 교정 효과는 지정한 soft robot mask 및 stage 범위에 대한 개입 효과이다. 작은 효과가 로봇 flow의 모든 인과 영향이 없음을 뜻하지 않는다. 배경/물체/다른 view의 표현, mask 밖으로 이동한 생성 로봇, tokenizer 공간·시간 혼합을 통해 영향이 남을 수 있다. Full 교정도 전체 모델 상태를 BG0로 바꾸지는 않는다. 결과는 첫20 future frame의 2D 손 표면 query 중심에 대한 것이며, 손의 외형 변화가 추적점에 영향을 줄 가능성과 3D 관절 운동 전체는 분리해 해석해야 한다. Early를 motion planning이라고 부르지 않는다.</p>
-<h2>고정 설정 및 품질 관리</h2>
-<p>추적 또는 paired visibility 검증에 실패한 조건 수: 4. 해당 metric은 제외/undefined로 기록하며 영상 frame을 보간하지 않았다.</p>
-<ul>
-<li>A2World checkpoint/revision/git commit: <a href="docs/model_provenance.json?v=e2aa65659f">model provenance</a>. Existing cached weights only.</li>
-<li>EX2 settled_v2: 6 tasks, BG0–BG15, seeds0–2. First20 actions; two model views; robot intervention only agentview future latent1–5.</li>
-<li>Actual flow evals0–35. Early0–11 / middle12–23 / late24–35. Step35 is final denoise for decoder. AB2 history continues without reset.</li>
-<li>Existing temporal RGB segmentation coverage is the soft intervention mask. Coverage≥0.5 is the unchanged metric mask. Soft boundaries are partial correction even at α=1.</li>
-<li>BG0/BGb baseline decoded pixels must match cached EX2 videos exactly. BG0 identity must preserve latent path exactly. On every paired forward, current tensor and RNG must remain identical.</li>
-<li>EX2 MuJoCo full GT arrays are exactly equal across16 backgrounds (96 checks). Same camera and projection oracle; no physics rerun required.</li>
-<li>Existing CoTracker3 / fixed hand-surface queries. Uniform21-frame input for all conditions; do not mix prior41-frame offline tracker outputs. All points visible on≥95% futureframes; no failure interpolation. Uncalibrated confidence is exported and does not prove correctness.</li>
-<li>Primary unit task/seed/background. Task bootstrap1000, six task clusters. Per-task results and paired contrasts saved; frames are not independent samples.</li>
-<li>Stage windows contain12 flow evaluations each but are not matched for integrated update magnitude. Spatial controls also differ in region size; they test this specified intervention, not an exhaustive localization of all robot information.</li>
-<li>Only six task clusters are available; bootstrap intervals and stage/mechanism comparisons are descriptive and are not evidence of broad task generalization.</li>
-<li>Near-zero baseline drift≤1e-4px yields undefined Recovery. D_BG and D_int always accompany it. Far-background mask excludes two output-grid cells around any robot coverage; mask sizes differ.</li>
-</ul>
-<p><a href="configs/protocol.json?v=60b2e4d7c1">Protocol</a> · <a href="results/trajectory_metrics.csv?v=8c035b80a0">Trajectory CSV</a> · <a href="results/paired_early_late.csv?v=21e45698f8">Paired CSV</a> · <a href="results/mechanism_correlations.csv?v=e2cc9dda20">Correlations</a> · <a href="https://hyesoo0411.github.io/world-model/visualization/">Previous site</a></p>
-<h2>Flow drift ↔ recovery</h2>
-<p>기존 normalized flow drift와 새 개입 회복률의 관계다. 아래 CI는 task bootstrap이며, 이 상관을 인과 매개 효과로 해석하지 않는다. Task별 수치는 correlation CSV와 사이트에서 제공한다.</p>
+<h2>실제 교정량 및 대조군</h2>
+<p>보간 가중치 M은 기존 simulator robot coverage다. Coverage≥0.5인 metric cell에서 RMS를 구하며, soft 경계에서는 완전 교체가 아니다. 교정 직후 RMS 감소는 식에서 예상되는 구현 검증이다. 인과적 endpoint는 그 이후 최종 궤적이다.</p>
 <table>
 <thead>
 <tr>
-<th>Scope</th>
-<th>Original flow</th>
-<th>Recovery</th>
-<th style="text-align: right;">n</th>
-<th>Spearman ρ (95% CI)</th>
-<th>Pearson r (95% CI)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pooled</td>
-<td>D_flow_early</td>
-<td>Recovery_early</td>
-<td style="text-align: right;">269</td>
-<td>0.2923 [0.1002, 0.4307]</td>
-<td>0.1850 [0.0138, 0.3922]</td>
-</tr>
-<tr>
-<td>pooled</td>
-<td>D_flow_early</td>
-<td>Recovery_late</td>
-<td style="text-align: right;">269</td>
-<td>-0.0766 [-0.2362, -0.0133]</td>
-<td>-0.0085 [-0.1166, 0.0851]</td>
-</tr>
-<tr>
-<td>pooled</td>
-<td>D_flow_late</td>
-<td>Recovery_early</td>
-<td style="text-align: right;">269</td>
-<td>-0.0621 [-0.3310, 0.1967]</td>
-<td>-0.0116 [-0.2819, 0.2840]</td>
-</tr>
-<tr>
-<td>pooled</td>
-<td>D_flow_late</td>
-<td>Recovery_late</td>
-<td style="text-align: right;">269</td>
-<td>-0.1630 [-0.4013, 0.0375]</td>
-<td>-0.1271 [-0.2904, 0.0369]</td>
-</tr>
-<tr>
-<td>task_demeaned</td>
-<td>D_flow_early</td>
-<td>Recovery_early</td>
-<td style="text-align: right;">269</td>
-<td>0.1841 [-0.0221, 0.4402]</td>
-<td>0.1177 [-0.0231, 0.3851]</td>
-</tr>
-<tr>
-<td>task_demeaned</td>
-<td>D_flow_early</td>
-<td>Recovery_late</td>
-<td style="text-align: right;">269</td>
-<td>-0.1129 [-0.2473, -0.0173]</td>
-<td>-0.0358 [-0.1514, 0.0286]</td>
-</tr>
-<tr>
-<td>task_demeaned</td>
-<td>D_flow_late</td>
-<td>Recovery_early</td>
-<td style="text-align: right;">269</td>
-<td>0.1108 [-0.0341, 0.2241]</td>
-<td>0.1713 [-0.0055, 0.2935]</td>
-</tr>
-<tr>
-<td>task_demeaned</td>
-<td>D_flow_late</td>
-<td>Recovery_late</td>
-<td style="text-align: right;">269</td>
-<td>-0.1391 [-0.3215, -0.0257]</td>
-<td>-0.1419 [-0.2834, -0.0543]</td>
-</tr>
-</tbody>
-</table>
-<h2>Tracking QC 제외</h2>
-<p>Confidence와 visibility는 별도 출력이다. 고정 query가 모두 visible인 future frame≥95% 기준을 유지했다.</p>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th style="text-align: right;">Seed</th>
-<th>BG</th>
-<th>Condition</th>
-<th style="text-align: right;">Valid future fraction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Original</td>
-<td style="text-align: right;">0</td>
-<td>BG8</td>
-<td>background_full</td>
-<td style="text-align: right;">0.90</td>
-</tr>
-<tr>
-<td>Original</td>
-<td style="text-align: right;">2</td>
-<td>BG8</td>
-<td>background_full</td>
-<td style="text-align: right;">0.70</td>
-</tr>
-<tr>
-<td>Original</td>
-<td style="text-align: right;">2</td>
-<td>BG8</td>
-<td>early</td>
-<td style="text-align: right;">0.85</td>
-</tr>
-<tr>
-<td>Original</td>
-<td style="text-align: right;">2</td>
-<td>BG8</td>
-<td>switch_ref_to_bg</td>
-<td style="text-align: right;">0.80</td>
-</tr>
-</tbody>
-</table>
-<h2>실제 flow 교정량</h2>
-<p>기존 EX9 drift feature는 공통 BG0 latent 경로의 값이고, 실제 교정량은 각 개입의 현재 latent에서 측정했다. 아래 감소율은 active step별1−after/before의 평균이다. Flow 검증에는 추적 QC와 무관하게270개 case를 포함한다. Soft 경계에서는 잔여 차이가 남는다.</p>
-<table>
-<thead>
-<tr>
-<th>조건</th>
-<th style="text-align: right;">cases</th>
-<th style="text-align: right;">Before RMS</th>
-<th style="text-align: right;">After RMS</th>
-<th style="text-align: right;">평균 상대 RMS 감소</th>
+<th>Stage</th>
+<th style="text-align: right;">Flow correction mean %</th>
+<th style="text-align: right;">Mean before RMS</th>
+<th style="text-align: right;">Mean after RMS</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>early</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">0.1059</td>
-<td style="text-align: right;">0.0197</td>
-<td style="text-align: right;">78.1982%</td>
+<td style="text-align: right;">78.198</td>
+<td style="text-align: right;">0.105894</td>
+<td style="text-align: right;">0.019719</td>
 </tr>
 <tr>
 <td>middle</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">0.0945</td>
-<td style="text-align: right;">0.0204</td>
-<td style="text-align: right;">76.1050%</td>
+<td style="text-align: right;">76.105</td>
+<td style="text-align: right;">0.094468</td>
+<td style="text-align: right;">0.020354</td>
 </tr>
 <tr>
 <td>late</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">0.1147</td>
-<td style="text-align: right;">0.0255</td>
-<td style="text-align: right;">76.6943%</td>
+<td style="text-align: right;">76.694</td>
+<td style="text-align: right;">0.114708</td>
+<td style="text-align: right;">0.025542</td>
 </tr>
 <tr>
 <td>full</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">0.1049</td>
-<td style="text-align: right;">0.0219</td>
-<td style="text-align: right;">76.9342%</td>
+<td style="text-align: right;">76.934</td>
+<td style="text-align: right;">0.104858</td>
+<td style="text-align: right;">0.021933</td>
 </tr>
 </tbody>
 </table>
-<h2>Optional α sweep</h2>
-<p>고정된 BG8 / seed0, 6 tasks의 보조 결과이다. 단조 여부는 인접 α의 Recovery가 감소하지 않는지 검사한 기술 통계이며, 허용 오차는1e-6이다.</p>
+<p>Same-BG no-op: BG8 ×6 tasks×3 seeds=18 cases. 매36단계의 두 BG8 forward, latent path 및 decoded pixels가 bitwise 동일. 동일 deterministic tracker의 기존 baseline 결과를 재사용했으며 별도 tracker 재실행으로 주장하지 않는다. 최종 궤적 변화 0px.</p>
+<p>Far-background comparison: Early 5.286 [1.523, 9.610], n=269 %p; Full 8.288 [-7.651, 19.798], n=268 %p. Robot과 far mask 크기·교정량이 일치하지 않아 exhaustive spatial localization은 아니다.</p>
+<h2>Flow direction ↔ recovery</h2>
+<p>원래 방향 차이는 EX8의 동일 BG0 latent 경로에서 측정한 1−cosine을 구간별로 평균했다. 반면 on-intervention-path 값은 개입된 현재 경로에서 계산했으므로 이미 앞선 교정의 영향을 받을 수 있다. 두 값을 구분한다.</p>
 <table>
 <thead>
 <tr>
-<th>Task</th>
-<th style="text-align: right;">α=0</th>
-<th style="text-align: right;">0.25</th>
-<th style="text-align: right;">0.50</th>
-<th style="text-align: right;">0.75</th>
-<th style="text-align: right;">1.00</th>
-<th>단조 증가</th>
+<th>Stage</th>
+<th>Original direction task-centered Spearman (95% CI)</th>
+<th style="text-align: right;">Pearson</th>
+<th>On-path direction Spearman (95% CI)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Original</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0007</td>
-<td style="text-align: right;">0.0011</td>
-<td style="text-align: right;">0.0024</td>
-<td style="text-align: right;">0.0033</td>
-<td>YES</td>
+<td>early</td>
+<td>0.156 [-0.044, 0.426]</td>
+<td style="text-align: right;">0.006</td>
+<td>0.158 [-0.044, 0.432]</td>
 </tr>
 <tr>
-<td>T01</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">-0.0035</td>
-<td style="text-align: right;">0.0044</td>
-<td style="text-align: right;">0.0114</td>
-<td style="text-align: right;">-0.0223</td>
-<td>NO</td>
+<td>middle</td>
+<td>0.133 [-0.107, 0.293]</td>
+<td style="text-align: right;">0.076</td>
+<td>0.136 [-0.080, 0.287]</td>
 </tr>
 <tr>
-<td>T02</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0132</td>
-<td style="text-align: right;">0.0279</td>
-<td style="text-align: right;">0.0417</td>
-<td style="text-align: right;">0.0547</td>
-<td>YES</td>
+<td>late</td>
+<td>-0.127 [-0.300, -0.023]</td>
+<td style="text-align: right;">-0.124</td>
+<td>-0.087 [-0.248, 0.001]</td>
 </tr>
 <tr>
-<td>T03</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0157</td>
-<td style="text-align: right;">0.0342</td>
-<td style="text-align: right;">0.0477</td>
-<td style="text-align: right;">0.0629</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>T04</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0333</td>
-<td style="text-align: right;">0.0559</td>
-<td style="text-align: right;">0.0748</td>
-<td style="text-align: right;">0.0833</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>T05</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0465</td>
-<td style="text-align: right;">0.1314</td>
-<td style="text-align: right;">0.1840</td>
-<td style="text-align: right;">0.2482</td>
-<td>YES</td>
+<td>full</td>
+<td>0.114 [-0.139, 0.265]</td>
+<td style="text-align: right;">0.066</td>
+<td>0.100 [-0.144, 0.269]</td>
 </tr>
 </tbody>
 </table>
-<p>유효한 6개 task 중 5개가 단조 증가를 보였다. 이 제한된 배경·seed 범위를 전체 조건의 dose-response로 일반화하지 않는다.</p>
-<h2>작은 baseline drift에 대한 민감도</h2>
-<p>전체 표본의 primary 결과를 유지한다. 1px/5px는 추적 정확도 기준이 아닌 보조 cutoff이며, 유리한 cutoff만 고르지 않는다. Absolute advantage는 D_late−D_early로, 양수가 early의 이득이다.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">최소 D_BG px</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">tasks</th>
-<th>Early−Late Recovery (95% CI)</th>
-<th>Absolute advantage px (95% CI)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">269</td>
-<td style="text-align: right;">6</td>
-<td>mean 0.0489, 95% CI [-0.0030, 0.0972], n=269</td>
-<td>mean 0.0733, 95% CI [0.0081, 0.1822], n=269</td>
-</tr>
-<tr>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">47</td>
-<td style="text-align: right;">4</td>
-<td>mean 0.0638, 95% CI [0.0517, 0.1174], n=47</td>
-<td>mean 0.3603, 95% CI [0.1129, 0.4305], n=47</td>
-</tr>
-<tr>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">19</td>
-<td style="text-align: right;">1</td>
-<td>mean 0.0501, 95% CI [undefined, undefined], n=19</td>
-<td>mean 0.6701, 95% CI [undefined, undefined], n=19</td>
-</tr>
-</tbody>
-</table>
-<p>추적 입력 길이 진단: 동일한 baseline 영상의 첫20 frame에서, 기존41-frame offline 추적과 새21-frame 추적 사이 centroid 차이는 평균 0.0434px이다. 모든 개입 비교는 새21-frame 추적끼리만 수행한다. 이 차이를 tracker의 정답 대비 정확도로 해석하지 않는다.</p>
+<h2>해석과 한계</h2>
+<p>고정된 BGb 시각 조건에서 Early robot-flow-only 교정이 BG0 쪽의 작은 평균 회복을 만든다는 결과는, 이 robot-associated flow 차이가 측정된 2D 궤적 불일치에 일부 인과적으로 기여함을 지지한다. 전체 궤적 차이를 설명하거나 유일한 경로임을 입증하지 않는다.</p>
+<p>Full에서도 잔여 차이가 크다. 이는 다른 경로의 존재와 양립하지만 그것만이 유일한 설명은 아니다. Soft mask로 교정량이 약77%이고, 한 camera·고정 GT mask·latent receptive-field mixing·생성 로봇의 mask 밖 이동도 남은 차이를 설명할 수 있다. Full이 항상 stage-specific보다 낫다는 단조성도 없다.</p>
+<p>BG0는 모델 reference이며 physical GT가 아니다. BG0 회복과 GT ADE 개선을 별도로 보고한다. 회복률은 작은 D_BG에서 민감하다. cutoff0/1/5px 민감도 CSV와 absolute DeltaD를 함께 제시한다. 6 task bootstrap의 CI는 broad generalization 근거로 충분하지 않다. CoTracker 외형 의존 오차와 2D projection 한계가 있다. Early/Middle/Late를 planning 단계로 부르지 않는다.</p>
+<h2>검증 및 재현</h2>
+<ul>
+<li>BG0/BGb smoke replay: 모든 raw flow·현재 latent·최종 pixels의 기존 캐시 재현. Same-current counterfactual은 독립 BG0 rollout tensor를 사용하지 않는다.</li>
+<li>모든 1620 robot/far intervention cache에서 fixed observation, active window, mask 밖 및 비개입 flow 동일성, latent hash를 검증했다.</li>
+<li>MuJoCo GT: 기존6×16 background equality 검증 유지. 동일20 actions·물리 상태·camera·checkpoint·noise·AB2 schedule.</li>
+<li>Paired windows: Early0–11, Middle12–23, Late24–35. Step35는 최종 decode clean 평가. AB2 history는 유지. 각 구간의 적분된 개입량은 같지 않다.</li>
+<li>Model/loader: <a href="docs/model_provenance.json?v=e2aa65659f">provenance</a>. 구현: <a href="docs/flow_only_reuse_audit.md">audit</a>. <a href="configs/flow_only_protocol.json?v=f87d34b88c">Protocol</a>.</li>
+<li><a href="results/flow_only_metrics.csv?v=003a4273e1">Metrics CSV</a> · <a href="results/flow_only_paired_stage_metrics.csv?v=2fddc27d1c">Paired metrics</a> · <a href="results/flow_only_flow_steps.csv?v=39df6dd659">Flow steps</a> · <a href="results/flow_only_trajectories.csv?v=cb540cc2ec">Trajectories</a> · <a href="results/flow_only_summary.csv?v=83d0bbf0d2">Summary</a> · <a href="results/flow_only_paired_summary.csv?v=fef41ae17f">Paired CI</a> · <a href="results/flow_only_direction_correlations.csv?v=05a99b9cb5">Direction correlations</a> · <a href="results/flow_only_noop.csv?v=c2698e614a">No-op</a> · <a href="results/flow_only_sensitivity.csv?v=cf901d67c7">Sensitivity</a></li>
+</ul>
 <h2>실행 자원</h2>
-<p>생성 작업은 CPU RAM28GiB를 요청했고 최대 프로세스 HWM은 19.90GiB였다. GPU PyTorch allocator peak는 별도로 7.75GiB이다. 추적 작업은 CPU RAM2GiB 요청, 최대 HWM 1.28GiB였다. 생성 요청량은 pilot19.89GiB에 약41% 여유를 둔 값이다.</p>
-<p>Slurm accounting이 비활성화되어 프로세스 HWM과 cgroup을 기록했다. Cgroup current에는 page cache가 포함되며 polling은 일부 순간 사용량을 놓칠 수 있다. GPU 수치는 전체 장치 사용량이 아닌 PyTorch allocator 계측이다. <a href="results/resource_usage.csv?v=45a82c86d3">Resource CSV</a></p></html>
+<p>새 smoke/no-op GPU jobs: CPU RAM 요청28 GiB, 최대 프로세스 HWM 19.90 GiB (약41% 여유). GPU allocator 최대 7.70 GiB는 CPU RAM과 별도다. 기존 cache 검증과 통계는 CPU에서 수행했다. Slurm accounting 부재로 process HWM·cgroup과 PyTorch allocator를 기록했으며, device 전체 사용량은 아니다.</p>
+<p><a href="results/flow_only_validation_summary.json?v=f9ebeec13b">Validation + resources</a></p></html>

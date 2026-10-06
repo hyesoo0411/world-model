@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "task": "Original",
+  "seed": 0,
+  "background": "BG8",
+  "cases": 9,
+  "no_observation_switch": true,
+  "all_required_assertions_passed": true
+}
