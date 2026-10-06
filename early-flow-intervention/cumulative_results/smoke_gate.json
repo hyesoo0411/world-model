@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "sample": "Original/seed0/BG8",
+  "D_BG_px": 25.3856143951416,
+  "rows": [
+    {
+      "condition": "spatial_E",
+      "D_BG_px": 25.3856143951416,
+      "ADE_BG0_px": 26.55318260192871,
+      "Recovery_pct": -4.59933010938128,
+      "D_to_BGb_px": 0.7405725121498108,
+      "future_clean_BG0_RMS": 0.44791851503347907
+    },
+    {
+      "condition": "spatial_EM",
+      "D_BG_px": 25.3856143951416,
+      "ADE_BG0_px": 0.30270227789878845,
+      "Recovery_pct": 98.80758336958951,
+      "D_to_BGb_px": 25.593843460083008,
+      "future_clean_BG0_RMS": 0.032973959543561346
+    },
+    {
+      "condition": "spatial_ML",
+      "D_BG_px": 25.3856143951416,
+      "ADE_BG0_px": 2.2736330032348633,
+      "Recovery_pct": 91.04361636890552,
+      "D_to_BGb_px": 23.178945541381836,
+      "future_clean_BG0_RMS": 0.1114099637532182
+    },
+    {
+      "condition": "spatial_all",
+      "D_BG_px": 25.3856143951416,
+      "ADE_BG0_px": 0.0641937404870987,
+      "Recovery_pct": 99.7471254803504,
+      "D_to_BGb_px": 25.40829086303711,
+      "future_clean_BG0_RMS": 0.0
+    }
+  ],
+  "baseline_exact": true,
+  "same_background_noop_exact": true,
+  "full_tensor_assignment_exact": true,
+  "fixed_BG_condition": true,
+  "same_current_x_action_tau": true,
+  "all_steps_sanity_passed": true,
+  "visual_review_pending": false,
+  "visual_review_passed": true,
+  "reviewed_at": "2026-10-06T11:41:39.214086+00:00",
+  "review": "Manually inspected rendered RGB frames 0/5/10/15/20 for BG0, BG8, E, E+M, M+L, All-steps with CoTracker query overlays. Queries remain on the gripper surface; E resembles BG8, E+M and All-steps approach BG0, M+L has a small remaining displacement. No severe tracking failure visible.",
+  "protocol_sha256": "3dc367004ebd9b4cc3a319adf5fe996dc2be56ea4688d8b6d135e618941894e9"
+}

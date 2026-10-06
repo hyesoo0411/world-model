@@ -1,0 +1,178 @@
+{
+  "passed": true,
+  "rollouts": 1080,
+  "step_checks": 38880,
+  "saved_current_latents_hashed": 38880,
+  "representative_raw_flow_rollouts_verified": 24,
+  "same_observation_action_tau": true,
+  "same_noise_and_schedule": true,
+  "GT_background_checks": 96,
+  "GT_max_difference": 0,
+  "all_steps_future_clean_BG0_max_RMS": 0.0,
+  "all_steps_future_exact_count": 270,
+  "resources": [
+    {
+      "job": "49658",
+      "stage": "scripts/resume_balanced.py",
+      "exit_code": 0,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.892051696777344,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49647",
+      "stage": "scripts/run_worker.py",
+      "exit_code": 1,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.892696380615234,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49660",
+      "stage": "scripts/resume_balanced.py",
+      "exit_code": 0,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.89550018310547,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49655",
+      "stage": "scripts/assist_remaining.py",
+      "exit_code": 1,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 0.4485435485839844,
+      "GPU_allocator_peak_GiB": 0.0,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49644",
+      "stage": "scripts/run_worker.py",
+      "exit_code": 1,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.891220092773438,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49661",
+      "stage": "scripts/resume_balanced.py",
+      "exit_code": 0,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.846237182617188,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49645",
+      "stage": "scripts/run_worker.py",
+      "exit_code": 1,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.889076232910156,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49656",
+      "stage": "scripts/validate_source_recovery.py",
+      "exit_code": 0,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.898391723632812,
+      "GPU_allocator_peak_GiB": 7.702121257781982,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49659",
+      "stage": "scripts/resume_balanced.py",
+      "exit_code": 0,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.894458770751953,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49643",
+      "stage": "scripts/track_full_spatial.py",
+      "exit_code": 0,
+      "requested_cpu_ram_mb": "2048",
+      "CPU_peak_GiB": 1.2500419616699219,
+      "GPU_allocator_peak_GiB": 1.9107160568237305,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49654",
+      "stage": "scripts/assist_remaining.py",
+      "exit_code": 1,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 0.44866943359375,
+      "GPU_allocator_peak_GiB": 0.0,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49642",
+      "stage": "scripts/run_full_spatial.py",
+      "exit_code": 0,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.892436981201172,
+      "GPU_allocator_peak_GiB": 7.702121257781982,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    },
+    {
+      "job": "49653",
+      "stage": "scripts/run_worker.py",
+      "exit_code": 1,
+      "requested_cpu_ram_mb": "28672",
+      "CPU_peak_GiB": 19.89400863647461,
+      "GPU_allocator_peak_GiB": 7.711343288421631,
+      "limitations": "cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only."
+    }
+  ],
+  "prior_results_preserved": true,
+  "pre_recovery_cases_preserved": 568,
+  "source_recovery_replay": {
+    "passed": true,
+    "checks": [
+      {
+        "background": "BG0",
+        "condition": "baseline",
+        "all_latents_bitwise_equal": true,
+        "all_raw_flow_hashes_equal": true,
+        "all_decoded_frames_equal": true
+      },
+      {
+        "background": "BG8",
+        "condition": "baseline",
+        "all_latents_bitwise_equal": true,
+        "all_raw_flow_hashes_equal": true,
+        "all_decoded_frames_equal": true
+      },
+      {
+        "background": "BG8",
+        "condition": "noop",
+        "all_latents_bitwise_equal": true,
+        "all_raw_flow_hashes_equal": true,
+        "all_decoded_frames_equal": true
+      },
+      {
+        "background": "BG8",
+        "condition": "spatial_EM",
+        "all_latents_bitwise_equal": true,
+        "all_raw_flow_hashes_equal": true,
+        "all_decoded_frames_equal": true
+      },
+      {
+        "background": "BG8",
+        "condition": "spatial_all",
+        "all_latents_bitwise_equal": true,
+        "all_raw_flow_hashes_equal": true,
+        "all_decoded_frames_equal": true
+      }
+    ],
+    "source_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+    "recorded_source_hashes_verified": 10,
+    "intervention_code_unchanged": true,
+    "only_change": "source checkout location; previous experiments untouched"
+  }
+}

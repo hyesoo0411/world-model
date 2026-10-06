@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "background": "BG0",
+      "condition": "baseline",
+      "all_latents_bitwise_equal": true,
+      "all_raw_flow_hashes_equal": true,
+      "all_decoded_frames_equal": true
+    },
+    {
+      "background": "BG8",
+      "condition": "baseline",
+      "all_latents_bitwise_equal": true,
+      "all_raw_flow_hashes_equal": true,
+      "all_decoded_frames_equal": true
+    },
+    {
+      "background": "BG8",
+      "condition": "noop",
+      "all_latents_bitwise_equal": true,
+      "all_raw_flow_hashes_equal": true,
+      "all_decoded_frames_equal": true
+    },
+    {
+      "background": "BG8",
+      "condition": "spatial_EM",
+      "all_latents_bitwise_equal": true,
+      "all_raw_flow_hashes_equal": true,
+      "all_decoded_frames_equal": true
+    },
+    {
+      "background": "BG8",
+      "condition": "spatial_all",
+      "all_latents_bitwise_equal": true,
+      "all_raw_flow_hashes_equal": true,
+      "all_decoded_frames_equal": true
+    }
+  ],
+  "source_commit": "077e10ad6cee07342b5e779f11fea78247584834",
+  "recorded_source_hashes_verified": 10,
+  "intervention_code_unchanged": true,
+  "only_change": "source checkout location; previous experiments untouched"
+}

@@ -1,89 +1,65 @@
-# Stage-wise Robot-Flow Intervention
+# Cumulative Full-spatial Flow Intervention
 
-BGb 관측을 모든 denoising 단계에서 고정하고, 현재 개입 latent에서 다시 계산한 BG0 robot flow를 선택한 구간에만 섞었다. 무엇을 바꾸었는가: robot-associated raw flow. 무엇을 비교했는가: 최종 CoTracker 손 궤적의 BG0까지 거리와 MuJoCo GT 오차.
+동일한 expert action·물리 상태·초기 noise에서, 배경으로 달라진 전체 raw flow를 누적 교정하면 최종 로봇 궤적이 BG0에 가까워지는지 확인했다. BGb main observation을 유지하고, 실제 현재 latent에서 다시 계산한 BG0 반사실 flow를 선택한 단계의 tensor 전체에 넣었다. 비교 대상은 기존 Robot-only와 새 Full-spatial E / E+M / M+L / All-steps다.
 
-**현재 답:** Early 교정의 제한적인 회복은 지지되지만, 보편적인 핵심 단계를 확정할 수 없다. Middle의 평균 회복률이 가장 크더라도 task별 차이와 paired CI를 함께 봐야 한다. Soft mask와 agentview 미래 latent에 한정된 개입이며, 관측 전환 결과는 이 보고서에 사용하지 않았다.
+Result · 평균 회복률: E 14.35% → E+M 49.91% → All-steps 56.44%. E+M 뒤 Late는 BGb flow로 진행했습니다.
+Result · E+M − M+L: 5.87 [-1.94, 15.01]%p (95% CI). 어느 구간이 우세한지 확정할 수 없습니다.
+Result · 같은 E+M 구간에서 Full-spatial − Robot-only: 37.12 [13.02, 62.35]%p. 더 넓고 강한 교정의 추가 회복을 지지합니다.
+All-steps 잔여 ADE는 평균 0.071px입니다. 평균 회복률은 작은 baseline 표본의 비율에 민감합니다. D_BG≥1px인 47개 (4 tasks)에서는 97.34% 회복입니다 (보조 분석).
+
+핵심 해석: 시간 제한 Full-spatial 교정의 회복은 배경에 따른 전체 generative flow 차이가 최종 궤적 차이에 인과적으로 기여함을 지지한다. E+M 이후 Late를 BGb flow로 되돌려도 평균 회복이 남는다. Robot-only와의 비교에는 공간 범위뿐 아니라 soft/hard 교정 강도와 view 범위 차이도 있다. 순수한 robot-local 대 background-local 인과 분해는 아니다.
 
 ## 연구 질문
 
-| 질문 | 답 | 근거 |
+| 질문 | 답 | 직접 근거와 한계 |
 |---|---|---|
-| Q1. Robot-flow-only correction recovers BG0 | YES | Early recovery %: 5.106 [1.334, 9.521], n=269. 고정 관측하에서 flow 교정의 제한적 인과 기여. |
-| Q2. Which stage is largest? | INCONCLUSIVE | Mean: Early 5.106%, Middle 10.827%, Late 0.213%, Full 6.113%. Middle−Early: 5.722 [-3.674, 15.542], n=269 %p; Middle−Late: 10.615 [-0.923, 21.546], n=269 %p. |
-| Q3. Consistent across tasks? | NO | Task별 양/음의 회복과 순위가 다르다. 보편적 stage 우위를 주장하지 않는다. |
-| Q4. Robot > far-background? | YES (Early only) | Early paired advantage: 5.286 [1.523, 9.610], n=269 %p. Full advantage: 8.288 [-7.651, 19.798], n=268 %p. Mask 크기와 개입량은 다르다. |
-| Q5. Original amount/direction predicts recovery? | INCONCLUSIVE | 아래 방향 상관 및 CSV 참고. Stage/task에 따라 달라지며 correlation은 causal mediation의 증거가 아니다. |
-| Q6. How much remains after Full? | YES, substantial residual | 공통 paired 표본에서 평균 잔여 비율 93.887 [79.388, 111.181], n=269 %. Mean remaining ADE 1.110 [0.185, 2.915], n=269 px. Soft 경계·mask 밖·다른 view·상태경로를 통한 영향은 남는다. |
+| 1. Full-spatial이 Robot-only보다 더 회복하는가? | YES (E+M) | Matched E+M paired 차이 37.12 [13.02, 62.35]%p (n=270). 공간·강도·view가 함께 다름. |
+| 2. Early만의 회복이 이후에도 남는가? | YES | 최종 E recovery 14.35 [3.65, 24.57]%; ΔD 0.24 [0.03, 0.55]px. 양수 여부와 회복의 크기를 구분. |
+| 3. Middle까지 교정하면 추가 회복이 있는가? | YES | E+M − E 35.56 [16.42, 54.96]%p. |
+| 4. E+M 이후 Late BGb flow가 회복을 얼마나 줄이는가? | YES (Late 추가 교정 이득) | All-steps − E+M 6.53 [2.24, 11.54]%p. 이는 최종 결과의 paired 차이이며, Middle 종료 시점에 이미 회복된 궤적을 직접 측정한 것은 아님. |
+| 5. 같은 24회에서 E+M이 M+L보다 강한가? | INCONCLUSIVE | 5.87 [-1.94, 15.01]%p. 평가 수는 같지만 sigma 구간과 실제 update 크기는 다름. |
+| 6. All-steps가 BG0에 접근하는가? | YES | Recovery 56.44 [32.51, 77.70]%, ADE_BG0 0.07 [0.05, 0.09]px. 미래 clean latent 완전 일치 270/270. |
+| 7. Task 간 일관적인가? | YES (E+M 평균 방향) | E+M task평균 6.34–92.06%. 크기·구간 순위의 일관성이나 새로운 task로의 일반화는 별도. |
+| 8. Flow 차이가 robot-local에 한정되는가? | NO; 공간별 인과적 우위는 INCONCLUSIVE | 초기 step0에서 미래 robot-mask 밖 flow RMS 평균 0.1605; robot-mask 안 0.1059. Mask 밖에도 차이가 존재하지만, 이것만으로 공간별 인과 기여를 정할 수는 없습니다. |
+| 9. All-steps 뒤 잔여 궤적 차이는? | NO (완전 일치는 아님) | 평균 ADE_BG0 0.0714px; sample별 잔여 비율 평균 43.56%. 관측-frame anchor와 decode·tracking 경로가 유지되어, 잔여 오차만으로 독립적인 추가 메커니즘을 확정할 수 없음. |
 
-## 동일 paired 표본 비교
+## 수치와 통계
 
-각 row는 BG0·BGb·Early·Middle·Late·Full의 동일 유효 frame을 사용한다. 비율은 sample별로 계산한 뒤 평균한다. 모든 수치는 20 future frames의 2D query-center 거리이다.
+회복률 = 100 × (D_BG − D_k)/(D_BG + 1e−8). D는 20 future frame의 손 표면 query 중심 2D ADE(px). D_BG ≤ 0.0001px이면 회복률은 undefined. BG0는 모델 reference이고 물리 GT는 MuJoCo다. 표본 단위는 task/background/seed이며 frame을 독립 표본으로 쓰지 않았다.
 
-| Flow condition | n | D_BG px | ADE to BG0 px | FDE to BG0 px | Recovery mean % (95% CI) | Median % | DeltaD px (95% CI) | GT ADE px | GT FDE px |
-|---|---:|---:|---:|---:|---|---:|---|---:|---:|
-| early | 269 | 1.375 | 1.298 | 3.067 | 5.106 [1.334, 9.521], n=269 | 5.000 | 0.076 [0.009, 0.178], n=269 | 2.138 | 4.759 |
-| middle | 269 | 1.375 | 1.198 | 2.814 | 10.827 [-1.899, 24.914], n=269 | 13.227 | 0.176 [0.044, 0.339], n=269 | 2.160 | 4.790 |
-| late | 269 | 1.375 | 1.372 | 3.214 | 0.213 [-5.739, 5.742], n=269 | 1.692 | 0.003 [-0.010, 0.019], n=269 | 2.300 | 5.126 |
-| full | 269 | 1.375 | 1.110 | 2.609 | 6.113 [-11.181, 20.612], n=269 | 18.700 | 0.265 [0.040, 0.583], n=269 | 2.082 | 4.582 |
+| Full-spatial window | n | Recovery mean [95% CI] % | Median % | D_BG px | ADE_BG0 px | FDE_BG0 px | ΔD px | ADE_GT px | FDE_GT px |
+|---|---:|---|---:|---:|---:|---:|---:|---:|---:|
+| Full-spatial E | 269 | 14.35 [3.65, 24.57] | 11.64 | 1.3778 | 1.1389 | 2.6941 | 0.2389 | 2.0213 | 4.4557 |
+| Full-spatial E+M | 269 | 49.91 [25.96, 73.45] | 68.94 | 1.3778 | 0.0935 | 0.1099 | 1.2843 | 1.1048 | 2.1038 |
+| Full-spatial M+L | 269 | 44.03 [26.49, 59.47] | 56.58 | 1.3778 | 0.2559 | 0.4263 | 1.1219 | 1.2170 | 2.3343 |
+| Full-spatial All-steps | 269 | 56.44 [32.51, 77.70] | 72.58 | 1.3778 | 0.0714 | 0.0780 | 1.3063 | 1.0868 | 2.0696 |
 
-GT ADE/FDE는 자체 visibility 기준, paired recovery는 공통 visibility 기준이다. 개별 condition-valid 표본의 수치도 `flow_only_metrics.csv`와 summary CSV에 별도로 저장했다.
+전체 평균 CI는 6 task cluster를 1,000회 bootstrap(seed42)했다. Paired 비교는 네 조건 모두에 공통 유효한 frame을 사용했다. GT ADE는 각 궤적의 valid frame, GT improvement는 paired valid frame 기준이다. 모든 query가 visible인 future frame이 95% 미만인 표본은 해당 지표에서 제외했다. Confidence·visibility와 실패 표본을 CSV에 보존했고 보간하지 않았다.
 
-## Task별 paired recovery (%)
+GT 해석: E+M의 GT 오차 개선은 T01에서 −0.034px, T02에서 −0.019px였다. BG0 방향 회복이 모든 task의 GT 개선을 뜻하지 않는다. 위 전체 양의 평균에는 Original task의 큰 개선이 영향을 준다.
 
-| Task | Early | Middle | Late | Full |
-|---|---:|---:|---:|---:|
-| Original | 6.407 | 0.800 | -0.114 | 5.420 |
-| T01 | -0.514 | -2.797 | 5.512 | -1.396 |
-| T02 | 5.989 | 20.234 | 0.819 | 17.933 |
-| T03 | 3.924 | 17.998 | -9.912 | 8.103 |
-| T04 | 0.591 | -9.112 | -6.334 | -27.299 |
-| T05 | 14.267 | 37.619 | 11.298 | 33.900 |
+## 구현 검증과 잔여 경로
 
-## 실제 교정량 및 대조군
+새 rollout 1080; step 검사 38880; 저장된 실제 현재 latent hash 38880개 확인. 활성 단계 v_used == v_0, 비활성 v_used == v_b. Pilot BG0/BGb baseline과 same-background no-op은 latent·decoded frame·CoTracker track이 정확히 일치했다. 기존 MuJoCo GT의 배경 간 동일성 검사 96개, 최대 차이0.
 
-보간 가중치 M은 기존 simulator robot coverage다. Coverage≥0.5인 metric cell에서 RMS를 구하며, soft 경계에서는 완전 교체가 아니다. 교정 직후 RMS 감소는 식에서 예상되는 구현 검증이다. 인과적 endpoint는 그 이후 최종 궤적이다.
+A2World 공식 denoiser는 raw flow를 clean estimate로 변환한 후 관측-frame 위치를 main condition으로 고정한다. 이 위치는 BGb로 유지했다. All-steps의 미래 latent가 BG0와 같아도, 이 관측 anchor와 시간적 VAE decode 때문에 최종 영상 전체가 BG0와 bitwise 동일할 필요는 없다. All-steps는 구현 상한이며, E+M release 실험을 대체하는 주 결과가 아니다.
 
-| Stage | Flow correction mean % | Mean before RMS | Mean after RMS |
-|---|---:|---:|---:|
-| early | 78.198 | 0.105894 | 0.019719 |
-| middle | 76.105 | 0.094468 | 0.020354 |
-| late | 76.694 | 0.114708 | 0.025542 |
-| full | 76.934 | 0.104858 | 0.021933 |
+원래 RGB/latent robot mask는 분석용으로 재사용했다. Full-spatial 교정에는 mask를 적용하지 않았다. Nonrobot은 mask의 complement로 다른 camera와 관측-frame도 포함한다. 미래 nonrobot 지표에서는 관측-frame을 제외했지만 순수한 물리 배경 분할은 아니다.
 
-Same-BG no-op: BG8 ×6 tasks×3 seeds=18 cases. 매36단계의 두 BG8 forward, latent path 및 decoded pixels가 bitwise 동일. 동일 deterministic tracker의 기존 baseline 결과를 재사용했으며 별도 tracker 재실행으로 주장하지 않는다. 최종 궤적 변화 0px.
+실행 중 외부 A2World 소스 폴더가 사라져 568개 완료 표본을 보존한 상태로 중단됐다. 새 실험 runtime에 같은 commit을 확보했고, 기록된 source SHA-256 10개가 모두 일치했다. BG0/BGb baseline·no-op·E+M·All-steps의 전체 latent·raw-flow hash·decoded frame을 bitwise 재현한 뒤 남은 512개만 재개했다. 기존 결과 파일은 변경하지 않았다.
 
-Far-background comparison: Early 5.286 [1.523, 9.610], n=269 %p; Full 8.288 [-7.651, 19.798], n=268 %p. Robot과 far mask 크기·교정량이 일치하지 않아 exhaustive spatial localization은 아니다.
+## 해석의 범위
 
-## Flow direction ↔ recovery
+이 개입은 전체 generative flow field를 바꾸며 appearance·object·background 관련 변화도 포함한다. Raw action은 변하지 않는다. “Action realization / 생성 궤적이 달라진다”가 적절한 표현이다. Early를 planning stage라고 부르지 않고, 단일 critical stage나 전체 causal mediation을 주장하지 않는다.
 
-원래 방향 차이는 EX8의 동일 BG0 latent 경로에서 측정한 1−cosine을 구간별로 평균했다. 반면 on-intervention-path 값은 개입된 현재 경로에서 계산했으므로 이미 앞선 교정의 영향을 받을 수 있다. 두 값을 구분한다.
+기존 Robot-only는 soft coverage에 따른 부분 교정이다. Full-spatial의 강한 회복만으로 공간 밖 flow의 단독 원인을 확정할 수 없다. 기존 mask는 MuJoCo GT 기준이어서, 생성 로봇이 다른 위치로 움직인 경우 robot flow 일부를 놓칠 수도 있다. 같은 hard 교정 강도·view 범위·mask coverage를 맞춘 공간 대조군이 이 설명을 더 구분할 수 있다. 작은 D_BG에서의 ratio 민감도, CoTracker 2D 추적 오차, 6 task만의 cluster CI도 한계다.
 
-| Stage | Original direction task-centered Spearman (95% CI) | Pearson | On-path direction Spearman (95% CI) |
-|---|---|---:|---|
-| early | 0.156 [-0.044, 0.426] | 0.006 | 0.158 [-0.044, 0.432] |
-| middle | 0.133 [-0.107, 0.293] | 0.076 | 0.136 [-0.080, 0.287] |
-| late | -0.127 [-0.300, -0.023] | -0.124 | -0.087 [-0.248, 0.001] |
-| full | 0.114 [-0.139, 0.265] | 0.066 | 0.100 [-0.144, 0.269] |
+## 재현 파일
 
-## 해석과 한계
-
-고정된 BGb 시각 조건에서 Early robot-flow-only 교정이 BG0 쪽의 작은 평균 회복을 만든다는 결과는, 이 robot-associated flow 차이가 측정된 2D 궤적 불일치에 일부 인과적으로 기여함을 지지한다. 전체 궤적 차이를 설명하거나 유일한 경로임을 입증하지 않는다.
-
-Full에서도 잔여 차이가 크다. 이는 다른 경로의 존재와 양립하지만 그것만이 유일한 설명은 아니다. Soft mask로 교정량이 약77%이고, 한 camera·고정 GT mask·latent receptive-field mixing·생성 로봇의 mask 밖 이동도 남은 차이를 설명할 수 있다. Full이 항상 stage-specific보다 낫다는 단조성도 없다.
-
-BG0는 모델 reference이며 physical GT가 아니다. BG0 회복과 GT ADE 개선을 별도로 보고한다. 회복률은 작은 D_BG에서 민감하다. cutoff0/1/5px 민감도 CSV와 absolute DeltaD를 함께 제시한다. 6 task bootstrap의 CI는 broad generalization 근거로 충분하지 않다. CoTracker 외형 의존 오차와 2D projection 한계가 있다. Early/Middle/Late를 planning 단계로 부르지 않는다.
-
-## 검증 및 재현
-
-- BG0/BGb smoke replay: 모든 raw flow·현재 latent·최종 pixels의 기존 캐시 재현. Same-current counterfactual은 독립 BG0 rollout tensor를 사용하지 않는다.
-- 모든 1620 robot/far intervention cache에서 fixed observation, active window, mask 밖 및 비개입 flow 동일성, latent hash를 검증했다.
-- MuJoCo GT: 기존6×16 background equality 검증 유지. 동일20 actions·물리 상태·camera·checkpoint·noise·AB2 schedule.
-- Paired windows: Early0–11, Middle12–23, Late24–35. Step35는 최종 decode clean 평가. AB2 history는 유지. 각 구간의 적분된 개입량은 같지 않다.
-- Model/loader: [provenance](docs/model_provenance.json). 구현: [audit](docs/flow_only_reuse_audit.md). [Protocol](configs/flow_only_protocol.json).
-- [Metrics CSV](results/flow_only_metrics.csv) · [Paired metrics](results/flow_only_paired_stage_metrics.csv) · [Flow steps](results/flow_only_flow_steps.csv) · [Trajectories](results/flow_only_trajectories.csv) · [Summary](results/flow_only_summary.csv) · [Paired CI](results/flow_only_paired_summary.csv) · [Direction correlations](results/flow_only_direction_correlations.csv) · [No-op](results/flow_only_noop.csv) · [Sensitivity](results/flow_only_sensitivity.csv)
-
-## 실행 자원
-
-새 smoke/no-op GPU jobs: CPU RAM 요청28 GiB, 최대 프로세스 HWM 19.90 GiB (약41% 여유). GPU allocator 최대 7.70 GiB는 CPU RAM과 별도다. 기존 cache 검증과 통계는 CPU에서 수행했다. Slurm accounting 부재로 process HWM·cgroup과 PyTorch allocator를 기록했으며, device 전체 사용량은 아니다.
-
-[Validation + resources](results/flow_only_validation_summary.json)
+- `configs/protocol.json`: 실행된 window와 조건. 상속된 robot-mask/negative-control 항목은 이전 실험 문맥이며, 새 primary 공간 정의는 `space`, 시간 정의는 `windows`다.
+- `docs/implementation.md`, `docs/model_provenance.json`: 실제 raw flow hook / scheduler / checkpoint 근거.
+- `results/flow_steps.csv`, `trajectories.csv`, `rollout_metrics.csv`: 모든 step와 궤적·endpoint.
+- `results/paired_window_metrics.csv`, `paired_summary.csv`, `spatial_summary.csv`: paired 기준.
+- `results/summary.csv`, `bootstrap_statistics.json`, `sensitivity.csv`: 평균·중앙값·CI 및 baseline drift 민감도.
+- `results/final_validation.json`, `resources.csv`: validation와 CPU/GPU 실측.
+- `results/<task>/seed<seed>/<BG>/<condition>/`: 무손실 frames, latent 경로, tracking, 대표 raw flow. 원시 tensor와 checkpoint는 공개 사이트에 넣지 않음.

@@ -1,0 +1,72 @@
+[
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/pipelines/video2world_multiview_action_state_pred.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/cosmos_predict2/pipelines/video2world_multiview_action_state_pred.py",
+    "expected": "700708804681e3725f0b8ff6ef20554384774c3e5c221529eb9dc6eb8b618f0e",
+    "actual": "700708804681e3725f0b8ff6ef20554384774c3e5c221529eb9dc6eb8b618f0e",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/models/video2world_multiview_action_state_pred_dit.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/cosmos_predict2/models/video2world_multiview_action_state_pred_dit.py",
+    "expected": "3b42a7463bcb99e47d4b99bde272477c9fe696422fb5a26eb5286ad108aeb445",
+    "actual": "3b42a7463bcb99e47d4b99bde272477c9fe696422fb5a26eb5286ad108aeb445",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/models/video2world_multiview_action_state_pred_model.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/cosmos_predict2/models/video2world_multiview_action_state_pred_model.py",
+    "expected": "23d983be1b02b69a07599992fb9538ba412db3355dc704d50a3e8d6b90ff3943",
+    "actual": "23d983be1b02b69a07599992fb9538ba412db3355dc704d50a3e8d6b90ff3943",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/models/video2world_model.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/cosmos_predict2/models/video2world_model.py",
+    "expected": "0e8869776b46453c70fcbb7960dab5f864c29f0771eac47d39bdeb2e95c6b636",
+    "actual": "0e8869776b46453c70fcbb7960dab5f864c29f0771eac47d39bdeb2e95c6b636",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/module/denoiser_scaling.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/cosmos_predict2/module/denoiser_scaling.py",
+    "expected": "8d46e93faf47d4ba4705e7c7c8864a45ebc5bc2114e9c26565149db38067d59b",
+    "actual": "8d46e93faf47d4ba4705e7c7c8864a45ebc5bc2114e9c26565149db38067d59b",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/schedulers/rectified_flow_scheduler.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/cosmos_predict2/schedulers/rectified_flow_scheduler.py",
+    "expected": "3ab5e171ffea12a23c328247061216ea4ee530d97bf3ab9f227c513808f0d2c3",
+    "actual": "3ab5e171ffea12a23c328247061216ea4ee530d97bf3ab9f227c513808f0d2c3",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/tokenizers/tokenizer.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/cosmos_predict2/tokenizers/tokenizer.py",
+    "expected": "b2cb5efef419f9ada8a0e0941142ccaddae348b5aa4934b3b4eb8b8dbfddc8a5",
+    "actual": "b2cb5efef419f9ada8a0e0941142ccaddae348b5aa4934b3b4eb8b8dbfddc8a5",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/a2world/actions.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/a2world/actions.py",
+    "expected": "edc7d75ae61562fe4fbac68448fd6ee4764b5ee308f235ca11bc7bc5c8f5b6ff",
+    "actual": "edc7d75ae61562fe4fbac68448fd6ee4764b5ee308f235ca11bc7bc5c8f5b6ff",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/a2world/history.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/a2world/history.py",
+    "expected": "cca78de2a16eac2aabff3b329ba4847c56e5e919d5b523c8e510adb4a9068f9f",
+    "actual": "cca78de2a16eac2aabff3b329ba4847c56e5e919d5b523c8e510adb4a9068f9f",
+    "passed": true
+  },
+  {
+    "original": "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/a2world/rollout.py",
+    "recovered": "experiments/[EX12]_cumulative_full_spatial_flow/runtime/A2World/world_model/a2world/rollout.py",
+    "expected": "709c860931a3330fd91e69271e3be9030ebc1c9e4fa48619ff71cceffaf6dba9",
+    "actual": "709c860931a3330fd91e69271e3be9030ebc1c9e4fa48619ff71cceffaf6dba9",
+    "passed": true
+  }
+]

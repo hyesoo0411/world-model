@@ -1,0 +1,498 @@
+{
+  "passed": true,
+  "GT_checks": [
+    {
+      "task": "Original",
+      "background": "BG0",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG1",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG2",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG3",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG4",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG5",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG6",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG7",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG8",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG9",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG10",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG11",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG12",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG13",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG14",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "Original",
+      "background": "BG15",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG0",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG1",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG2",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG3",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG4",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG5",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG6",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG7",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG8",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG9",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG10",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG11",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG12",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG13",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG14",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T01",
+      "background": "BG15",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG0",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG1",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG2",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG3",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG4",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG5",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG6",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG7",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG8",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG9",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG10",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG11",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG12",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG13",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG14",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T02",
+      "background": "BG15",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG0",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG1",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG2",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG3",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG4",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG5",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG6",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG7",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG8",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG9",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG10",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG11",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG12",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG13",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG14",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T03",
+      "background": "BG15",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG0",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG1",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG2",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG3",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG4",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG5",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG6",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG7",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG8",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG9",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG10",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG11",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG12",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG13",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG14",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T04",
+      "background": "BG15",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG0",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG1",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG2",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG3",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG4",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG5",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG6",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG7",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG8",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG9",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG10",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG11",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG12",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG13",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG14",
+      "max_abs_GT_difference": 0.0
+    },
+    {
+      "task": "T05",
+      "background": "BG15",
+      "max_abs_GT_difference": 0.0
+    }
+  ],
+  "sha256": {
+    "experiments/[EX8]_flow_velocity_analysis/scripts/capture_flow.py": "382ab9e0a040430e20ca54f6f680bbfd4ae9a9c520818fdeda4ac41445cb4514",
+    "experiments/[EX8]_flow_velocity_analysis/scripts/flow_common.py": "087ac73cf10ae185ab372f4c1484d10e43c23536f334ea4dff99f679bcbf1266",
+    "experiments/[EX2]_background_action_invariance/scripts/run_a2world_paired.py": "03cf83117c6590ae872a21369ed17bc5893f4661d46e8b8ed3daa52c08c90e22",
+    "experiments/[EX2]_background_action_invariance/scripts/prepare_tracking_queries.py": "5e6e39cd5908d9e58225763579083383c0ca373c07c7d112c45581a013492fe9",
+    "experiments/[EX2]_background_action_invariance/scripts/track_robot_motion.py": "7bc0a2c7b167c6e399dce398442b27d82dafd73eae8f41f31605356223cc57be",
+    "experiments/[EX9]_flow_trajectory_analysis/scripts/audit_and_trajectories.py": "28d7326bd50034f618d654d747b669e0d92152e65ef50dd6b4080a01ed381f06",
+    "experiments/[EX9]_flow_trajectory_analysis/scripts/recover_tracking_confidence.py": "6904bedb88fcf02c7f8dadce099ce65141e9f5360554e9c62f99234d1a7656f6",
+    "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/schedulers/rectified_flow_scheduler.py": "3ab5e171ffea12a23c328247061216ea4ee530d97bf3ab9f227c513808f0d2c3",
+    "experiments/[EX1]_reverse_causal/vendor/A2World/world_model/cosmos_predict2/pipelines/video2world_multiview_action_state_pred.py": "700708804681e3725f0b8ff6ef20554384774c3e5c221529eb9dc6eb8b618f0e",
+    "experiments/[EX10]_early_flow_intervention/configs/protocol.json": "7ba90a4fea88c696af7ebd3d20b840433529cec311775c62e7bf885419fb1113"
+  },
+  "git_commit": "077e10ad6cee07342b5e779f11fea78247584834"
+}

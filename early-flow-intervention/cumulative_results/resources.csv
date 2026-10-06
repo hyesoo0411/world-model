@@ -1,0 +1,14 @@
+job,stage,exit_code,requested_cpu_ram_mb,CPU_peak_GiB,GPU_allocator_peak_GiB,limitations
+49658,scripts/resume_balanced.py,0,28672,19.892051696777344,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49647,scripts/run_worker.py,1,28672,19.892696380615234,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49660,scripts/resume_balanced.py,0,28672,19.89550018310547,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49655,scripts/assist_remaining.py,1,28672,0.4485435485839844,0.0,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49644,scripts/run_worker.py,1,28672,19.891220092773438,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49661,scripts/resume_balanced.py,0,28672,19.846237182617188,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49645,scripts/run_worker.py,1,28672,19.889076232910156,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49656,scripts/validate_source_recovery.py,0,28672,19.898391723632812,7.702121257781982,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49659,scripts/resume_balanced.py,0,28672,19.894458770751953,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49643,scripts/track_full_spatial.py,0,2048,1.2500419616699219,1.9107160568237305,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49654,scripts/assist_remaining.py,1,28672,0.44866943359375,0.0,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49642,scripts/run_full_spatial.py,0,28672,19.892436981201172,7.702121257781982,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
+49653,scripts/run_worker.py,1,28672,19.89400863647461,7.711343288421631,cgroup current includes page cache; polling may miss transients where memory.peak unavailable; GPU stats are PyTorch allocator only.
