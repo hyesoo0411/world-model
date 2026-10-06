@@ -12,15 +12,16 @@ function lines(id,series,xlabel,ylabel,xmax=1){
 function scatter(id,rows,key,label){let rs=rows.filter(r=>Number.isFinite(r[key]));const W=420,H=270,L=66,T=22,B=53,R=15;let mx=Math.max(1e-8,...rs.map(r=>r.D_norm)),my=Math.max(1e-8,...rs.map(r=>r[key]));let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Flow versus ${label}">`;
  for(let i=0;i<=3;i++){let x=L+i/3*(W-L-R),y=H-B-i/3*(H-T-B);s+=`<path d="M${L} ${y}H${W-R}" stroke="#e3e9ed"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="10">${(my*i/3).toPrecision(2)}</text><text x="${x}" y="${H-B+18}" text-anchor="middle" font-size="10">${fmt(mx*i/3,2)}</text>`;}
  rs.forEach(r=>{let color=palette[data.tasks.indexOf(r.task)];s+=`<circle cx="${L+r.D_norm/mx*(W-L-R)}" cy="${H-B-r[key]/my*(H-T-B)}" r="3" fill="${color}" opacity=".7"><title>${r.task} seed${r.seed} ${r.background}: ${fmt(r[key],5)}</title></circle>`;});s+=`<text x="${W/2}" y="${H-7}" font-size="12" text-anchor="middle">Normalized flow difference</text><text x="15" y="${H/2}" transform="rotate(-90 15 ${H/2})" font-size="12" text-anchor="middle">${label}</text></svg>`;$(id).innerHTML=s+'<div class="plotLegend">'+[...new Set(rs.map(r=>r.task))].map(t=>`<span style="color:${palette[data.tasks.indexOf(t)]}">● ${t}</span>`).join('')+'</div>';}
-function loboScatter(rows,centered,showLabels=false){
+function loboScatter(rows,centered,showLabels=false,options={}){
+ const xkey=options.xkey||'D_norm',target=options.target||'ex9-lobo-scatter',xlabel=options.xlabel||'Mean normalized robot-flow drift';
  const W=860,H=335,L=85,R=25,T=25,B=66;
  const bounds=k=>{let lo=Math.min(...rows.map(r=>r[k])),hi=Math.max(...rows.map(r=>r[k])),pad=(hi-lo||1)*.08;return [lo-pad,hi+pad];};
- const [xmin,xmax]=bounds('D_norm'),[ymin,ymax]=bounds('lobo_R2'),X=x=>L+(x-xmin)/(xmax-xmin)*(W-L-R),Y=y=>H-B-(y-ymin)/(ymax-ymin)*(H-T-B);
- let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Robot-flow drift versus LOBO Action R²">`;
+ const [xmin,xmax]=bounds(xkey),[ymin,ymax]=bounds('lobo_R2'),X=x=>L+(x-xmin)/(xmax-xmin)*(W-L-R),Y=y=>H-B-(y-ymin)/(ymax-ymin)*(H-T-B);
+ let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${xlabel} versus LOBO Action R²">`;
  for(let i=0;i<=4;i++){let x=xmin+(xmax-xmin)*i/4,y=ymin+(ymax-ymin)*i/4;svg+=`<path d="M${L} ${Y(y)}H${W-R}" stroke="#e3e9ed"/><text x="${L-7}" y="${Y(y)+4}" text-anchor="end" font-size="11">${fmt(y)}</text><text x="${X(x)}" y="${H-B+20}" text-anchor="middle" font-size="11">${fmt(x)}</text>`;}
- rows.forEach(r=>{svg+=`<circle cx="${X(r.D_norm)}" cy="${Y(r.lobo_R2)}" r="4" fill="${palette[data.tasks.indexOf(r.task)]}" opacity=".8"><title>${r.task} ${r.background} · drift ${fmt(r.D_norm,5)} · LOBO R² ${fmt(r.lobo_R2,5)}</title></circle>`;});
+ rows.forEach(r=>{svg+=`<circle cx="${X(r[xkey])}" cy="${Y(r.lobo_R2)}" r="${options.highlight?(r.background===options.highlight?5:3.5):4}" fill="${palette[data.tasks.indexOf(r.task)]}" opacity="${options.highlight?(r.background===options.highlight?1:.35):.8}"><title>${r.task} ${r.background} · drift ${fmt(r[xkey],5)} · LOBO R² ${fmt(r.lobo_R2,5)}</title></circle>`;});
  if(showLabels){
-  const occupied=[],points=rows.map(r=>({x:X(r.D_norm),y:Y(r.lobo_R2)}));
+  const occupied=[],points=rows.map(r=>({x:X(r[xkey]),y:Y(r.lobo_R2)}));
   const overlap=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
   rows.forEach((r,i)=>{
    const p=points[i],w=38,h=22,candidates=[];
@@ -35,8 +36,8 @@ function loboScatter(rows,centered,showLabels=false){
   });
  }
  const suffix=centered?' (task-centered)':'';
- svg+=`<text x="${W/2}" y="${H-12}" text-anchor="middle" font-size="12">Mean normalized robot-flow drift${suffix}</text><text x="17" y="${H/2}" transform="rotate(-90 17 ${H/2})" text-anchor="middle" font-size="12">LOBO Action R²${suffix}</text></svg>`;
- $('ex9-lobo-scatter').innerHTML=svg+'<div class="plotLegend">'+[...new Set(rows.map(r=>r.task))].map(t=>`<span style="color:${palette[data.tasks.indexOf(t)]}">● ${t}</span>`).join('')+'</div>';
+ svg+=`<text x="${W/2}" y="${H-12}" text-anchor="middle" font-size="12">${xlabel}${suffix}</text><text x="17" y="${H/2}" transform="rotate(-90 17 ${H/2})" text-anchor="middle" font-size="12">LOBO Action R²${suffix}</text></svg>`;
+ $(target).innerHTML=svg+'<div class="plotLegend">'+[...new Set(rows.map(r=>r.task))].map(t=>`<span style="color:${palette[data.tasks.indexOf(t)]}">● ${t}</span>`).join('')+'</div>';
 }
 function renderLobo(task,probe,step){
  const selection=$('ex9-lobo-group').value,group=selection==='task'?task:selection;
@@ -47,9 +48,20 @@ function renderLobo(task,probe,step){
  $('ex9-lobo-result').textContent=`${probe} · τ=${fmt(r.tau,6)} · progress=${fmt(r.progress)} · seed 0 · n=${r.n} · Spearman ρ ${fmt(r.rho)}${r.rho_ci_low==null?' (task별 CI 미산출)':` [95% CI ${fmt(r.rho_ci_low)}, ${fmt(r.rho_ci_high)}]`} · Pearson r ${fmt(r.pearson)}`;
  lines('ex9-lobo-rho',[{name:'Spearman ρ',rows:cs.map(r=>({x:r.progress,y:r.rho}))},{name:'Pearson r',rows:cs.map(r=>({x:r.progress,y:r.pearson}))},...(group===task?[]:[{name:'Spearman 95% CI lower',color:'#94bfc5',dashed:true,rows:cs.map(r=>({x:r.progress,y:r.rho_ci_low}))},{name:'Spearman 95% CI upper',color:'#94bfc5',dashed:true,rows:cs.map(r=>({x:r.progress,y:r.rho_ci_high}))}])],'Denoising progress · Early/high-noise → Late/low-noise','Flow drift ↔ LOBO Action R² correlation');
 }
+function renderTrajectoryLobo(task,probe,step,bg){
+ const data=window.LOBO_TRAJECTORY_DATA,selection=$('ex9-lobo-traj-group').value,group=selection==='task'?task:selection;
+ let rows=data.pairs.filter(r=>r.probe===probe&&r.step===step&&(selection!=='task'||r.task===task)).map(r=>({...r}));
+ if(selection==='task_demeaned')for(const t of window.TRAJECTORY_DATA.tasks){const rs=rows.filter(r=>r.task===t);for(const k of ['nD_traj_BG','lobo_R2']){const mean=rs.reduce((s,r)=>s+r[k],0)/rs.length;rs.forEach(r=>r[k]-=mean);}}
+ rows.sort((a,b)=>Number(a.background===bg)-Number(b.background===bg));
+ loboScatter(rows,selection==='task_demeaned',selection==='task',{xkey:'nD_traj_BG',target:'ex9-lobo-traj-scatter',xlabel:'Final BG trajectory drift / image diagonal',highlight:bg});
+ const cs=data.rows.filter(r=>r.probe===probe&&r.grouping===group),r=cs.find(r=>r.step===step);
+ $('ex9-lobo-traj-result').textContent=`${probe} · τ=${fmt(r.tau,6)} · progress=${fmt(r.progress)} · n=${r.n} task/background groups · Spearman ρ ${fmt(r.rho)}${r.rho_ci_low==null?' (task별 CI 미산출)':` [95% CI ${fmt(r.rho_ci_low)}, ${fmt(r.rho_ci_high)}]`} · Pearson r ${fmt(r.pearson)} · highlighted: ${bg}`;
+ lines('ex9-lobo-traj-rho',[{name:'Spearman ρ',rows:cs.map(r=>({x:r.progress,y:r.rho}))},{name:'Pearson r',rows:cs.map(r=>({x:r.progress,y:r.pearson}))},...(selection==='task'?[]:[{name:'Spearman 95% CI lower',color:'#94bfc5',dashed:true,rows:cs.map(r=>({x:r.progress,y:r.rho_ci_low}))},{name:'Spearman 95% CI upper',color:'#94bfc5',dashed:true,rows:cs.map(r=>({x:r.progress,y:r.rho_ci_high}))}])],'Probe denoising progress · Early/high-noise → Late/low-noise','Final trajectory drift ↔ LOBO R² correlation');
+}
 function render(){
  const task=$('task').value,seed=+$('seed').value,bg=$('bg').value,step=data.steps[+$('step').value],dim=+$('ex9-dim').value,len=+$('ex9-length').value,probe=$('probe').value;
  renderLobo(task,probe,step);
+ renderTrajectoryLobo(task,probe,step,bg);
  const scope=data.joint.filter(r=>r.task===task&&r.seed===seed),row=scope.find(r=>r.background===bg&&r.step===step),group=$('ex9-group').value==='task'?task:$('ex9-group').value;
  const cs=data.correlations.filter(r=>r.grouping===group&&r.feature==='D_norm');lines('ex9-rho',['nD_traj_BG','nADE_GT'].map(target=>({name:target,rows:cs.filter(r=>r.target===target).map(r=>({x:r.progress,y:r.rho}))})),'Denoising progress · Early/high-noise → Late/low-noise','Spearman rho');
  $('ex9-correlation-result').textContent=cs.filter(r=>r.step===step).map(r=>`${r.target}: ρ ${fmt(r.rho)} [${fmt(r.rho_ci_low)}, ${fmt(r.rho_ci_high)}], n=${r.n}`).join(' · ');
@@ -69,5 +81,5 @@ function render(){
  lines('ex9-eap',data.backgrounds.slice(1).map((b,i)=>({name:b,color:`hsl(${(i+1)*137.5%360},60%,42%)`,rows:es.filter(r=>r.background===b).map(r=>({x:r.progress,y:r.EAP}))})),'Denoising progress · out-of-range values omitted','Equivalent action perturbation (sigma)');
  $('ex9-joint-table').innerHTML='<table><tr><th>BG</th><th>Flow norm</th><th>nBG drift</th><th>nGT ADE</th><th>R² drop</th><th>EAP</th></tr>'+scope.filter(r=>r.step===step).map(r=>`<tr><td>${r.background}</td><td>${fmt(r.D_norm,4)}</td><td>${fmt(r.nD_traj_BG,4)}</td><td>${fmt(r.nADE_GT,4)}</td><td>${fmt(r.Delta_R2)}</td><td>${eapText(es.find(e=>e.background===r.background&&e.step===step))}</td></tr>`).join('')+'</table>';
 }
-['task','seed','bg','probe','ex9-group','ex9-lobo-group','ex9-dim','ex9-length'].forEach(id=>$(id).addEventListener('change',render));$('step').addEventListener('input',render);render();window.renderTrajectoryExtension=render;
+['task','seed','bg','probe','ex9-group','ex9-lobo-group','ex9-lobo-traj-group','ex9-dim','ex9-length'].forEach(id=>$(id).addEventListener('change',render));$('step').addEventListener('input',render);render();window.renderTrajectoryExtension=render;
 })();
