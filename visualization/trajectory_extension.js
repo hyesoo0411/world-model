@@ -81,6 +81,20 @@ function render(){
  const selectedW=ps.find(r=>r.step===step&&r.regime==='within'),selectedL=ps.find(r=>r.step===step&&r.regime==='lobo');
  $('ex9-within-lobo-gap-result').textContent=`${task} · ${bg} · ${probe} · seed 0 · first20 + last20 · 16 test windows · step ${step} / progress ${fmt(selectedW.progress)} · Within ${fmt(selectedW.macro_r2)} · LOBO ${fmt(selectedL.macro_r2)} · Within − LOBO ${fmt(selectedW.macro_r2-selectedL.macro_r2)}`;
  $('ex13-within-lobo-overview').src=`probe_validity/within_lobo_first_last_${probe}.png`;
+ const gapColor=i=>i===0?'#173749':`hsl(${i*137.5%360},65%,40%)`;
+ $('ex13-within-lobo-task-grid').innerHTML=data.tasks.map(t=>{
+  const lookup=new Map(data.probes.filter(r=>r.task===t&&r.probe===probe).map(r=>[`${r.background}/${r.step}/${r.regime}`,r]));
+  const series=data.backgrounds.map((b,i)=>({b,color:gapColor(i),points:data.steps.map(st=>{const w=lookup.get(`${b}/${st}/within`),l=lookup.get(`${b}/${st}/lobo`);return {step:st,x:w.progress,y:w.macro_r2-l.macro_r2,w:w.macro_r2,l:l.macro_r2};})}));
+  const W=440,H=310,L=67,R=14,T=18,B=55,values=series.flatMap(s=>s.points.map(p=>p.y));let lo=Math.min(0,...values),hi=Math.max(0,...values),pad=(hi-lo||.1)*.06;lo-=pad;hi+=pad;
+  const X=x=>L+x*(W-L-R),Y=y=>H-B-(y-lo)/(hi-lo)*(H-T-B);
+  let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" data-task="${t}" data-probe="${probe}" aria-label="${t}: Within minus LOBO R squared by background">`;
+  for(let i=0;i<=4;i++){const y=lo+(hi-lo)*i/4,x=i/4;svg+=`<path d="M${L} ${Y(y)}H${W-R}" stroke="#e3e9ed"/><text x="${L-6}" y="${Y(y)+4}" text-anchor="end" font-size="12">${y.toPrecision(3)}</text><text x="${X(x)}" y="${H-B+21}" text-anchor="middle" font-size="12">${x.toFixed(2)}</text>`;}
+  svg+=`<path d="M${L} ${Y(0)}H${W-R}" stroke="#596976" stroke-dasharray="4 3" stroke-width="1"/>`;
+  series.sort((a,b)=>Number(a.b===bg)-Number(b.b===bg)).forEach(s=>{const selected=s.b===bg;svg+=`<path data-bg="${s.b}" data-values="${s.points.map(p=>p.y).join(',')}" d="${s.points.map((p,i)=>`${i?'L':'M'}${X(p.x)} ${Y(p.y)}`).join(' ')}" fill="none" stroke="${s.color}" stroke-width="${selected?2.8:1.2}" opacity="${selected?1:.3}"><title>${s.b}</title></path>`;if(selected)s.points.forEach(p=>svg+=`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="2.2" fill="${s.color}"><title>${t} ${s.b} · step ${p.step} · Within ${fmt(p.w,4)} · LOBO ${fmt(p.l,4)} · difference ${fmt(p.y,4)}</title></circle>`);});
+  svg+=`<text x="${(L+W-R)/2}" y="${H-10}" text-anchor="middle" font-size="13">Denoising progress</text><text x="17" y="${(T+H-B)/2}" transform="rotate(-90 17 ${(T+H-B)/2})" text-anchor="middle" font-size="13">Within − LOBO R²</text></svg>`;
+  return `<div><h4>${t}</h4>${svg}</div>`;
+ }).join('');
+ $('ex13-within-lobo-task-legend').innerHTML=data.backgrounds.map((b,i)=>`<span style="color:${gapColor(i)};font-weight:${b===bg?700:400}">━ ${b}${b===bg?' (selected)':''}</span>`).join('');
  // WITHIN LOBO MIXED END
  $('ex9-probe-heatmap').innerHTML='<div class="table-scroll"><table><tr><th>BG</th><th>BG0→BG</th><th>BG→BG</th><th>LOBO→BG</th></tr>'+data.backgrounds.map(b=>'<tr><td>'+b+'</td>'+['transfer','within','lobo'].map(regime=>{let r=data.probes.find(r=>r.task===task&&r.background===b&&r.probe===probe&&r.step===step&&r.regime===regime);let v=r?.macro_r2;return `<td style="background:${v==null?'#eee':v<0?'#f8e3e6':`hsl(190,45%,${97-Math.min(1,v)*38}%)`}">${fmt(v)}</td>`;}).join('')+'</tr>').join('')+'</table></div>';
  const ds=data.dose.filter(r=>r.task===task&&r.seed===seed&&r.step===step&&r.dimension===dim&&r.window_length===len),maxeps=Math.max(.5,...ds.map(r=>r.epsilon));lines('ex9-dose',[{name:'Measured action response',rows:ds.map(r=>({x:r.epsilon,y:r.D_norm}))},{name:'Isotonic diagnostic',color:'#9270b3',dashed:true,rows:ds.map(r=>({x:r.epsilon,y:r.D_norm_isotonic}))},{name:`${bg} background response`,color:'black',dashed:true,rows:row?[{x:0,y:row.D_norm},{x:maxeps,y:row.D_norm}]:[]}],'Action perturbation ε (dataset standard deviations)','Normalized robot flow difference',maxeps);
