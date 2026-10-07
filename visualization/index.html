@@ -102,6 +102,20 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 <p><b>Input</b> 기존 flow 표현·demo split 그대로 · task·τ별 학습 · seed 0 · Linear / 2-layer MLP. 상단 Probe 선택과 연동.</p>
 <p><b>Output</b> 동일 held-out demo의 Action R² · 공간만 pooling, 시간 순서 유지.</p>
 <p><b>Result</b> <span id="ex9-probe-result"></span></p><div id="ex9-probe-curves"></div><div id="ex9-probe-heatmap"></div>
+<!-- WITHIN LOBO MIXED START -->
+<div id="within-lobo-first-last" style="scroll-margin-top:130px">
+<h3>Within − LOBO R² · First + last action chunks</h3>
+<p><b>Goal</b> Compare within-background and held-out-background action recoverability.</p>
+<div class="formula">ΔR²(τ,b) = R²_within(τ,b) − R²_LOBO(τ,b)</div>
+<p><b>Input</b> First20 + last20 in both training and evaluation · 35 / 7 / 8 train / validation / test demos · 70 / 14 / 16 windows per background · seed 0. Within: train on BGb. LOBO: train on the other 15 backgrounds; test on the same 16 windows of BGb. Existing mixed-chunk probes; no retraining.</p>
+<p><b>Output</b> Positive gap: Within &gt; LOBO. Negative gap: LOBO &gt; Within. All 16 backgrounds; selected background highlighted. R² is computed on the combined 16 windows, not averaged from separate first/last R² scores.</p>
+<p><b>Result</b> <span id="ex9-within-lobo-gap-result"></span></p>
+<div id="ex9-within-lobo-gap"></div>
+<p><b>Result</b> All six tasks · mean of BG0–BG15 scores · solid: Within; dashed: LOBO. Task panels use separate y scales.</p>
+<img id="ex13-within-lobo-overview" loading="lazy" src="probe_validity/within_lobo_first_last_linear.png" alt="Within and LOBO held-out action R squared across six tasks, first and last chunks combined">
+<p><a href="probe_validity/within_lobo_first_last.csv">Paired CSV</a> · Background-mean comparison: <a href="probe_validity/within_lobo_first_last_linear.png">Linear PNG</a> / <a href="probe_validity/within_lobo_first_last_linear.pdf">PDF</a> · <a href="probe_validity/within_lobo_first_last_mlp.png">MLP PNG</a> / <a href="probe_validity/within_lobo_first_last_mlp.pdf">PDF</a></p>
+</div>
+<!-- WITHIN LOBO MIXED END -->
 <h3>Robot-flow drift ↔ LOBO Action R²</h3>
 <p><b>Goal</b> 배경으로 인한 flow 변화가 클수록 LOBO 성능도 낮아지는가? LOBO는 평가할 배경 하나를 제외한 나머지 배경으로 학습합니다.</p>
 <div class="formula">ρ(mean<sub>A</sub> D<sub>flow,norm</sub>(τ,b,A), R²<sub>LOBO</sub>(τ,b))</div>
@@ -152,4 +166,4 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 </section>
 <!-- EX9 extension end -->
 
-<script src="data.js"></script><script src="temporal_data.js"></script><script src="temporal_heatmaps.js"></script><script src="cumulative_data.js"></script><script src="normalized_data.js"></script><script src="normalized.js"></script><script src="app.js"></script><script src="trajectory_data.js"></script><script src="lobo_trajectory_data.js?v=96783927cb"></script><script src="trajectory_extension.js?v=77e07e84b8"></script><script src="cosine_trajectory_data.js?v=70c321de13"></script><script src="cosine_trajectory.js?v=a48e2ae2d6"></script></html>
+<script src="data.js"></script><script src="temporal_data.js"></script><script src="temporal_heatmaps.js"></script><script src="cumulative_data.js"></script><script src="normalized_data.js"></script><script src="normalized.js"></script><script src="app.js"></script><script src="trajectory_data.js"></script><script src="lobo_trajectory_data.js?v=96783927cb"></script><script src="trajectory_extension.js?v=188652f706"></script><script src="cosine_trajectory_data.js?v=70c321de13"></script><script src="cosine_trajectory.js?v=a48e2ae2d6"></script></html>
