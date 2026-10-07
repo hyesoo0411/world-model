@@ -148,12 +148,17 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 <p><a href="trajectory_extension/results/lobo_trajectory_pairs.csv">Paired values CSV</a> · <a href="trajectory_extension/results/lobo_trajectory_correlations.csv">Correlation + CI CSV</a> · <a href="trajectory_extension/figures/16_trajectory_vs_lobo_linear.pdf">Linear PDF</a> · <a href="trajectory_extension/figures/16_trajectory_vs_lobo_mlp.pdf">MLP PDF</a> · <a href="trajectory_extension/docs/lobo_trajectory_correlation.md">분석 정의</a></p>
 </div>
 <!-- LOBO TRAJECTORY END -->
-<h3 id="lobo-all-backgrounds">LOBO R² vs. denoising progress · All backgrounds</h3>
-<p><b>Goal</b> Compare LOBO action recoverability across all 16 background conditions.</p>
+<div id="lobo-task-panels" style="scroll-margin-top:130px">
+<h3 id="lobo-all-backgrounds">LOBO R² vs. denoising progress · All backgrounds · Six tasks</h3>
+<p><b>Goal</b> Compare LOBO action recoverability across all six tasks and all 16 backgrounds.</p>
 <div class="formula">R²_LOBO(τ, b) · b = BG0–BG15</div>
-<p><b>Input</b> Selected Task and Linear / MLP probe · fixed seed 0 · train on the other 15 backgrounds; test on held-out demos of background b.</p>
-<p><b>Output</b> One line per background · held-out Action R².</p>
-<p><b>Result</b> <span id="ex9-lobo-all-result"></span></p><div id="ex9-lobo-all-curves"></div>
+<p><b>Input</b> First20 + last20 chunks · 8 held-out demos / 16 test windows per background · seed 0. Train on the other 15 backgrounds; test on held-out demos of background b. Linear / MLP and background selections apply to every panel.</p>
+<p><b>Output</b> One panel per task; one curve per background. Selected background highlighted. Separate task y scales; dashed horizontal line = R² 0. Early/high-noise → Late/low-noise from left to right.</p>
+<p><b>Result</b> <span id="ex9-lobo-all-result"></span></p>
+<div id="ex9-lobo-all-curves" class="within-lobo-task-grid"></div>
+<div id="ex9-lobo-all-legend" class="plotLegend"></div>
+<p><a href="probe_validity/lobo_by_task_linear.png">Linear PNG</a> / <a href="probe_validity/lobo_by_task_linear.pdf">PDF</a> · <a href="probe_validity/lobo_by_task_mlp.png">MLP PNG</a> / <a href="probe_validity/lobo_by_task_mlp.pdf">PDF</a> · <a href="probe_validity/within_lobo_first_last.csv">CSV (LOBO column)</a></p>
+</div>
 </section>
 <section id="action-calibration" lang="ko"><h2>12 · Action Calibration</h2>
 <p><b>Goal</b> 배경 flow drift는 실제 action을 얼마나 바꾼 효과와 비슷한가?</p>
@@ -174,4 +179,4 @@ select,input,button{font-family:inherit}select,input,button{font-family:inherit}
 </section>
 <!-- EX9 extension end -->
 
-<script src="data.js"></script><script src="temporal_data.js"></script><script src="temporal_heatmaps.js"></script><script src="cumulative_data.js"></script><script src="normalized_data.js"></script><script src="normalized.js"></script><script src="app.js"></script><script src="trajectory_data.js"></script><script src="lobo_trajectory_data.js?v=96783927cb"></script><script src="trajectory_extension.js?v=25830d4af9"></script><script src="cosine_trajectory_data.js?v=70c321de13"></script><script src="cosine_trajectory.js?v=a48e2ae2d6"></script></html>
+<script src="data.js"></script><script src="temporal_data.js"></script><script src="temporal_heatmaps.js"></script><script src="cumulative_data.js"></script><script src="normalized_data.js"></script><script src="normalized.js"></script><script src="app.js"></script><script src="trajectory_data.js"></script><script src="lobo_trajectory_data.js?v=96783927cb"></script><script src="trajectory_extension.js?v=7b53e92154"></script><script src="cosine_trajectory_data.js?v=70c321de13"></script><script src="cosine_trajectory.js?v=a48e2ae2d6"></script></html>

@@ -69,10 +69,23 @@ function render(){
  if(row){$('ex9-traj-result').textContent=`ADE ${fmt(row.ADE_GT)} px · FDE ${fmt(row.FDE_GT)} px · BG drift ${fmt(row.D_traj_BG)} px · confidence ${fmt(row.confidence_mean,4)}`;}
  let src=`trajectory_extension/videos/${task}/seed${seed}_${bg}.mp4`;if($('ex9-video').getAttribute('src')!==src)$('ex9-video').src=src;
  let track=data.tracks[`${task}_${seed}_${bg}`];if(track){let xs=track.GT.map(r=>r[0]).concat(track.BG0.map(r=>r[0]),track.BG.map(r=>r[0])),ys=track.GT.map(r=>r[1]).concat(track.BG0.map(r=>r[1]),track.BG.map(r=>r[1]));let xmin=Math.min(...xs)-2,xmax=Math.max(...xs)+2,ymin=Math.min(...ys)-2,ymax=Math.max(...ys)+2;let scale=Math.min(690/(xmax-xmin),190/(ymax-ymin)),X=x=>430+(x-(xmin+xmax)/2)*scale,Y=y=>125+(y-(ymin+ymax)/2)*scale;let svg='<svg viewBox="0 0 860 270" aria-label="Image-plane hand trajectories" role="img">';['GT','BG0','BG'].forEach((k,i)=>{svg+=`<path d="${track[k].map((p,j)=>`${j?'L':'M'}${X(p[0])} ${Y(p[1])}`).join(' ')}" stroke="${['black','#15798b','#c45770'][i]}" fill="none" stroke-width="2"><title>${k}</title></path>`;});svg+=`<text x="430" y="250" text-anchor="middle" font-size="12">Image coordinates · u ${fmt(xmin,1)}–${fmt(xmax,1)} px / v ${fmt(ymin,1)}–${fmt(ymax,1)} px (downward)</text></svg><div class="plotLegend">GT: black · BG0: blue · ${bg}: pink</div>`;$('ex9-tracks').innerHTML=svg;}
- const loboAll=data.probes.filter(r=>r.task===task&&r.probe===probe&&r.regime==='lobo');
- const backgroundSeries=data.backgrounds.map((b,i)=>({name:b+' · '+(window.FLOW_DATA.conditions.find(c=>c.id===b)?.name||b),color:i===0?'#173749':`hsl(${i*137.5%360},65%,40%)`,dashed:i>=8,highlight:b===bg,width:b===bg?3:1.4,opacity:b===bg?1:.35,rows:loboAll.filter(r=>r.background===b).map(r=>({x:r.progress,y:r.macro_r2}))}));
- lines('ex9-lobo-all-curves',backgroundSeries,'Denoising progress · Early/high-noise → Late/low-noise','LOBO Action R²');
- $('ex9-lobo-all-result').textContent=`${task} · ${probe} · seed 0 · BG0–BG15 · highlighted: ${bg} · ${data.steps.length} denoising points per background`;
+ // LOBO SIX TASKS START
+ const loboPanelColor=i=>i===0?'#173749':`hsl(${i*137.5%360},65%,40%)`;
+ $('ex9-lobo-all-curves').innerHTML=data.tasks.map(t=>{
+  const lookup=new Map(data.probes.filter(r=>r.task===t&&r.probe===probe).map(r=>[`${r.background}/${r.step}/${r.regime}`,r]));
+  const series=data.backgrounds.map((b,i)=>({b,color:loboPanelColor(i),points:data.steps.map(st=>{const l=lookup.get(`${b}/${st}/lobo`);return {step:st,x:l.progress,y:l.macro_r2,l:l.macro_r2};})}));
+  const W=440,H=310,L=67,R=14,T=18,B=55,values=series.flatMap(s=>s.points.map(p=>p.y));let lo=Math.min(0,...values),hi=Math.max(0,...values),pad=(hi-lo||.1)*.06;lo-=pad;hi+=pad;
+  const X=x=>L+x*(W-L-R),Y=y=>H-B-(y-lo)/(hi-lo)*(H-T-B);
+  let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" data-task="${t}" data-probe="${probe}" aria-label="${t}: LOBO R squared by background">`;
+  for(let i=0;i<=4;i++){const y=lo+(hi-lo)*i/4,x=i/4;svg+=`<path d="M${L} ${Y(y)}H${W-R}" stroke="#e3e9ed"/><text x="${L-6}" y="${Y(y)+4}" text-anchor="end" font-size="12">${y.toPrecision(3)}</text><text x="${X(x)}" y="${H-B+21}" text-anchor="middle" font-size="12">${x.toFixed(2)}</text>`;}
+  svg+=`<path d="M${L} ${Y(0)}H${W-R}" stroke="#596976" stroke-dasharray="4 3" stroke-width="1"/>`;
+  series.sort((a,b)=>Number(a.b===bg)-Number(b.b===bg)).forEach(s=>{const selected=s.b===bg;svg+=`<path data-bg="${s.b}" data-values="${s.points.map(p=>p.y).join(',')}" d="${s.points.map((p,i)=>`${i?'L':'M'}${X(p.x)} ${Y(p.y)}`).join(' ')}" fill="none" stroke="${s.color}" stroke-width="${selected?2.8:1.2}" opacity="${selected?1:.3}"><title>${s.b}</title></path>`;if(selected)s.points.forEach(p=>svg+=`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="2.2" fill="${s.color}"><title>${t} ${s.b} · step ${p.step} · LOBO R² ${fmt(p.l,4)}</title></circle>`);});
+  svg+=`<text x="${(L+W-R)/2}" y="${H-10}" text-anchor="middle" font-size="13">Denoising progress</text><text x="17" y="${(T+H-B)/2}" transform="rotate(-90 17 ${(T+H-B)/2})" text-anchor="middle" font-size="13">LOBO Action R²</text></svg>`;
+  return `<div><h4>${t}</h4>${svg}</div>`;
+ }).join('');
+ $('ex9-lobo-all-legend').innerHTML=data.backgrounds.map((b,i)=>`<span style="color:${loboPanelColor(i)};font-weight:${b===bg?700:400}">━ ${b}${b===bg?' (selected)':''}</span>`).join('');
+ $('ex9-lobo-all-result').textContent=`All six tasks · ${probe} · seed 0 · BG0–BG15 · highlighted: ${bg} · first20 + last20 · 16 test windows per background`;
+ // LOBO SIX TASKS END
  const ps=data.probes.filter(r=>r.task===task&&r.background===bg&&r.probe===probe&&['within','lobo'].includes(r.regime));lines('ex9-probe-curves',['within','lobo'].map((regime,i)=>({name:regime,color:palette[i+1],rows:ps.filter(r=>r.regime===regime).map(r=>({x:r.progress,y:r.macro_r2}))})),'Denoising progress · same temporal features','Held-out Action R²');
  $('ex9-probe-result').textContent=ps.filter(r=>r.step===step).map(r=>`${r.regime}: ${fmt(r.macro_r2)}`).join(' · ')+' · 평가 seed 0';
  // WITHIN LOBO MIXED START
