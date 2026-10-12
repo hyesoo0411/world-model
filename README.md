@@ -22,3 +22,7 @@ The bundled Korean font retains its upstream license in `visualization/fonts/LIC
 - [Joint metrics](visualization/trajectory_extension/results/joint_metrics.csv)
 
 EX9 reuses the 288 generated rollouts, validated simulator projection and CoTracker trajectories. It tests flow–trajectory associations, within-background/leave-one-background-out action readouts, and equivalent action perturbations. The primary trajectory endpoint is a 2D hand-surface query centroid over the first 20-action chunk. Associations do not establish causal mediation.
+
+## EX19: Demo-supported action sweep
+
+[Interactive results and all-background videos](https://hyesoo0411.github.io/world-model/demo-supported-action-sweep/). Five original demo states, downward-only arm scaling, BG0–BG15, three seeds, first 20-action chunk only. Empirical sequence support is measured; it is not proof of joint IID support.

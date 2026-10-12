@@ -1,0 +1,102 @@
+[
+  {
+    "index": 106,
+    "task_id": "Original",
+    "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+    "suite": "libero_10",
+    "path": "HF_CACHE/hub/datasets--yifengzhu-hf--LIBERO-datasets/snapshots/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo.hdf5",
+    "demo": "demo_6",
+    "start": 0,
+    "stop": 20,
+    "M_mean": 0.5898639574238249,
+    "M_RMS": 0.5974167204578836,
+    "raw_action_bound_valid": true,
+    "gripper_unique": [
+      -1.0
+    ],
+    "NN_LOO": 0.020325289720980657,
+    "NN_index": 121,
+    "magnitude_percentile": 80.33333333333333,
+    "case": "C01"
+  },
+  {
+    "index": 194,
+    "task_id": "T01",
+    "task": "STUDY_SCENE2_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+    "suite": "libero_90",
+    "path": "HF_CACHE/hub/datasets--yifengzhu-hf--LIBERO-datasets/snapshots/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_90/STUDY_SCENE2_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo.hdf5",
+    "demo": "demo_44",
+    "start": 0,
+    "stop": 20,
+    "M_mean": 0.5936177384700386,
+    "M_RMS": 0.6037708910696682,
+    "raw_action_bound_valid": true,
+    "gripper_unique": [
+      -1.0
+    ],
+    "NN_LOO": 0.03266866911729338,
+    "NN_index": 169,
+    "magnitude_percentile": 81.33333333333333,
+    "case": "C02"
+  },
+  {
+    "index": 234,
+    "task_id": "T02",
+    "task": "STUDY_SCENE3_pick_up_the_white_mug_and_place_it_to_the_right_of_the_caddy",
+    "suite": "libero_90",
+    "path": "HF_CACHE/hub/datasets--yifengzhu-hf--LIBERO-datasets/snapshots/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_90/STUDY_SCENE3_pick_up_the_white_mug_and_place_it_to_the_right_of_the_caddy_demo.hdf5",
+    "demo": "demo_34",
+    "start": 0,
+    "stop": 20,
+    "M_mean": 0.6307471026010656,
+    "M_RMS": 0.7043730963522074,
+    "raw_action_bound_valid": true,
+    "gripper_unique": [
+      -1.0
+    ],
+    "NN_LOO": 0.02975563892099188,
+    "NN_index": 207,
+    "magnitude_percentile": 87.0,
+    "case": "C03"
+  },
+  {
+    "index": 288,
+    "task_id": "T03",
+    "task": "STUDY_SCENE4_pick_up_the_book_on_the_right_and_place_it_on_the_cabinet_shelf",
+    "suite": "libero_90",
+    "path": "HF_CACHE/hub/datasets--yifengzhu-hf--LIBERO-datasets/snapshots/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_90/STUDY_SCENE4_pick_up_the_book_on_the_right_and_place_it_on_the_cabinet_shelf_demo.hdf5",
+    "demo": "demo_38",
+    "start": 0,
+    "stop": 20,
+    "M_mean": 0.6558835580513959,
+    "M_RMS": 0.6909807664782408,
+    "raw_action_bound_valid": true,
+    "gripper_unique": [
+      -1.0
+    ],
+    "NN_LOO": 0.031275932639694894,
+    "NN_index": 259,
+    "magnitude_percentile": 90.66666666666666,
+    "case": "C04"
+  },
+  {
+    "index": 36,
+    "task_id": "T04",
+    "task": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+    "suite": "libero_10",
+    "path": "HF_CACHE/hub/datasets--yifengzhu-hf--LIBERO-datasets/snapshots/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_demo.hdf5",
+    "demo": "demo_36",
+    "start": 0,
+    "stop": 20,
+    "M_mean": 0.7033477094494275,
+    "M_RMS": 0.7551040989526557,
+    "raw_action_bound_valid": true,
+    "gripper_unique": [
+      -1.0
+    ],
+    "NN_LOO": 0.034796800093663434,
+    "NN_index": 16,
+    "magnitude_percentile": 94.33333333333334,
+    "case": "C05"
+  }
+]

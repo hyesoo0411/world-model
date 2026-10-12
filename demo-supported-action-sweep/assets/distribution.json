@@ -1,0 +1,32 @@
+{
+  "n_first_chunks": 300,
+  "n_tasks": 6,
+  "M_mean_percentiles": {
+    "25": 0.36708837120218096,
+    "50": 0.4834658762085547,
+    "75": 0.5714153158916425,
+    "90": 0.6539267001395672,
+    "95": 0.7116619015725459,
+    "100": 0.8348214567880771
+  },
+  "M_RMS_percentiles": {
+    "25": 0.4257145141893587,
+    "50": 0.5332502227409242,
+    "75": 0.6113548142660807,
+    "90": 0.6984201075125912,
+    "95": 0.7398588460123741,
+    "100": 0.8519700188072515
+  },
+  "NN_LOO_percentiles": {
+    "25": 0.022329551942199637,
+    "50": 0.029946540833203243,
+    "75": 0.035987267877805165,
+    "90": 0.04109526147346635,
+    "95": 0.044638709856429176,
+    "100": 0.06565803788691979
+  },
+  "encoding": "Flatten [20,6] official float32 model arm features raw*0.05; gripper and padded arm excluded. Model has no dataset z-scoring. Primary distance is Euclidean in these 120 model-input coordinates.",
+  "support_labels": "Descriptive calibration against real chunk leave-one-out distances: well-supported <= P75; borderline P75-P95; weakly supported > P95. Sensitivity analyses at P50 and P90. These are reference quantiles, not proven IID/OOD boundaries.",
+  "NN_exclusion": "Exclude the base demo index for every alpha, including alpha1. Secondary task-restricted NN also reported.",
+  "source_scope": "All cached LIBERO demonstrations (six task files); not the complete model training distribution."
+}

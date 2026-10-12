@@ -1,0 +1,40 @@
+{
+  "verdict": "전체 배경에서 α=0→1의 궤적 차이는 평균 0.108→1.321 px로 증가했습니다. 5개 state 모두 증가 경향을 보였고 4개는 단조 증가했습니다. Supported action에서도 배경에 따른 action 실현 차이가 나타납니다. 다만 early flow는 측정 영역을 고정하면 평균이 감소해, 일관된 early-flow 증가까지 확인됐다고 볼 수는 없습니다.",
+  "checks": "1,200개 조건과 동일 BG 반복 10개, 1,125개 paired trajectory, 75개 shared-latent 그룹 검증 완료. Action·noise·초기 물리 상태·scheduler를 고정했고 clipping은 없었습니다. 동일 BG 반복 차이는 0 px입니다. 동일 GT의 배경별 tracker 차이는 0.008–0.078 px, 정지영상 tracking drift는 0.068–0.103 px입니다. 기존 영상 1개의 frame 1개만 제외됐고, 해당 pair 전체를 빼도 조건 평균 변화는 최대 0.015 px였습니다.",
+  "flow_trajectory_interpretation": "Base×α 평균 25개에서 early flow와 trajectory drift의 Pearson/Spearman은 0.925/0.702, within-state 중심화 후 0.978/0.762였다. C01을 제외해도 within-state 상관은 0.704/0.534로 남았다. 1,125개 BG×seed×α pair의 pooled 상관은 0.797/0.651이다. 그러나 이 값은 scale별 GT robot ROI를 쓴 결과다. 고정 ROI에서는 action 크기에 따른 early flow 증가가 유지되지 않으므로, 상관만으로 early flow가 원인이거나 일반적인 예측자라고 결론 내리지 않는다. Background 종류와 ROI 구성의 영향도 남아 있다.",
+  "tracking_limits": "작은 subpixel 차이에는 tracking 및 생성된 손 모양 변화의 기여가 남는다. 정지영상 평균 drift는 0.068–0.103 px(최대 0.119 px), GT oracle tracking ADE는 0.047–0.418 px, 물리적으로 동일한 GT의 paired BG tracker 차이는 0.008–0.078 px다. 서로 다른 오차 기준이며 단일 임계값으로 합치지 않는다. 유효 frame만 사용했고 point membership 변경이나 interpolation은 없다. 생성된 손의 변형은 GT 대조군보다 큰 추적 오차를 만들 수 있다.",
+  "answers": [
+    {
+      "question": "1. Extrapolation 없이 자연적으로 큰 demo action을 찾았나?",
+      "answer": "예. 6개 task의 300개 first chunks 중 크기 P80–P94의 5개 원본 demo를 사용했습니다. 각자의 원본 scene·state와 gripper 명령을 유지했고 α>1은 사용하지 않았습니다. 전체 학습 분포의 IID를 증명한 것은 아닙니다."
+    },
+    {
+      "question": "2. Supported 조건에서도 action 크기에 따라 trajectory drift가 증가했나?",
+      "answer": "예, 이번 5개 state에서는 이를 지지합니다. Global well-supported 조건의 within-state Pearson/Spearman은 0.541/0.757이고, 같은 task의 support만 적용해 비교 가능한 3개 state에서도 0.785/0.786입니다. 다만 supported 조건은 25개 중 15개이며 α=.5는 포함되지 않습니다. Action-only support가 state–action–history의 joint IID를 보장하지는 않습니다."
+    },
+    {
+      "question": "3. Early denoising flow도 증가했나?",
+      "answer": "ROI 정의에 따라 달라집니다. 각 α의 GT robot ROI에서는 평균 0.0789→0.1135로 증가하고 4/5 state의 기울기가 양수입니다. Middle은 0.0851→0.0988, late는 0.0934→0.0745였습니다. 그러나 α1의 ROI로 영역을 고정하면 early는 0.1480→0.1135로 감소하고 양의 기울기는 1/5뿐입니다. 따라서 early에서 더 강해진다는 해석은 견고하지 않습니다."
+    },
+    {
+      "question": "4. 각 initial state 안에서도 경향이 일관적인가?",
+      "answer": "Trajectory는 5/5 state에서 양의 기울기, 4/5에서 5개 α의 단조 증가를 보였습니다. C01이 평균 증가분의 약 77%를 차지하지만, 이를 제외한 4개 state도 평균 0.100→0.456 px로 증가했습니다. 효과의 크기는 state에 크게 의존하며, early flow의 단조 증가는 1/5 state뿐입니다."
+    },
+    {
+      "question": "5. NN 거리와 action 크기 중 어느 쪽이 더 잘 설명하나?",
+      "answer": "Within-state trajectory 상관은 magnitude 0.512, NN 거리 −0.100으로 크기와의 관계가 더 뚜렷합니다. 그러나 다른 state를 예측하는 leave-one-state-out RMSE는 magnitude 0.805, NN 0.799 px로 거의 같습니다. Early flow도 각각 0.0242/0.0235로 비슷합니다. NN 거리 증가만으로 효과를 설명하기 어렵지만, 새로운 state에서 magnitude가 더 우수한 예측자라고 확정할 수도 없습니다."
+    },
+    {
+      "question": "6. Weak support/OOD 이전에도 효과가 있나?",
+      "answer": "예. C01 α1은 원본 demo action 그대로이며 leave-self-out NN은 real-demo P18 근처인데도 평균 trajectory drift가 4.783 px였습니다. Global support가 높은 조건과 같은-task support 부분집합에서도 증가 관계가 남았습니다. 따라서 모든 효과를 action extrapolation OOD로 설명할 수는 없습니다."
+    },
+    {
+      "question": "7. 이전 α>1 결과는 기존 경향의 증폭인가, 새로운 OOD failure인가?",
+      "answer": "아직 구분할 수 없습니다. 이번 결과는 extrapolation 없이도 효과가 존재함을 보입니다. 하지만 EX18은 다른 settled state이고, α1.5/1.75는 NN 기준으로 P99/관측 최댓값 밖입니다. Figure 6은 양쪽 배경을 BG1–BG3로 맞췄지만 state 차이가 남으므로, 이전 결과가 같은 현상의 증폭인지 별도의 OOD failure인지는 단정하지 않습니다."
+    },
+    {
+      "question": "8. Generated motion 자체도 증가했나?",
+      "answer": "예. 5개 state 모두 생성 움직임이 단조 증가했고 전체 평균은 0.254→19.956 px였습니다. GT 평균 EE 움직임도 6.56→64.17 mm로 증가했습니다. 오차만 커진 결과는 아닙니다. α0은 원본 gripper 명령과 state를 유지한 zero-arm 조건이며, 물리적 no-op은 아닙니다."
+    }
+  ]
+}

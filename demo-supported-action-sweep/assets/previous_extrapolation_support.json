@@ -1,0 +1,46 @@
+[
+  {
+    "experiment": "EX18",
+    "alpha": 1,
+    "M_mean": 0.492469572213294,
+    "d_NN": 0.020703389549894327,
+    "NN_percentile": 20.333333333333332,
+    "support": "well-supported",
+    "NN_task": "Original",
+    "NN_demo": "demo_28",
+    "state_note": "Previous settled canonical state differs from original demo state; not matched to EX19."
+  },
+  {
+    "experiment": "EX18",
+    "alpha": 1.25,
+    "M_mean": 0.6155869652666175,
+    "d_NN": 0.03143224112219442,
+    "NN_percentile": 57.333333333333336,
+    "support": "well-supported",
+    "NN_task": "Original",
+    "NN_demo": "demo_12",
+    "state_note": "Previous settled canonical state differs from original demo state; not matched to EX19."
+  },
+  {
+    "experiment": "EX18",
+    "alpha": 1.5,
+    "M_mean": 0.7387043583199411,
+    "d_NN": 0.052021883076847394,
+    "NN_percentile": 99.0,
+    "support": "weakly supported",
+    "NN_task": "Original",
+    "NN_demo": "demo_12",
+    "state_note": "Previous settled canonical state differs from original demo state; not matched to EX19."
+  },
+  {
+    "experiment": "EX18",
+    "alpha": 1.75,
+    "M_mean": 0.8618217513732646,
+    "d_NN": 0.0780135474548144,
+    "NN_percentile": 100.0,
+    "support": "weakly supported",
+    "NN_task": "Original",
+    "NN_demo": "demo_12",
+    "state_note": "Previous settled canonical state differs from original demo state; not matched to EX19."
+  }
+]

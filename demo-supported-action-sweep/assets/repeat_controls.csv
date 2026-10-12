@@ -1,0 +1,11 @@
+case,alpha,seed,background,accepted,paired_visible_fraction,D_traj_px,D_pointwise_mean_px,final_difference_px,maximum_deviation_px,nD_image_diagonal,BG0_path_length_px,D_over_BG0_path_length,length_normalization_valid,direction_cosine,direction_angle_degrees,GT_pair_tracking_floor_px
+C01,0.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,1.4485307931900024,0.0,True,1.0,0.0,0.0
+C01,1.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,43.318077087402344,0.0,True,1.0,0.0,0.0
+C02,0.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,0.6842865943908691,,False,,,0.0
+C02,1.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,50.346893310546875,0.0,True,1.0,0.0,0.0
+C03,0.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,0.9219514727592468,,False,,,0.0
+C03,1.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,49.35451889038086,0.0,True,1.0,0.0,0.0
+C04,0.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,0.5753137469291687,,False,,,0.0
+C04,1.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,54.70267868041992,0.0,True,1.0,0.0,0.0
+C05,0.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,0.9197866320610046,,False,,,0.0
+C05,1.0,0,BG0_repeat,True,1.0,0.0,0.0,0.0,0.0,0.0,63.836524963378906,0.0,True,1.0,0.0,0.0

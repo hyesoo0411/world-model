@@ -1,0 +1,1509 @@
+{
+  "passed": true,
+  "exact_EX8_conditions": true,
+  "original_actions_states_queries_GT_masks_unchanged": true,
+  "original_BG0_BG3_initial_RGB_unchanged": true,
+  "original_flow_metrics_unchanged": true,
+  "rows": [
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 20,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 25,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 100,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 98,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 70,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 69,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 62,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 93,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 81,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 46,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "agentview",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 486,
+      "nonwall_nonrobot_max_rgb": 39,
+      "all_changed_pixels": 10308
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C01",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 20,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 25,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 100,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 98,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 70,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 69,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 62,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 93,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 81,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 46,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "agentview",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 64,
+      "nonwall_nonrobot_changed_pixels": 490,
+      "nonwall_nonrobot_max_rgb": 39,
+      "all_changed_pixels": 10551
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C02",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 20,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 25,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 100,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 98,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 77,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10255
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 70,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 69,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 62,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 93,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 81,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 46,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "agentview",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 78,
+      "nonwall_nonrobot_changed_pixels": 489,
+      "nonwall_nonrobot_max_rgb": 39,
+      "all_changed_pixels": 10256
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C03",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 20,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 25,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 100,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 98,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 95,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 70,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 69,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 62,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 93,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 81,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 46,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "agentview",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 60,
+      "nonwall_nonrobot_changed_pixels": 516,
+      "nonwall_nonrobot_max_rgb": 39,
+      "all_changed_pixels": 10004
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C04",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 11,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 14,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 13,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 13,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 53,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 50,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 51,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 50,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 41,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 37,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 34,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 49,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 45,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 24,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "agentview",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 25,
+      "nonwall_nonrobot_changed_pixels": 124,
+      "nonwall_nonrobot_max_rgb": 22,
+      "all_changed_pixels": 5643
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG1",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG2",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG3",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG4",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG5",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG6",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG7",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG8",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG9",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG10",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG11",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG12",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG13",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG14",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    },
+    {
+      "case": "C05",
+      "camera": "robot0_eye_in_hand",
+      "background": "BG15",
+      "robot_interior_changed_pixels": 0,
+      "robot_boundary_changed_pixels": 0,
+      "nonwall_nonrobot_changed_pixels": 0,
+      "nonwall_nonrobot_max_rgb": 0,
+      "all_changed_pixels": 0
+    }
+  ]
+}
